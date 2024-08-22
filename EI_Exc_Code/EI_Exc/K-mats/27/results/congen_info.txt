@@ -1,0 +1,4 @@
+
+ *** TOTAL NUMBER OF GENERATED CSF'S FOR THE GROUND STATE IS    308
+*** This target calculation should not take long !
+

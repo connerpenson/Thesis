@@ -1,0 +1,288 @@
+ vp =            0 vpp =            0 ep =            0 epp =            0 trans_freq =    0.0000000000000000     
+
+ vp =            0 vpp =            0 ep =            0 epp =            1 trans_freq =    8977.3507750406861     
+
+ vp =            0 vpp =            0 ep =            0 epp =            2 trans_freq =    25755.517556060106     
+
+ vp =            0 vpp =            0 ep =            1 epp =            0 trans_freq =   -8977.3507750406861     
+
+ vp =            0 vpp =            0 ep =            1 epp =            1 trans_freq =    0.0000000000000000     
+
+ vp =            0 vpp =            0 ep =            1 epp =            2 trans_freq =    16778.166781019419     
+
+ vp =            0 vpp =            0 ep =            2 epp =            0 trans_freq =   -25755.517556060106     
+
+ vp =            0 vpp =            0 ep =            2 epp =            1 trans_freq =   -16778.166781019419     
+
+ vp =            0 vpp =            0 ep =            2 epp =            2 trans_freq =    0.0000000000000000     
+
+ vp =            0 vpp =            1 ep =            0 epp =            0 trans_freq =    2183.6869236454368     
+
+ vp =            0 vpp =            1 ep =            0 epp =            1 trans_freq =    10850.448183119297     
+
+ vp =            0 vpp =            1 ep =            0 epp =            2 trans_freq =    28115.251002233475     
+
+ vp =            0 vpp =            1 ep =            1 epp =            0 trans_freq =   -6793.6638513952494     
+
+ vp =            0 vpp =            1 ep =            1 epp =            1 trans_freq =    1873.0974080786109     
+
+ vp =            0 vpp =            1 ep =            1 epp =            2 trans_freq =    19137.900227192789     
+
+ vp =            0 vpp =            1 ep =            2 epp =            0 trans_freq =   -23571.830632414669     
+
+ vp =            0 vpp =            1 ep =            2 epp =            1 trans_freq =   -14905.069372940809     
+
+ vp =            0 vpp =            1 ep =            2 epp =            2 trans_freq =    2359.7334461733699     
+
+ vp =            0 vpp =            2 ep =            0 epp =            0 trans_freq =    4330.9630070030689     
+
+ vp =            0 vpp =            2 ep =            0 epp =            1 trans_freq =    12681.538147974759     
+
+ vp =            0 vpp =            2 ep =            0 epp =            2 trans_freq =    30429.350845426321     
+
+ vp =            0 vpp =            2 ep =            1 epp =            0 trans_freq =   -4646.3877680376172     
+
+ vp =            0 vpp =            2 ep =            1 epp =            1 trans_freq =    3704.1873729340732     
+
+ vp =            0 vpp =            2 ep =            1 epp =            2 trans_freq =    21452.000070385635     
+
+ vp =            0 vpp =            2 ep =            2 epp =            0 trans_freq =   -21424.554549057037     
+
+ vp =            0 vpp =            2 ep =            2 epp =            1 trans_freq =   -13073.979408085346     
+
+ vp =            0 vpp =            2 ep =            2 epp =            2 trans_freq =    4673.8332893662155     
+
+ vp =            0 vpp =            3 ep =            0 epp =            0 trans_freq =    6431.8458857089281     
+
+ vp =            0 vpp =            3 ep =            0 epp =            1 trans_freq =    14494.884686768055     
+
+ vp =            0 vpp =            3 ep =            0 epp =            2 trans_freq =    32691.267084933817     
+
+ vp =            0 vpp =            3 ep =            1 epp =            0 trans_freq =   -2545.5048893317580     
+
+ vp =            0 vpp =            3 ep =            1 epp =            1 trans_freq =    5517.5339117273688     
+
+ vp =            0 vpp =            3 ep =            1 epp =            2 trans_freq =    23713.916309893131     
+
+ vp =            0 vpp =            3 ep =            2 epp =            0 trans_freq =   -19323.671670351177     
+
+ vp =            0 vpp =            3 ep =            2 epp =            1 trans_freq =   -11260.632869292051     
+
+ vp =            0 vpp =            3 ep =            2 epp =            2 trans_freq =    6935.7495288737118     
+
+ vp =            1 vpp =            0 ep =            0 epp =            0 trans_freq =   -2183.6869236454368     
+
+ vp =            1 vpp =            0 ep =            0 epp =            1 trans_freq =    6793.6638513952494     
+
+ vp =            1 vpp =            0 ep =            0 epp =            2 trans_freq =    23571.830632414669     
+
+ vp =            1 vpp =            0 ep =            1 epp =            0 trans_freq =   -10850.448183119297     
+
+ vp =            1 vpp =            0 ep =            1 epp =            1 trans_freq =   -1873.0974080786109     
+
+ vp =            1 vpp =            0 ep =            1 epp =            2 trans_freq =    14905.069372940809     
+
+ vp =            1 vpp =            0 ep =            2 epp =            0 trans_freq =   -28115.251002233475     
+
+ vp =            1 vpp =            0 ep =            2 epp =            1 trans_freq =   -19137.900227192789     
+
+ vp =            1 vpp =            0 ep =            2 epp =            2 trans_freq =   -2359.7334461733699     
+
+ vp =            1 vpp =            1 ep =            0 epp =            0 trans_freq =    0.0000000000000000     
+
+ vp =            1 vpp =            1 ep =            0 epp =            1 trans_freq =    8666.7612594738603     
+
+ vp =            1 vpp =            1 ep =            0 epp =            2 trans_freq =    25931.564078588039     
+
+ vp =            1 vpp =            1 ep =            1 epp =            0 trans_freq =   -8666.7612594738603     
+
+ vp =            1 vpp =            1 ep =            1 epp =            1 trans_freq =    0.0000000000000000     
+
+ vp =            1 vpp =            1 ep =            1 epp =            2 trans_freq =    17264.802819114178     
+
+ vp =            1 vpp =            1 ep =            2 epp =            0 trans_freq =   -25931.564078588039     
+
+ vp =            1 vpp =            1 ep =            2 epp =            1 trans_freq =   -17264.802819114178     
+
+ vp =            1 vpp =            1 ep =            2 epp =            2 trans_freq =    0.0000000000000000     
+
+ vp =            1 vpp =            2 ep =            0 epp =            0 trans_freq =    2147.2760833576322     
+
+ vp =            1 vpp =            2 ep =            0 epp =            1 trans_freq =    10497.851224329323     
+
+ vp =            1 vpp =            2 ep =            0 epp =            2 trans_freq =    28245.663921780884     
+
+ vp =            1 vpp =            2 ep =            1 epp =            0 trans_freq =   -6519.4851761162281     
+
+ vp =            1 vpp =            2 ep =            1 epp =            1 trans_freq =    1831.0899648554623     
+
+ vp =            1 vpp =            2 ep =            1 epp =            2 trans_freq =    19578.902662307024     
+
+ vp =            1 vpp =            2 ep =            2 epp =            0 trans_freq =   -23784.287995230407     
+
+ vp =            1 vpp =            2 ep =            2 epp =            1 trans_freq =   -15433.712854258716     
+
+ vp =            1 vpp =            2 ep =            2 epp =            2 trans_freq =    2314.0998431928456     
+
+ vp =            1 vpp =            3 ep =            0 epp =            0 trans_freq =    4248.1589620634913     
+
+ vp =            1 vpp =            3 ep =            0 epp =            1 trans_freq =    12311.197763122618     
+
+ vp =            1 vpp =            3 ep =            0 epp =            2 trans_freq =    30507.580161288381     
+
+ vp =            1 vpp =            3 ep =            1 epp =            0 trans_freq =   -4418.6022974103689     
+
+ vp =            1 vpp =            3 ep =            1 epp =            1 trans_freq =    3644.4365036487579     
+
+ vp =            1 vpp =            3 ep =            1 epp =            2 trans_freq =    21840.818901814520     
+
+ vp =            1 vpp =            3 ep =            2 epp =            0 trans_freq =   -21683.405116524547     
+
+ vp =            1 vpp =            3 ep =            2 epp =            1 trans_freq =   -13620.366315465420     
+
+ vp =            1 vpp =            3 ep =            2 epp =            2 trans_freq =    4576.0160827003419     
+
+ vp =            2 vpp =            0 ep =            0 epp =            0 trans_freq =   -4330.9630070030689     
+
+ vp =            2 vpp =            0 ep =            0 epp =            1 trans_freq =    4646.3877680376172     
+
+ vp =            2 vpp =            0 ep =            0 epp =            2 trans_freq =    21424.554549057037     
+
+ vp =            2 vpp =            0 ep =            1 epp =            0 trans_freq =   -12681.538147974759     
+
+ vp =            2 vpp =            0 ep =            1 epp =            1 trans_freq =   -3704.1873729340732     
+
+ vp =            2 vpp =            0 ep =            1 epp =            2 trans_freq =    13073.979408085346     
+
+ vp =            2 vpp =            0 ep =            2 epp =            0 trans_freq =   -30429.350845426321     
+
+ vp =            2 vpp =            0 ep =            2 epp =            1 trans_freq =   -21452.000070385635     
+
+ vp =            2 vpp =            0 ep =            2 epp =            2 trans_freq =   -4673.8332893662155     
+
+ vp =            2 vpp =            1 ep =            0 epp =            0 trans_freq =   -2147.2760833576322     
+
+ vp =            2 vpp =            1 ep =            0 epp =            1 trans_freq =    6519.4851761162281     
+
+ vp =            2 vpp =            1 ep =            0 epp =            2 trans_freq =    23784.287995230407     
+
+ vp =            2 vpp =            1 ep =            1 epp =            0 trans_freq =   -10497.851224329323     
+
+ vp =            2 vpp =            1 ep =            1 epp =            1 trans_freq =   -1831.0899648554623     
+
+ vp =            2 vpp =            1 ep =            1 epp =            2 trans_freq =    15433.712854258716     
+
+ vp =            2 vpp =            1 ep =            2 epp =            0 trans_freq =   -28245.663921780884     
+
+ vp =            2 vpp =            1 ep =            2 epp =            1 trans_freq =   -19578.902662307024     
+
+ vp =            2 vpp =            1 ep =            2 epp =            2 trans_freq =   -2314.0998431928456     
+
+ vp =            2 vpp =            2 ep =            0 epp =            0 trans_freq =    0.0000000000000000     
+
+ vp =            2 vpp =            2 ep =            0 epp =            1 trans_freq =    8350.5751409716904     
+
+ vp =            2 vpp =            2 ep =            0 epp =            2 trans_freq =    26098.387838423252     
+
+ vp =            2 vpp =            2 ep =            1 epp =            0 trans_freq =   -8350.5751409716904     
+
+ vp =            2 vpp =            2 ep =            1 epp =            1 trans_freq =    0.0000000000000000     
+
+ vp =            2 vpp =            2 ep =            1 epp =            2 trans_freq =    17747.812697451562     
+
+ vp =            2 vpp =            2 ep =            2 epp =            0 trans_freq =   -26098.387838423252     
+
+ vp =            2 vpp =            2 ep =            2 epp =            1 trans_freq =   -17747.812697451562     
+
+ vp =            2 vpp =            2 ep =            2 epp =            2 trans_freq =    0.0000000000000000     
+
+ vp =            2 vpp =            3 ep =            0 epp =            0 trans_freq =    2100.8828787058592     
+
+ vp =            2 vpp =            3 ep =            0 epp =            1 trans_freq =    10163.921679764986     
+
+ vp =            2 vpp =            3 ep =            0 epp =            2 trans_freq =    28360.304077930748     
+
+ vp =            2 vpp =            3 ep =            1 epp =            0 trans_freq =   -6249.6922622658312     
+
+ vp =            2 vpp =            3 ep =            1 epp =            1 trans_freq =    1813.3465387932956     
+
+ vp =            2 vpp =            3 ep =            1 epp =            2 trans_freq =    20009.728936959058     
+
+ vp =            2 vpp =            3 ep =            2 epp =            0 trans_freq =   -23997.504959717393     
+
+ vp =            2 vpp =            3 ep =            2 epp =            1 trans_freq =   -15934.466158658266     
+
+ vp =            2 vpp =            3 ep =            2 epp =            2 trans_freq =    2261.9162395074964     
+
+ vp =            3 vpp =            0 ep =            0 epp =            0 trans_freq =   -6431.8458857089281     
+
+ vp =            3 vpp =            0 ep =            0 epp =            1 trans_freq =    2545.5048893317580     
+
+ vp =            3 vpp =            0 ep =            0 epp =            2 trans_freq =    19323.671670351177     
+
+ vp =            3 vpp =            0 ep =            1 epp =            0 trans_freq =   -14494.884686768055     
+
+ vp =            3 vpp =            0 ep =            1 epp =            1 trans_freq =   -5517.5339117273688     
+
+ vp =            3 vpp =            0 ep =            1 epp =            2 trans_freq =    11260.632869292051     
+
+ vp =            3 vpp =            0 ep =            2 epp =            0 trans_freq =   -32691.267084933817     
+
+ vp =            3 vpp =            0 ep =            2 epp =            1 trans_freq =   -23713.916309893131     
+
+ vp =            3 vpp =            0 ep =            2 epp =            2 trans_freq =   -6935.7495288737118     
+
+ vp =            3 vpp =            1 ep =            0 epp =            0 trans_freq =   -4248.1589620634913     
+
+ vp =            3 vpp =            1 ep =            0 epp =            1 trans_freq =    4418.6022974103689     
+
+ vp =            3 vpp =            1 ep =            0 epp =            2 trans_freq =    21683.405116524547     
+
+ vp =            3 vpp =            1 ep =            1 epp =            0 trans_freq =   -12311.197763122618     
+
+ vp =            3 vpp =            1 ep =            1 epp =            1 trans_freq =   -3644.4365036487579     
+
+ vp =            3 vpp =            1 ep =            1 epp =            2 trans_freq =    13620.366315465420     
+
+ vp =            3 vpp =            1 ep =            2 epp =            0 trans_freq =   -30507.580161288381     
+
+ vp =            3 vpp =            1 ep =            2 epp =            1 trans_freq =   -21840.818901814520     
+
+ vp =            3 vpp =            1 ep =            2 epp =            2 trans_freq =   -4576.0160827003419     
+
+ vp =            3 vpp =            2 ep =            0 epp =            0 trans_freq =   -2100.8828787058592     
+
+ vp =            3 vpp =            2 ep =            0 epp =            1 trans_freq =    6249.6922622658312     
+
+ vp =            3 vpp =            2 ep =            0 epp =            2 trans_freq =    23997.504959717393     
+
+ vp =            3 vpp =            2 ep =            1 epp =            0 trans_freq =   -10163.921679764986     
+
+ vp =            3 vpp =            2 ep =            1 epp =            1 trans_freq =   -1813.3465387932956     
+
+ vp =            3 vpp =            2 ep =            1 epp =            2 trans_freq =    15934.466158658266     
+
+ vp =            3 vpp =            2 ep =            2 epp =            0 trans_freq =   -28360.304077930748     
+
+ vp =            3 vpp =            2 ep =            2 epp =            1 trans_freq =   -20009.728936959058     
+
+ vp =            3 vpp =            2 ep =            2 epp =            2 trans_freq =   -2261.9162395074964     
+
+ vp =            3 vpp =            3 ep =            0 epp =            0 trans_freq =    0.0000000000000000     
+
+ vp =            3 vpp =            3 ep =            0 epp =            1 trans_freq =    8063.0388010591269     
+
+ vp =            3 vpp =            3 ep =            0 epp =            2 trans_freq =    26259.421199224889     
+
+ vp =            3 vpp =            3 ep =            1 epp =            0 trans_freq =   -8063.0388010591269     
+
+ vp =            3 vpp =            3 ep =            1 epp =            1 trans_freq =    0.0000000000000000     
+
+ vp =            3 vpp =            3 ep =            1 epp =            2 trans_freq =    18196.382398165762     
+
+ vp =            3 vpp =            3 ep =            2 epp =            0 trans_freq =   -26259.421199224889     
+
+ vp =            3 vpp =            3 ep =            2 epp =            1 trans_freq =   -18196.382398165762     
+
+ vp =            3 vpp =            3 ep =            2 epp =            2 trans_freq =    0.0000000000000000     
+

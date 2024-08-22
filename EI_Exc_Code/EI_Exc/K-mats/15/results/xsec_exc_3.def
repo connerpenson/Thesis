@@ -1,0 +1,11 @@
+title=Inelastic Cross Sections from intial state 2 B2u
+x_label=Energy (eV)
+y_label=Cross Sections Å²
+y_series0=Excitation to 2 B3u
+y_series1=Excitation to 2 B2u
+y_series2=Excitation to 2 B1u
+y_series3=Excitation to 4 B1u
+y_series4=Excitation to 4 B1u
+y_series5=Excitation to 4 Au
+y_series6=Excitation to 4 B3g
+y_series7=Excitation to 4 B2g

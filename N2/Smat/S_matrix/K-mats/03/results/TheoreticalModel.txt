@@ -1,0 +1,100 @@
+================================================
+e-N2+ Scattering using the R-matrix method
+Quantemol-N (EE)
+Version 6.1
+Date and time: Wed Apr 10 13:42:17 EDT 2024
+================================================
+
+
+Point group employed: D2h
+
+Molecular charge is +1
+
+Geometry employed (quoted in Angstroms in the centre of mass frame):
+N 0.0000 0.0000 0.5262
+N 0.0000 0.0000 -0.5262
+
+
+Basis set employed: DZP
+
+
+
+Quantum chemistry method employed: Configuration Interaction (HF Orbitals)
+
+CAS used in target analysis:
+
+Frozen orbitals: 
+(1ag, 1b1u, )^4
+
+Active space: 
+(2ag, 3ag, 4ag, 1b3u, 1b2u, 2b1u, 3b1u, 1b2g, 1b3g, )^9
+
+
+Virtual molecular orbitals allocation for augmentation to the
+continuum orbitals.
+This is required for the construction of the N+1 trial eigenkets.
+
+0 virtual MOs of Ag symmetry retained
+1 virtual MOs of B3u symmetry retained
+1 virtual MOs of B2u symmetry retained
+0 virtual MOs of B1g symmetry retained
+0 virtual MOs of B1u symmetry retained
+0 virtual MOs of B2g symmetry retained
+0 virtual MOs of B3g symmetry retained
+0 virtual MOs of Au symmetry retained
+
+Scattering method employed: close coupling (CC) expansion
+
+
+Continuum orbitals: orbitals which represent the scattering electron. 
+A partial wave expansion of up to and including g-wave is employed (see Faure et. al. (2002)).
+
+
+Number of target states employed in close coupling expansion and retained in the outer region: 10
+(see SelectedTargetStates.txt in results folder for details).
+
+
+R-matrix sphere radius: 11 a_0
+R-matrix propagated to 100.1a_0
+
+
+
+Assumptions of the BEB ionisation cross section calculations:
+
+the ionisation energy of 1 is 15.396 eV by Koopman's theorem 
+
+
+Q=1 for all the bound orbitals.
+
+bound orbitals used in the computation of the BEB cross section (binding energies B and kinetic energies U
+are given in eV):
+n=1 IR=ag occ=2 B=440.544 U=601.8805999023999
+n=2 IR=ag occ=2 B=52.893 U=73.6803078436
+n=3 IR=ag occ=1 B=15.396 U=60.122560162000006
+n=1 IR=b3u occ=2 B=28.923 U=49.6388568784
+n=1 IR=b2u occ=2 B=28.923 U=49.6388568784
+n=1 IR=b1u occ=2 B=440.438 U=602.9881446296
+n=2 IR=b1u occ=2 B=31.035 U=67.52704876760001
+
+
+
+
+CORE MODEL PUBLICATIONS
+
+UK molecular R-matrix
+'UKRmol: a low-energy electron- and positron-molecule scattering suite', J Carr et al, European Physical Journal D 66 (2012) 58
+'Electron â molecule collision calculations using the R-matrix method', J Tennyson, Physics Reports 491 (2010) 29-76
+'RESON: A program for the detection and fitting of Breit-Wigner resonances', J Tennyson & CJ Noble, Computer Physics Communications 33 (1984) 421-424
+
+Basis Set
+'GTOBAS: fitting continuum functions with Gaussian-type orbitals', A Faure et al, Computer Physics Communications 144 (2002) 224-241
+
+Electron Attachment
+'A dissociative electron attachment cross-section estimator', J Munro et al, Journal of Physics: Conference Series, 388 (2012) 012013
+
+Binary Encounter Bethe (BEB) model
+'Binary Encounter Dipole model for electron impact ionization', Y Kim & M Rudd, Physical Review 50(5) (1994) 3954-3967
+
+BE-f Scaling
+'Scaling of plane-wave Born cross sections for electron-impact excitation of neutral atoms', Y Kim, Physical Review A, 64 (2001) 032713-1-032713-10
+

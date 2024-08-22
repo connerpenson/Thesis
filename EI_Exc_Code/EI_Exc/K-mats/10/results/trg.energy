@@ -1,0 +1,69 @@
+
+STATE ENERGIES FOR THE MOLECULAR TARGET ARE: 
+
+   Energy (Hartree)                     State
+
+ -108.516008729997          State No.   1 Doublet     AG        
+ -107.993862006012          State No.   2 Doublet     AG        
+ -107.977312206994          State No.   3 Doublet     AG        
+ -107.922635482215          State No.   4 Doublet     AG        
+ -107.806256215007          State No.   5 Doublet     AG        
+ -108.458062362798          State No.   6 Doublet     B3U       
+ -108.021565362239          State No.   7 Doublet     B3U       
+ -107.867745556954          State No.   8 Doublet     B3U       
+ -107.805112510518          State No.   9 Doublet     B3U       
+ -107.797018616876          State No.  10 Doublet     B3U       
+ -108.458062362798          State No.  11 Doublet     B2U       
+ -108.021565362239          State No.  12 Doublet     B2U       
+ -107.867745556954          State No.  13 Doublet     B2U       
+ -107.805112510518          State No.  14 Doublet     B2U       
+ -107.797018616876          State No.  15 Doublet     B2U       
+ -107.985079932047          State No.  16 Doublet     B1G       
+ -107.977312206993          State No.  17 Doublet     B1G       
+ -107.922635482215          State No.  18 Doublet     B1G       
+ -107.890155849998          State No.  19 Doublet     B1G       
+ -108.390547670718          State No.  20 Doublet     B1U       
+ -108.122741434158          State No.  21 Doublet     B1U       
+ -108.110066416287          State No.  22 Doublet     B1U       
+ -108.097591159140          State No.  23 Doublet     B1U       
+ -107.784915243759          State No.  24 Doublet     B1U       
+ -108.177211256883          State No.  25 Doublet     B2G       
+ -108.107308487206          State No.  26 Doublet     B2G       
+ -108.062649652688          State No.  27 Doublet     B2G       
+ -108.040086612303          State No.  28 Doublet     B2G       
+ -107.803806621463          State No.  29 Doublet     B2G       
+ -107.786106366553          State No.  30 Doublet     B2G       
+ -108.177211256883          State No.  31 Doublet     B3G       
+ -108.107308487206          State No.  32 Doublet     B3G       
+ -108.062649652688          State No.  33 Doublet     B3G       
+ -108.040086612303          State No.  34 Doublet     B3G       
+ -107.803806621463          State No.  35 Doublet     B3G       
+ -107.786106366553          State No.  36 Doublet     B3G       
+ -108.119022755471          State No.  37 Doublet     AU        
+ -108.110066416287          State No.  38 Doublet     AU        
+ -108.097591159140          State No.  39 Doublet     AU        
+ -108.071284888761          State No.  40 Doublet     AU        
+ -108.129003205749          State No.  41 Quartet     AG        
+ -108.076494020130          State No.  42 Quartet     AG        
+ -107.834022553592          State No.  43 Quartet     AG        
+ -108.159648777069          State No.  44 Quartet     B3U       
+ -107.861938110626          State No.  45 Quartet     B3U       
+ -108.159648777069          State No.  46 Quartet     B2U       
+ -107.861938110626          State No.  47 Quartet     B2U       
+ -108.076494020130          State No.  48 Quartet     B1G       
+ -108.054341719315          State No.  49 Quartet     B1G       
+ -107.834022553592          State No.  50 Quartet     B1G       
+ -107.796516651467          State No.  51 Quartet     B1G       
+ -108.242254107677          State No.  52 Quartet     B1U       
+ -108.192505659150          State No.  53 Quartet     B1U       
+ -108.145165811275          State No.  54 Quartet     B2G       
+ -107.834542005688          State No.  55 Quartet     B2G       
+ -108.145165811275          State No.  56 Quartet     B3G       
+ -107.834542005688          State No.  57 Quartet     B3G       
+ -108.192505659150          State No.  58 Quartet     AU        
+ -108.168394737917          State No.  59 Quartet     AU        
+
+See file results/SelectedTargetStates.txt for vertical excitation energies
+ of the selected states in energy order.
+
+

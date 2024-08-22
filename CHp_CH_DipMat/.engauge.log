@@ -1,0 +1,1082 @@
+06:53:42.109 INFO   - main args=engauge PotCurve_CH.dig
+06:53:42.109 INFO   - MainWindow::MainWindow curDir=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat
+06:53:42.109 INFO   - MainWindow::setCurrentFile
+06:53:42.109 INFO   - MainWindow::updateWindowTitle
+06:53:42.109 INFO   - CreateFacade::create
+06:53:42.109 INFO   - CreateIcons::create
+06:53:42.113 INFO   - CreateCentralWidget::create
+06:53:42.113 INFO   - CreateActions::create
+06:53:42.113 INFO   - CreateActions::createFile
+06:53:42.114 INFO   - CreateActions::createEdit
+06:53:42.114 INFO   - CreateActions::createDigitize
+06:53:42.114 INFO   - CreateActions::createView
+06:53:42.115 INFO   - CreateActions::createSettings
+06:53:42.115 INFO   - CreateActions::createHelp
+06:53:42.115 INFO   - CreateStatusBar::create
+06:53:42.170 INFO   - CreateMenus::create
+06:53:42.176 INFO   - MainWindow::updateRecentFileList
+06:53:42.177 INFO   - CreateToolBars::create
+06:53:42.180 INFO   - CreateDockableWidgets::create
+06:53:42.186 INFO   - FittingWindow::resizeTable
+06:53:42.187 INFO   - GeometryWindow::loadStrategies
+06:53:42.187 INFO   - GeometryWindow::initializeHeader
+06:53:42.187 INFO   - GeometryWindow::resizeTable
+06:53:42.187 INFO   - CreateHelpWindow::create
+06:53:42.189 INFO   - HelpBrowser::loadResource scheme=qthelp
+06:53:42.190 INFO   - CreateTutorial::create
+06:53:42.190 INFO   - TutorialDlg::createSceneAndView
+06:53:42.191 INFO   - TutorialStateContext::createStates
+06:53:42.191 INFO   - TutorialStateContext::requestImmediateStateTransition
+06:53:42.191 INFO   - TutorialStateIntroduction::begin ()
+06:53:42.193 INFO   - TutorialStateContext::createTimer
+06:53:42.193 INFO   - CreateScene::create
+06:53:42.194 INFO   - CreateNetwork::create
+06:53:42.212 INFO   - CreateLoadImage::create
+06:53:42.212 INFO   - CreateStateContexts::create
+06:53:42.212 INFO   - BackgroundStateContext::BackgroundStateContext
+06:53:42.212 INFO   - BackgroundStateContext::requestStateTransition
+06:53:42.212 INFO   - BackgroundStateContext::completeRequestedStateTransitionIfExists
+06:53:42.212 INFO   - BackgroundStateUnloaded::begin
+06:53:42.212 INFO   - DigitizeStateEmpty::begin
+06:53:42.212 INFO   - ViewPointStyle::unsetPointStyle
+06:53:42.212 INFO   - MainWindow::updateDigitizeStateIfSoftwareTriggered
+06:53:42.212 INFO   - CreateSettingsDialogs::create
+06:53:42.212 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsCoords
+06:53:42.212 INFO   - DlgSettingsCoords::DlgSettingsCoords
+06:53:42.212 INFO   - DlgSettingsCoords::createSubPanel
+06:53:42.212 INFO   - DlgSettingsCoords::createGroupCoordsType
+06:53:42.212 INFO   - DlgSettingsCoords::createGroupXTheta
+06:53:42.212 INFO   - DlgSettingsCoords::createGroupYRadius
+06:53:42.213 INFO   - DlgSettingsCoords::createDateTime
+06:53:42.213 INFO   - DlgSettingsCoords::createPreview
+06:53:42.216 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsCurveAddRemove
+06:53:42.216 INFO   - DlgSettingsCurveAddRemove::DlgSettingsCurveAddRemove
+06:53:42.216 INFO   - DlgSettingsCurveAddRemove::createSubPanel
+06:53:42.216 INFO   - DlgSettingsCurveAddRemove::createListCurves
+06:53:42.217 INFO   - DlgSettingsCurveAddRemove::createButtons
+06:53:42.217 INFO   - DlgSettingsCurveAddRemove::createOptionalSaveDefault
+06:53:42.217 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsCurveProperties
+06:53:42.217 INFO   - DlgSettingsCurveProperties::DlgSettingsCurveProperties
+06:53:42.217 INFO   - DlgSettingsCurveProperties::createSubPanel
+06:53:42.217 INFO   - DlgSettingsCurveProperties::createCurveName
+06:53:42.218 INFO   - DlgSettingsCurveProperties::createPoint
+06:53:42.218 INFO   - DlgSettingsCurveProperties::createLine
+06:53:42.218 INFO   - DlgSettingsCurveProperties::createPreview
+06:53:42.222 INFO   - DlgSettingsCurveProperties::createOptionalSaveDefault
+06:53:42.222 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsDigitizeCurve
+06:53:42.222 INFO   - DlgSettingsDigitizeCurve::DlgSettingsDigitizeCurve
+06:53:42.222 INFO   - DlgSettingsDigitizeCurve::createSubPanel
+06:53:42.222 INFO   - DlgSettingsDigitizeCurve::createControls
+06:53:42.223 INFO   - DlgSettingsDigitizeCurve::createPreview
+06:53:42.224 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsExportFormat
+06:53:42.224 INFO   - DlgSettingsExportFormat::DlgSettingsExportFormat
+06:53:42.224 INFO   - DlgSettingsExportFormat::createSubPanel
+06:53:42.224 INFO   - DlgSettingsExportFormat::createCurveSelection
+06:53:42.225 INFO   - DlgSettingsExportFormat::createTabWidget
+06:53:42.225 INFO   - DlgSettingsExportFormat::createFunctionsPointsSelection
+06:53:42.225 INFO   - DlgSettingsExportFormat::createRelationsPointsSelection
+06:53:42.225 INFO   - DlgSettingsExportFormat::createDelimiters
+06:53:42.225 INFO   - DlgSettingsExportFormat::createHeader
+06:53:42.225 INFO   - DlgSettingsExportFormat::createXLabel
+06:53:42.225 INFO   - DlgSettingsExportFormat::createFileLayout
+06:53:42.225 INFO   - DlgSettingsExportFormat::createPreview
+06:53:42.227 INFO   - DlgSettingsExportFormat::createOptionalSaveDefault
+06:53:42.228 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsColorFilter
+06:53:42.228 INFO   - DlgSettingsColorFilter::DlgSettingsColorFilter
+06:53:42.228 INFO   - DlgSettingsColorFilter::createSubPanel
+06:53:42.228 INFO   - DlgSettingsColorFilter::createControls
+06:53:42.228 INFO   - DlgSettingsColorFilter::createProfileAndScale
+06:53:42.228 INFO   - DlgSettingsColorFilter::createPreview
+06:53:42.229 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsAxesChecker
+06:53:42.229 INFO   - DlgSettingsAxesChecker::DlgSettingsAxesChecker
+06:53:42.229 INFO   - DlgSettingsAxesChecker::createSubPanel
+06:53:42.229 INFO   - DlgSettingsAxesChecker::createControls
+06:53:42.229 INFO   - DlgSettingsAxesChecker::createPreview
+06:53:42.229 INFO   - DlgSettingsAxesChecker::createPoints
+06:53:42.231 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsGridDisplay
+06:53:42.231 INFO   - DlgSettingsGridDisplay::DlgSettingsGridDisplay
+06:53:42.231 INFO   - DlgSettingsGridDisplay::createSubPanel
+06:53:42.231 INFO   - DlgSettingsGridDisplay::createDisplayGridLinesX
+06:53:42.231 INFO   - DlgSettingsGridDisplay::createDisplayGridLinesY
+06:53:42.231 INFO   - DlgSettingsGridDisplay::createDisplayCommon
+06:53:42.231 INFO   - DlgSettingsGridDisplay::createPreview
+06:53:42.233 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsGridRemoval
+06:53:42.233 INFO   - DlgSettingsGridRemoval::DlgSettingsGridRemoval
+06:53:42.233 INFO   - DlgSettingsGridRemoval::createSubPanel
+06:53:42.233 INFO   - DlgSettingsGridRemoval::createRemoveGridLines
+06:53:42.234 INFO   - DlgSettingsGridRemoval::createRemoveGridLinesX
+06:53:42.234 INFO   - DlgSettingsGridRemoval::createRemoveGridLinesY
+06:53:42.234 INFO   - DlgSettingsGridRemoval::createPreview
+06:53:42.236 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsPointMatch
+06:53:42.236 INFO   - DlgSettingsPointMatch::DlgSettingsPointMatch
+06:53:42.236 INFO   - DlgSettingsPointMatch::createSubPanel
+06:53:42.236 INFO   - DlgSettingsPointMatch::createControls
+06:53:42.236 INFO   - DlgSettingsPointMatch::createPreview
+06:53:42.236 INFO   - DlgSettingsPointMatch::createTemplate
+06:53:42.238 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsSegments
+06:53:42.238 INFO   - DlgSettingsSegments::DlgSettingsSegments
+06:53:42.238 INFO   - DlgSettingsSegments::createSubPanel
+06:53:42.238 INFO   - DlgSettingsSegments::createControls
+06:53:42.238 INFO   - DlgSettingsSegments::createPreview
+06:53:42.238 INFO   - DlgSettingsSegments::createPreviewImage
+06:53:42.240 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsGeneral
+06:53:42.240 INFO   - DlgSettingsGeneral::DlgSettingsGeneral
+06:53:42.240 INFO   - DlgSettingsGeneral::createSubPanel
+06:53:42.240 INFO   - DlgSettingsGeneral::createControls
+06:53:42.240 INFO   - DlgSettingsGeneral::createOptionalSaveDefault
+06:53:42.241 INFO   - DlgSettingsAbstractBase::DlgSettingsAbstractBase name=DlgSettingsMainWindow
+06:53:42.241 INFO   - DlgSettingsMainWindow::DlgSettingsMainWindow
+06:53:42.241 INFO   - DlgSettingsMainWindow::createSubPanel
+06:53:42.241 INFO   - DlgSettingsMainWindow::createControls
+06:53:42.246 INFO   - DlgSettingsMainWindow::createOptionalSaveDefault
+06:53:42.246 INFO   - CreateCommandStackShadow::create
+06:53:42.246 INFO   - CmdStackShadow::CmdStackShadow
+06:53:42.246 INFO   - CreateZoomMaps::create
+06:53:42.246 INFO   - MainWindow::updateControls selectedItems=0
+06:53:42.246 INFO   - MainWindow::slotViewToolBarChecklistGuide
+06:53:42.246 INFO   - MainWindow::slotCmbBackground
+06:53:42.246 INFO   - BackgroundStateContext::setBackgroundImage background=Original
+06:53:42.246 INFO   - BackgroundStateContext::requestStateTransition
+06:53:42.246 INFO   - BackgroundStateContext::completeRequestedStateTransitionIfExists
+06:53:42.246 INFO   - BackgroundStateUnloaded::end
+06:53:42.246 INFO   - BackgroundStateOriginal::begin
+06:53:42.246 INFO   - MainWindow::slotViewZoom
+06:53:42.246 INFO   - MainWindow::slotViewZoomFactor
+06:53:42.246 INFO   - StatusBar::slotZoom zoom=11
+06:53:42.246 INFO   - MainWindow::slotViewZoom
+06:53:42.246 INFO   - MainWindow::slotViewZoomFactor
+06:53:42.246 INFO   - StatusBar::slotZoom zoom=11
+06:53:42.246 INFO   - MainWindow::updateSettingsMainWindow
+06:53:42.246 INFO   - MainWindow::updateWindowTitle
+06:53:42.246 INFO   - MainWindow::updateFittingWindow
+06:53:42.246 INFO   - MainWindow::updateGeometryWindow
+06:53:42.246 INFO   - MainWindow::setCurrentFile
+06:53:42.246 INFO   - MainWindow::updateWindowTitle
+06:53:42.719 INFO   - MainWindow::showEvent files=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig
+06:53:43.168 INFO   - MainWindow::slotLoadStartupFiles
+06:53:43.168 INFO   - LoadFileInfo::loadsAsDigFile
+06:53:43.168 INFO   - CoordSystemContext::CoordSystemContext
+06:53:43.168 INFO   - Document::Document fileName=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig
+06:53:43.168 INFO   - Document::bytesIndicatePreVersion6
+06:53:43.168 INFO   - Document::versionFromFile
+06:53:43.170 INFO   - Document::loadVersions7AndUp
+06:53:43.170 INFO   - Document::generateEmptyPixmap
+06:53:43.170 INFO   - Document::loadImage
+06:53:43.178 INFO   - CoordSystemContext::addCoordSystems numberToAdd=1
+06:53:43.178 INFO   - CoordSystem::CoordSystem
+06:53:43.178 INFO   - CoordSystemContext::loadVersion7AndUp
+06:53:43.178 INFO   - CoordSystem::loadVersions7AndUp
+06:53:43.178 INFO   - DocumentModelGeneral::loadXml
+06:53:43.178 INFO   - DocumentModelCoords::loadXml
+06:53:43.178 INFO   - DocumentModelDigitizeCurve::loadXml
+06:53:43.178 INFO   - DocumentModelExportFormat::loadXml
+06:53:43.178 INFO   - DocumentModelAxesChecker::loadXml
+06:53:43.178 INFO   - DocumentModelGridDisplay::loadXml
+06:53:43.178 INFO   - DocumentModelGridRemoval::loadXml
+06:53:43.178 INFO   - DocumentModelPointMatch::loadXml
+06:53:43.178 INFO   - DocumentModelSegments::loadXml
+06:53:43.178 INFO   - Curve::loadXml
+06:53:43.178 INFO   - ColorFilterSettings::loadXml
+06:53:43.178 INFO   - CurveStyle::loadXml
+06:53:43.178 INFO   - LineStyle::loadXml
+06:53:43.178 INFO   - PointStyle::loadXml
+06:53:43.178 INFO   - Curve::loadCurvePoints
+06:53:43.178 INFO   - Point::loadXml
+06:53:43.178 INFO   - Point::loadXml identifier=Axes	point	1 identifierIndex=57 posScreen=(89.2913, 91.8708) posGraph=(1, 0) ordinal=1
+06:53:43.178 INFO   - Point::loadXml
+06:53:43.178 INFO   - Point::loadXml identifier=Axes	point	3 identifierIndex=57 posScreen=(90.085, 547.058) posGraph=(1, -0.4) ordinal=2
+06:53:43.178 INFO   - Point::loadXml
+06:53:43.178 INFO   - Point::loadXml identifier=Axes	point	56 identifierIndex=57 posScreen=(158.939, 547.554) posGraph=(3, -0.4) ordinal=3
+06:53:43.178 INFO   - CurvesGraphs::loadXml
+06:53:43.178 INFO   - Curve::loadXml
+06:53:43.178 INFO   - ColorFilterSettings::loadXml
+06:53:43.179 INFO   - CurveStyle::loadXml
+06:53:43.179 INFO   - LineStyle::loadXml
+06:53:43.179 INFO   - PointStyle::loadXml
+06:53:43.179 INFO   - Curve::loadCurvePoints
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	5 identifierIndex=57 posScreen=(105.761, 444.671) posGraph=(0, 0) ordinal=0
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	6 identifierIndex=57 posScreen=(109.332, 493.086) posGraph=(0, 0) ordinal=1
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	7 identifierIndex=57 posScreen=(112.904, 526.422) posGraph=(0, 0) ordinal=2
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	8 identifierIndex=57 posScreen=(114.888, 538.526) posGraph=(0, 0) ordinal=3
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	9 identifierIndex=57 posScreen=(116.277, 548.645) posGraph=(0, 0) ordinal=4
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	10 identifierIndex=57 posScreen=(118.261, 556.582) posGraph=(0, 0) ordinal=5
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	11 identifierIndex=57 posScreen=(120.047, 561.742) posGraph=(0, 0) ordinal=6
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	12 identifierIndex=57 posScreen=(121.833, 566.305) posGraph=(0, 0) ordinal=7
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	13 identifierIndex=57 posScreen=(123.619, 569.083) posGraph=(0, 0) ordinal=8
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	14 identifierIndex=57 posScreen=(124.809, 570.869) posGraph=(0, 0) ordinal=9
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	15 identifierIndex=57 posScreen=(125.603, 571.464) posGraph=(0, 0) ordinal=10
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	16 identifierIndex=57 posScreen=(126.397, 572.06) posGraph=(0, 0) ordinal=11
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	17 identifierIndex=57 posScreen=(127.389, 572.457) posGraph=(0, 0) ordinal=12
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	18 identifierIndex=57 posScreen=(127.984, 572.655) posGraph=(0, 0) ordinal=13
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	19 identifierIndex=57 posScreen=(128.579, 572.258) posGraph=(0, 0) ordinal=14
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	20 identifierIndex=57 posScreen=(129.175, 571.861) posGraph=(0, 0) ordinal=15
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	21 identifierIndex=57 posScreen=(129.77, 571.464) posGraph=(0, 0) ordinal=16
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	22 identifierIndex=57 posScreen=(130.564, 570.472) posGraph=(0, 0) ordinal=17
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	23 identifierIndex=57 posScreen=(131.357, 569.679) posGraph=(0, 0) ordinal=18
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	24 identifierIndex=57 posScreen=(133.143, 568.091) posGraph=(0, 0) ordinal=19
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	25 identifierIndex=57 posScreen=(134.532, 566.702) posGraph=(0, 0) ordinal=20
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	26 identifierIndex=57 posScreen=(136.12, 564.718) posGraph=(0, 0) ordinal=21
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	27 identifierIndex=57 posScreen=(137.31, 562.337) posGraph=(0, 0) ordinal=22
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	28 identifierIndex=57 posScreen=(138.898, 558.765) posGraph=(0, 0) ordinal=23
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	29 identifierIndex=57 posScreen=(141.279, 555.194) posGraph=(0, 0) ordinal=24
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	30 identifierIndex=57 posScreen=(142.271, 552.019) posGraph=(0, 0) ordinal=25
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	31 identifierIndex=57 posScreen=(144.057, 548.05) posGraph=(0, 0) ordinal=26
+06:53:43.179 INFO   - Point::loadXml
+06:53:43.179 INFO   - Point::loadXml identifier=CH_Potential	point	32 identifierIndex=57 posScreen=(147.43, 539.518) posGraph=(0, 0) ordinal=27
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	33 identifierIndex=57 posScreen=(150.605, 531.978) posGraph=(0, 0) ordinal=28
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	34 identifierIndex=57 posScreen=(154.176, 523.842) posGraph=(0, 0) ordinal=29
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	35 identifierIndex=57 posScreen=(157.946, 515.31) posGraph=(0, 0) ordinal=30
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	36 identifierIndex=57 posScreen=(161.121, 507.373) posGraph=(0, 0) ordinal=31
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	37 identifierIndex=57 posScreen=(165.09, 500.23) posGraph=(0, 0) ordinal=32
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	38 identifierIndex=57 posScreen=(167.868, 492.69) posGraph=(0, 0) ordinal=33
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	39 identifierIndex=57 posScreen=(171.638, 485.348) posGraph=(0, 0) ordinal=34
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	40 identifierIndex=57 posScreen=(174.813, 479.197) posGraph=(0, 0) ordinal=35
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	41 identifierIndex=57 posScreen=(178.384, 473.046) posGraph=(0, 0) ordinal=36
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	42 identifierIndex=57 posScreen=(181.757, 468.085) posGraph=(0, 0) ordinal=37
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	43 identifierIndex=57 posScreen=(184.932, 461.934) posGraph=(0, 0) ordinal=38
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	44 identifierIndex=57 posScreen=(188.305, 457.37) posGraph=(0, 0) ordinal=39
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	45 identifierIndex=57 posScreen=(192.869, 452.409) posGraph=(0, 0) ordinal=40
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	46 identifierIndex=57 posScreen=(198.822, 445.068) posGraph=(0, 0) ordinal=41
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	47 identifierIndex=57 posScreen=(205.568, 439.115) posGraph=(0, 0) ordinal=42
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	48 identifierIndex=57 posScreen=(212.315, 434.948) posGraph=(0, 0) ordinal=43
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	49 identifierIndex=57 posScreen=(219.458, 430.979) posGraph=(0, 0) ordinal=44
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	50 identifierIndex=57 posScreen=(226.006, 428.201) posGraph=(0, 0) ordinal=45
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	51 identifierIndex=57 posScreen=(260.532, 422.646) posGraph=(0, 0) ordinal=46
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	52 identifierIndex=57 posScreen=(294.86, 420.661) posGraph=(0, 0) ordinal=47
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	53 identifierIndex=57 posScreen=(329.584, 420.661) posGraph=(0, 0) ordinal=48
+06:53:43.180 INFO   - Point::loadXml
+06:53:43.180 INFO   - Point::loadXml identifier=CH_Potential	point	54 identifierIndex=57 posScreen=(364.904, 420.661) posGraph=(0, 0) ordinal=49
+06:53:43.180 INFO   - CoordSystemContext::~CoordSystemContext
+06:53:43.180 INFO   - MainWindow::loadDocumentFile fileName=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig
+06:53:43.181 INFO   - CoordSystemContext::CoordSystemContext
+06:53:43.181 INFO   - Document::Document fileName=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig
+06:53:43.181 INFO   - Document::bytesIndicatePreVersion6
+06:53:43.181 INFO   - Document::versionFromFile
+06:53:43.184 INFO   - Document::loadVersions7AndUp
+06:53:43.184 INFO   - Document::generateEmptyPixmap
+06:53:43.184 INFO   - Document::loadImage
+06:53:43.191 INFO   - CoordSystemContext::addCoordSystems numberToAdd=1
+06:53:43.191 INFO   - CoordSystem::CoordSystem
+06:53:43.191 INFO   - CoordSystemContext::loadVersion7AndUp
+06:53:43.191 INFO   - CoordSystem::loadVersions7AndUp
+06:53:43.191 INFO   - DocumentModelGeneral::loadXml
+06:53:43.191 INFO   - DocumentModelCoords::loadXml
+06:53:43.191 INFO   - DocumentModelDigitizeCurve::loadXml
+06:53:43.191 INFO   - DocumentModelExportFormat::loadXml
+06:53:43.192 INFO   - DocumentModelAxesChecker::loadXml
+06:53:43.192 INFO   - DocumentModelGridDisplay::loadXml
+06:53:43.192 INFO   - DocumentModelGridRemoval::loadXml
+06:53:43.192 INFO   - DocumentModelPointMatch::loadXml
+06:53:43.192 INFO   - DocumentModelSegments::loadXml
+06:53:43.192 INFO   - Curve::loadXml
+06:53:43.192 INFO   - ColorFilterSettings::loadXml
+06:53:43.192 INFO   - CurveStyle::loadXml
+06:53:43.192 INFO   - LineStyle::loadXml
+06:53:43.192 INFO   - PointStyle::loadXml
+06:53:43.192 INFO   - Curve::loadCurvePoints
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=Axes	point	1 identifierIndex=57 posScreen=(89.2913, 91.8708) posGraph=(1, 0) ordinal=1
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=Axes	point	3 identifierIndex=57 posScreen=(90.085, 547.058) posGraph=(1, -0.4) ordinal=2
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=Axes	point	56 identifierIndex=57 posScreen=(158.939, 547.554) posGraph=(3, -0.4) ordinal=3
+06:53:43.192 INFO   - CurvesGraphs::loadXml
+06:53:43.192 INFO   - Curve::loadXml
+06:53:43.192 INFO   - ColorFilterSettings::loadXml
+06:53:43.192 INFO   - CurveStyle::loadXml
+06:53:43.192 INFO   - LineStyle::loadXml
+06:53:43.192 INFO   - PointStyle::loadXml
+06:53:43.192 INFO   - Curve::loadCurvePoints
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	5 identifierIndex=57 posScreen=(105.761, 444.671) posGraph=(0, 0) ordinal=0
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	6 identifierIndex=57 posScreen=(109.332, 493.086) posGraph=(0, 0) ordinal=1
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	7 identifierIndex=57 posScreen=(112.904, 526.422) posGraph=(0, 0) ordinal=2
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	8 identifierIndex=57 posScreen=(114.888, 538.526) posGraph=(0, 0) ordinal=3
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	9 identifierIndex=57 posScreen=(116.277, 548.645) posGraph=(0, 0) ordinal=4
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	10 identifierIndex=57 posScreen=(118.261, 556.582) posGraph=(0, 0) ordinal=5
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	11 identifierIndex=57 posScreen=(120.047, 561.742) posGraph=(0, 0) ordinal=6
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	12 identifierIndex=57 posScreen=(121.833, 566.305) posGraph=(0, 0) ordinal=7
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	13 identifierIndex=57 posScreen=(123.619, 569.083) posGraph=(0, 0) ordinal=8
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	14 identifierIndex=57 posScreen=(124.809, 570.869) posGraph=(0, 0) ordinal=9
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	15 identifierIndex=57 posScreen=(125.603, 571.464) posGraph=(0, 0) ordinal=10
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	16 identifierIndex=57 posScreen=(126.397, 572.06) posGraph=(0, 0) ordinal=11
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	17 identifierIndex=57 posScreen=(127.389, 572.457) posGraph=(0, 0) ordinal=12
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	18 identifierIndex=57 posScreen=(127.984, 572.655) posGraph=(0, 0) ordinal=13
+06:53:43.192 INFO   - Point::loadXml
+06:53:43.192 INFO   - Point::loadXml identifier=CH_Potential	point	19 identifierIndex=57 posScreen=(128.579, 572.258) posGraph=(0, 0) ordinal=14
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	20 identifierIndex=57 posScreen=(129.175, 571.861) posGraph=(0, 0) ordinal=15
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	21 identifierIndex=57 posScreen=(129.77, 571.464) posGraph=(0, 0) ordinal=16
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	22 identifierIndex=57 posScreen=(130.564, 570.472) posGraph=(0, 0) ordinal=17
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	23 identifierIndex=57 posScreen=(131.357, 569.679) posGraph=(0, 0) ordinal=18
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	24 identifierIndex=57 posScreen=(133.143, 568.091) posGraph=(0, 0) ordinal=19
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	25 identifierIndex=57 posScreen=(134.532, 566.702) posGraph=(0, 0) ordinal=20
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	26 identifierIndex=57 posScreen=(136.12, 564.718) posGraph=(0, 0) ordinal=21
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	27 identifierIndex=57 posScreen=(137.31, 562.337) posGraph=(0, 0) ordinal=22
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	28 identifierIndex=57 posScreen=(138.898, 558.765) posGraph=(0, 0) ordinal=23
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	29 identifierIndex=57 posScreen=(141.279, 555.194) posGraph=(0, 0) ordinal=24
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	30 identifierIndex=57 posScreen=(142.271, 552.019) posGraph=(0, 0) ordinal=25
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	31 identifierIndex=57 posScreen=(144.057, 548.05) posGraph=(0, 0) ordinal=26
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	32 identifierIndex=57 posScreen=(147.43, 539.518) posGraph=(0, 0) ordinal=27
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	33 identifierIndex=57 posScreen=(150.605, 531.978) posGraph=(0, 0) ordinal=28
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	34 identifierIndex=57 posScreen=(154.176, 523.842) posGraph=(0, 0) ordinal=29
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	35 identifierIndex=57 posScreen=(157.946, 515.31) posGraph=(0, 0) ordinal=30
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	36 identifierIndex=57 posScreen=(161.121, 507.373) posGraph=(0, 0) ordinal=31
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	37 identifierIndex=57 posScreen=(165.09, 500.23) posGraph=(0, 0) ordinal=32
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	38 identifierIndex=57 posScreen=(167.868, 492.69) posGraph=(0, 0) ordinal=33
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	39 identifierIndex=57 posScreen=(171.638, 485.348) posGraph=(0, 0) ordinal=34
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	40 identifierIndex=57 posScreen=(174.813, 479.197) posGraph=(0, 0) ordinal=35
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	41 identifierIndex=57 posScreen=(178.384, 473.046) posGraph=(0, 0) ordinal=36
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	42 identifierIndex=57 posScreen=(181.757, 468.085) posGraph=(0, 0) ordinal=37
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	43 identifierIndex=57 posScreen=(184.932, 461.934) posGraph=(0, 0) ordinal=38
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	44 identifierIndex=57 posScreen=(188.305, 457.37) posGraph=(0, 0) ordinal=39
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	45 identifierIndex=57 posScreen=(192.869, 452.409) posGraph=(0, 0) ordinal=40
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	46 identifierIndex=57 posScreen=(198.822, 445.068) posGraph=(0, 0) ordinal=41
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	47 identifierIndex=57 posScreen=(205.568, 439.115) posGraph=(0, 0) ordinal=42
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	48 identifierIndex=57 posScreen=(212.315, 434.948) posGraph=(0, 0) ordinal=43
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.193 INFO   - Point::loadXml identifier=CH_Potential	point	49 identifierIndex=57 posScreen=(219.458, 430.979) posGraph=(0, 0) ordinal=44
+06:53:43.193 INFO   - Point::loadXml
+06:53:43.194 INFO   - Point::loadXml identifier=CH_Potential	point	50 identifierIndex=57 posScreen=(226.006, 428.201) posGraph=(0, 0) ordinal=45
+06:53:43.194 INFO   - Point::loadXml
+06:53:43.194 INFO   - Point::loadXml identifier=CH_Potential	point	51 identifierIndex=57 posScreen=(260.532, 422.646) posGraph=(0, 0) ordinal=46
+06:53:43.194 INFO   - Point::loadXml
+06:53:43.194 INFO   - Point::loadXml identifier=CH_Potential	point	52 identifierIndex=57 posScreen=(294.86, 420.661) posGraph=(0, 0) ordinal=47
+06:53:43.194 INFO   - Point::loadXml
+06:53:43.194 INFO   - Point::loadXml identifier=CH_Potential	point	53 identifierIndex=57 posScreen=(329.584, 420.661) posGraph=(0, 0) ordinal=48
+06:53:43.194 INFO   - Point::loadXml
+06:53:43.194 INFO   - Point::loadXml identifier=CH_Potential	point	54 identifierIndex=57 posScreen=(364.904, 420.661) posGraph=(0, 0) ordinal=49
+06:53:43.194 INFO   - CmdMediator::CmdMediator filename=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig
+06:53:43.194 INFO   - MainWindow::rebuildRecentFileListForCurrentFile
+06:53:43.194 INFO   - MainWindow::updateRecentFileList
+06:53:43.244 INFO   - MainWindow::setupAfterLoadNewDocument file=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.dig message=File opened importType=0
+06:53:43.244 INFO   - DigitizeStateContext::resetOnLoad
+06:53:43.244 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.244 INFO   - BackgroundStateContext::setCurveSelected curve=
+06:53:43.244 INFO   - BackgroundStateCurve::setCurveSelected curve=
+06:53:43.244 INFO   - BackgroundStateCurve::processImageFromSavedInputs
+06:53:43.244 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(0x0)
+06:53:43.244 INFO   - BackgroundStateNone::setCurveSelected
+06:53:43.245 INFO   - BackgroundStateOriginal::setCurveSelected
+06:53:43.245 INFO   - BackgroundStateUnloaded::setCurveSelected
+06:53:43.245 INFO   - Document::curvesGraphsNames
+06:53:43.245 INFO   - CoordSystemContext::curvesGraphsNames
+06:53:43.245 INFO   - MainWindow::setPixmap
+06:53:43.245 INFO   - DigitizeStateContext::setImageIsLoaded
+06:53:43.245 INFO   - DigitizeStateContext::setCursor
+06:53:43.245 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.245 INFO   - BackgroundStateContext::setPixmap image=497x655 currentState=BackgroundStateOriginal
+06:53:43.245 INFO   - BackgroundStateCurve::setPixmap
+06:53:43.245 INFO   - BackgroundStateCurve::processImageFromSavedInputs
+06:53:43.245 INFO   - DocumentModelColorFilter::high curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.245 INFO   - DocumentModelColorFilter::low curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.265 INFO   - GridRemoval::remove transformationIsDefined=false removeDefinedGridLines=false
+06:53:43.265 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.265 INFO   - BackgroundStateNone::setPixmap
+06:53:43.266 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.266 INFO   - BackgroundStateOriginal::setPixmap
+06:53:43.266 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.266 INFO   - BackgroundStateUnloaded::setPixmap
+06:53:43.266 INFO   - Transformation::resetOnLoad
+06:53:43.266 INFO   - TransformationStateContext::resetOnLoad
+06:53:43.266 INFO   - GraphicsLinesForCurves::resetOnLoad
+06:53:43.266 INFO   - GraphicsScene::resetOnLoad itemsBefore=4 itemsAfter=4
+06:53:43.266 INFO   - MainWindow::loadCurveListFromCmdMediator
+06:53:43.266 INFO   - Document::curvesGraphsNames
+06:53:43.266 INFO   - CoordSystemContext::curvesGraphsNames
+06:53:43.266 INFO   - MainWindow::loadCoordSystemListFromCmdMediator
+06:53:43.266 INFO   - Document::coordSystemCount
+06:53:43.266 INFO   - MainWindow::updateViewsOfSettings
+06:53:43.266 INFO   - ViewPointStyle::unsetPointStyle
+06:53:43.266 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.266 INFO   - BackgroundStateContext::setCurveSelected curve=CH_Potential
+06:53:43.266 INFO   - BackgroundStateCurve::setCurveSelected curve=CH_Potential
+06:53:43.266 INFO   - BackgroundStateCurve::processImageFromSavedInputs
+06:53:43.266 INFO   - DocumentModelColorFilter::high curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.266 INFO   - DocumentModelColorFilter::low curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.280 INFO   - GridRemoval::remove transformationIsDefined=false removeDefinedGridLines=false
+06:53:43.280 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.280 INFO   - BackgroundStateNone::setCurveSelected
+06:53:43.280 INFO   - BackgroundStateOriginal::setCurveSelected
+06:53:43.280 INFO   - BackgroundStateUnloaded::setCurveSelected
+06:53:43.280 INFO   - BackgroundStateContext::setBackgroundImage background=Original
+06:53:43.280 INFO   - BackgroundStateContext::requestStateTransition
+06:53:43.280 INFO   - BackgroundStateContext::completeRequestedStateTransitionIfExists
+06:53:43.280 INFO   - MainWindow::slotViewZoom
+06:53:43.280 INFO   - MainWindow::slotViewZoomFactor
+06:53:43.280 INFO   - StatusBar::slotZoom zoom=11
+06:53:43.280 INFO   - MainWindow::setCurrentFile
+06:53:43.280 INFO   - MainWindow::updateWindowTitle
+06:53:43.280 INFO   - MainWindow::saveStartingDocumentSnapshot
+06:53:43.300 INFO   - CoordSystemContext::saveXml
+06:53:43.300 INFO   - DocumentModelGeneral::saveXml
+06:53:43.300 INFO   - DocumentModelCoords::saveXml
+06:53:43.300 INFO   - DocumentModelDigitizeCurve::saveXml
+06:53:43.300 INFO   - DocumentModelExportFormat::saveXml
+06:53:43.300 INFO   - DocumentModelAxesChecker::saveXml
+06:53:43.300 INFO   - DocumentModelGridDisplay::saveXml
+06:53:43.300 INFO   - DocumentModelGridRemoval::saveXml
+06:53:43.300 INFO   - DocumentModelPointMatch::saveXml
+06:53:43.300 INFO   - DocumentModelSegments::saveXml
+06:53:43.300 INFO   - Curve::saveXml
+06:53:43.300 INFO   - ColorFilterSettings::saveXml
+06:53:43.300 INFO   - CurveStyle::saveXml
+06:53:43.301 INFO   - LineStyle::saveXml
+06:53:43.301 INFO   - PointStyle::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - CurvesGraphs::saveXml
+06:53:43.301 INFO   - Curve::saveXml
+06:53:43.301 INFO   - ColorFilterSettings::saveXml
+06:53:43.301 INFO   - CurveStyle::saveXml
+06:53:43.301 INFO   - LineStyle::saveXml
+06:53:43.301 INFO   - PointStyle::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - Point::saveXml
+06:53:43.301 INFO   - MainWindow::updateAfterCommand
+06:53:43.301 INFO   - MainWindow::updateAfterCommandStatusBarCoords
+06:53:43.301 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.301 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.301 INFO   - Transformation::calculateTransformFromLinearCartesianPoints
+06:53:43.301 INFO   - Transformation::updateTransformFromMatrices matrixScreen=
+                     89.2913         90.085        158.939
+                     91.8708        547.058        547.554
+                           1              1              1  matrixGraphRaw=
+                           1              1              3
+                           0           -0.4           -0.4
+                           1              1              1  matrixGraphLinear=
+                           1              1              3
+                           0           -0.4           -0.4
+                           1              1              1
+ originalScreen0=(89.2913, 91.8708)
+ originalScreen1=(90.085, 547.058)
+ originalScreen2=(158.939, 547.554)
+ roundTripScreen0=(89.2913, 91.8708)
+ roundTripScreen1=(90.085, 547.058)
+ roundTripScreen2=(158.939, 547.554)
+
+06:53:43.301 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.301 INFO   - BackgroundStateContext::setCurveSelected curve=CH_Potential
+06:53:43.301 INFO   - BackgroundStateCurve::setCurveSelected curve=CH_Potential
+06:53:43.301 INFO   - BackgroundStateCurve::processImageFromSavedInputs
+06:53:43.302 INFO   - DocumentModelColorFilter::high curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.302 INFO   - DocumentModelColorFilter::low curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.316 INFO   - GridRemoval::remove transformationIsDefined=true removeDefinedGridLines=false
+06:53:43.316 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.316 INFO   - BackgroundStateNone::setCurveSelected
+06:53:43.316 INFO   - BackgroundStateOriginal::setCurveSelected
+06:53:43.316 INFO   - BackgroundStateUnloaded::setCurveSelected
+06:53:43.316 INFO   - MainWindow::updateGridLines
+06:53:43.316 INFO   - TransformationStateContext::triggerStateTransition
+06:53:43.316 INFO   - TransformationStateDefined::begin
+06:53:43.316 INFO   - TransformationStateDefined::initializeModelGridRemoval
+06:53:43.316 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.316 INFO   - DocumentModelColorFilter::high curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.316 INFO   - DocumentModelColorFilter::low curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.329 INFO   - GridRemoval::remove transformationIsDefined=true removeDefinedGridLines=false
+06:53:43.329 INFO   - GridClassifier::classify
+06:53:43.329 INFO   - GridClassifier::computeGraphCoordinateLimits
+06:53:43.329 INFO   - GridClassifier::initializeHistogramBins
+06:53:43.329 INFO   - GridClassifier::populateHistogramBins
+06:53:43.336 INFO   - GridClassifier::searchStartStepSpace
+06:53:43.351 INFO   - GridClassifier::searchStartStepSpace
+06:53:43.367 INFO   - GridClassifier::searchCountSpace start=88 step=34
+06:53:43.368 INFO   - GridClassifier::searchCountSpace start=56 step=41
+06:53:43.369 INFO   - Document::setModelGridRemoval
+06:53:43.369 INFO   - CoordSystemContext::setModelGridRemoval
+06:53:43.369 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.369 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.370 INFO   - Checker::prepareForDisplay  transformation=Transformation
+  affine=no matrix=(0.0290473, -5.06492e-05, -1.58902, 6.33035e-06, -0.00087877, 0.0801681, 0, 1.52466e-19, 1)
+06:53:43.370 INFO   - Checker::adjustPolarAngleRanges transformation=Transformation
+  affine=no matrix=(0.0290473, -5.06492e-05, -1.58902, 6.33035e-06, -0.00087877, 0.0801681, 0, 1.52466e-19, 1)
+06:53:43.370 INFO   - Checker::adjustPolarAngleRanges path=()
+06:53:43.370 INFO   - TransformationStateDefined::startTimer
+06:53:43.401 INFO   - GraphicsScene::updateAfterCommand
+06:53:43.401 INFO   - GraphicsLinesForCurves::updateHighlightOpacity highlightOpacity=0.35
+06:53:43.401 INFO   - GraphicsScene::updateCurves
+06:53:43.401 INFO   - Document::curvesGraphsNames
+06:53:43.401 INFO   - CoordSystemContext::curvesGraphsNames
+06:53:43.401 INFO   - GraphicsLinesForCurves::addRemoveCurves curveCount=0
+06:53:43.401 INFO   - GraphicsScene::updatePointMembership
+06:53:43.401 INFO   - GraphicsLinesForCurves::lineMembershipReset
+06:53:43.401 INFO   - GraphicsLinesForCurve::lineMembershipReset curve=Axes
+06:53:43.401 INFO   - GraphicsLinesForCurve::lineMembershipReset curve=CH_Potential
+06:53:43.401 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.401 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.401 INFO   - GraphicsScene::createPoint identifier=Axes	point	1
+06:53:43.401 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.401 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsScene::createPoint identifier=Axes	point	3
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsScene::createPoint identifier=Axes	point	56
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - Document::iterateThroughCurvesPointsGraphs
+06:53:43.402 INFO   - CoordSystemContext::iterateThroughCurvesPointsGraphs
+06:53:43.402 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	5
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.402 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	6
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	7
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	8
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	9
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.403 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	10
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	11
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	12
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	13
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.404 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	14
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	15
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	16
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	17
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.405 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	18
+06:53:43.405 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	19
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	20
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	21
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.406 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	22
+06:53:43.406 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	23
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	24
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	25
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.407 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	26
+06:53:43.407 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	27
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	28
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	29
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	30
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.408 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	31
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	32
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	33
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	34
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.409 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	35
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	36
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	37
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	38
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.410 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	39
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	40
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	41
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	42
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.411 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	43
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	44
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	45
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	46
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	47
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	48
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	49
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.412 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	50
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	51
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	52
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	53
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsScene::createPoint identifier=CH_Potential	point	54
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.413 INFO   - GraphicsLinesForCurves::lineMembershipPurge
+06:53:43.413 INFO   - GraphicsLinesForCurve::lineMembershipPurge curve=Axes
+06:53:43.413 INFO   - GraphicsLinesForCurve::renumberOrdinals
+06:53:43.413 INFO   - GraphicsLinesForCurve::updateGraphicsLinesToMatchGraphicsPoints numberPoints=3 ordinalRenumbering=true
+06:53:43.413 INFO   - GraphicsLinesForCurve::lineMembershipPurge curve=CH_Potential
+06:53:43.413 INFO   - GraphicsLinesForCurve::updateGraphicsLinesToMatchGraphicsPoints numberPoints=50 ordinalRenumbering=false
+06:53:43.413 INFO   - GraphicsLinesForCurve::drawLinesSmooth curve=CH_Potential
+06:53:43.413 INFO   - DigitizeStateEmpty::updateAfterPointAddition
+06:53:43.413 INFO   - MainWindow::updateControls selectedItems=0
+06:53:43.413 INFO   - CmdStackShadow::canRedo
+06:53:43.413 INFO   - MainWindow::updateChecklistGuide
+06:53:43.413 INFO   - ChecklistGuide::update
+06:53:43.413 INFO   - ChecklistGuideBrowser::update
+06:53:43.413 INFO   - ChecklistGuideBrowser::repopulateCheckedTags
+06:53:43.413 INFO   - Document::curveAxes
+06:53:43.413 INFO   - CoordSystemContext::curveAxes
+06:53:43.413 INFO   - Document::curveAxes
+06:53:43.413 INFO   - CoordSystemContext::curveAxes
+06:53:43.413 INFO   - Document::curveAxes
+06:53:43.413 INFO   - CoordSystemContext::curveAxes
+06:53:43.414 INFO   - ChecklistGuideBrowser::refresh
+06:53:43.414 INFO   - ChecklistGuideBrowser::processAhrefs
+06:53:43.414 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.414 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.414 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.414 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.414 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.414 INFO   - ChecklistGuideBrowser::processCheckboxes
+06:53:43.414 INFO   - ChecklistGuideBrowser::check
+06:53:43.414 INFO   - ChecklistGuideBrowser::check
+06:53:43.414 INFO   - ChecklistGuideBrowser::check
+06:53:43.414 INFO   - ChecklistGuideBrowser::check
+06:53:43.414 INFO   - ChecklistGuideBrowser::check
+06:53:43.414 INFO   - ChecklistGuideBrowser::processDivs
+06:53:43.414 INFO   - ChecklistGuideBrowser::divShow anchor=
+06:53:43.414 INFO   - ChecklistGuideBrowser::divHide anchor=BACKGROUND
+06:53:43.414 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS1
+06:53:43.414 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS2
+06:53:43.414 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS3
+06:53:43.414 INFO   - ChecklistGuideBrowser::divHide anchor=EXPORT
+06:53:43.414 INFO   - MainWindow::updateFittingWindow
+06:53:43.414 INFO   - FittingWindow::update
+06:53:43.414 INFO   - Document::curveForCurveName
+06:53:43.414 INFO   - CoordSystemContext::curveForCurveName
+06:53:43.414 INFO   - FittingWindow::resizeTable
+06:53:43.414 INFO   - MainWindow::slotFittingWindowCurveFit order=9
+06:53:43.415 INFO   - MainWindow::updateGeometryWindow
+06:53:43.415 INFO   - GeometryWindow::update
+06:53:43.415 INFO   - Document::curveForCurveName
+06:53:43.415 INFO   - CoordSystemContext::curveForCurveName
+06:53:43.415 INFO   - GeometryWindow::resizeTable
+06:53:43.417 INFO   - CoordSystemContext::printStream
+06:53:43.417 INFO   - DocumentScrub::DocumentScrub
+06:53:43.417 INFO   - DocumentScrub::check
+06:53:43.417 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.417 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.417 INFO   - Document::iterateThroughCurvesPointsGraphs
+06:53:43.417 INFO   - CoordSystemContext::iterateThroughCurvesPointsGraphs
+06:53:43.417 INFO   - MainWindow::slotDigitizeSelect
+06:53:43.417 INFO   - DigitizeStateEmpty::end
+06:53:43.417 INFO   - DigitizeStateSelect::begin
+06:53:43.417 INFO   - DigitizeStateSelect::addHoverHighlighting
+06:53:43.417 INFO   - ViewPointStyle::setPointStyle
+06:53:43.417 INFO   - ViewPointStyle::pixmapForCurrentSettings
+06:53:43.417 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.417 INFO   - ViewSegmentFilter::setColorFilterSettings
+06:53:43.417 INFO   - MainWindow::updateDigitizeStateIfSoftwareTriggered
+06:53:43.418 INFO   - MainWindow::slotDigitizeSelect
+06:53:43.418 INFO   - ViewPointStyle::setEnabled enabled=false
+06:53:43.418 INFO   - ViewPointStyle::pixmapForCurrentSettings
+06:53:43.418 INFO   - ViewSegmentFilter::setEnabled enabled=false
+06:53:43.418 INFO   - MainWindow::updateControls selectedItems=0
+06:53:43.418 INFO   - CmdStackShadow::canRedo
+06:53:43.418 INFO   - ViewPointStyle::setEnabled enabled=false
+06:53:43.418 INFO   - ViewPointStyle::pixmapForCurrentSettings
+06:53:43.418 INFO   - ViewSegmentFilter::setEnabled enabled=false
+06:53:43.418 INFO   - MainWindow::updateControls selectedItems=0
+06:53:43.418 INFO   - CmdStackShadow::canRedo
+06:53:43.418 INFO   - MainWindow::updateGridLines
+06:53:43.418 INFO   - MainWindow::updateAfterCommand
+06:53:43.418 INFO   - MainWindow::updateAfterCommandStatusBarCoords
+06:53:43.418 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.418 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.418 INFO   - Transformation::calculateTransformFromLinearCartesianPoints
+06:53:43.419 INFO   - Transformation::updateTransformFromMatrices matrixScreen=
+                     89.2913         90.085        158.939
+                     91.8708        547.058        547.554
+                           1              1              1  matrixGraphRaw=
+                           1              1              3
+                           0           -0.4           -0.4
+                           1              1              1  matrixGraphLinear=
+                           1              1              3
+                           0           -0.4           -0.4
+                           1              1              1
+ originalScreen0=(89.2913, 91.8708)
+ originalScreen1=(90.085, 547.058)
+ originalScreen2=(158.939, 547.554)
+ roundTripScreen0=(89.2913, 91.8708)
+ roundTripScreen1=(90.085, 547.058)
+ roundTripScreen2=(158.939, 547.554)
+
+06:53:43.419 INFO   - DocumentModelColorFilter::DocumentModelColorFilter
+06:53:43.419 INFO   - BackgroundStateContext::setCurveSelected curve=CH_Potential
+06:53:43.419 INFO   - BackgroundStateCurve::setCurveSelected curve=CH_Potential
+06:53:43.419 INFO   - BackgroundStateCurve::processImageFromSavedInputs
+06:53:43.419 INFO   - DocumentModelColorFilter::high curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.419 INFO   - DocumentModelColorFilter::low curve=CH_Potential curves=Axes,CH_Potential
+06:53:43.433 INFO   - GridRemoval::remove transformationIsDefined=true removeDefinedGridLines=false
+06:53:43.433 INFO   - BackgroundStateAbstractBase::setProcessedPixmap map=(497x655)
+06:53:43.433 INFO   - BackgroundStateNone::setCurveSelected
+06:53:43.433 INFO   - BackgroundStateOriginal::setCurveSelected
+06:53:43.433 INFO   - BackgroundStateUnloaded::setCurveSelected
+06:53:43.433 INFO   - MainWindow::updateGridLines
+06:53:43.461 INFO   - GraphicsScene::updateAfterCommand
+06:53:43.461 INFO   - GraphicsLinesForCurves::updateHighlightOpacity highlightOpacity=0.35
+06:53:43.461 INFO   - GraphicsLinesForCurve::updateCurveStyle curve=Axes highlightOpacity=0.35
+06:53:43.461 INFO   - GraphicsLinesForCurve::updateCurveStyle curve=CH_Potential highlightOpacity=0.35
+06:53:43.461 INFO   - GraphicsScene::updateCurves
+06:53:43.461 INFO   - Document::curvesGraphsNames
+06:53:43.461 INFO   - CoordSystemContext::curvesGraphsNames
+06:53:43.461 INFO   - GraphicsLinesForCurves::addRemoveCurves curveCount=2
+06:53:43.461 INFO   - GraphicsScene::updatePointMembership
+06:53:43.461 INFO   - GraphicsLinesForCurves::lineMembershipReset
+06:53:43.461 INFO   - GraphicsLinesForCurve::lineMembershipReset curve=Axes
+06:53:43.461 INFO   - GraphicsLinesForCurve::lineMembershipReset curve=CH_Potential
+06:53:43.461 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.461 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.461 INFO   - GraphicsScene::createPoint identifier=Axes	point	56
+06:53:43.461 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.461 INFO   - GraphicsPointPolygon::GraphicsPointPolygon
+06:53:43.461 INFO   - Document::iterateThroughCurvesPointsGraphs
+06:53:43.461 INFO   - CoordSystemContext::iterateThroughCurvesPointsGraphs
+06:53:43.465 INFO   - GraphicsLinesForCurves::lineMembershipPurge
+06:53:43.465 INFO   - GraphicsLinesForCurve::lineMembershipPurge curve=Axes
+06:53:43.465 INFO   - GraphicsLinesForCurve::renumberOrdinals
+06:53:43.465 INFO   - GraphicsLinesForCurve::updateGraphicsLinesToMatchGraphicsPoints numberPoints=3 ordinalRenumbering=true
+06:53:43.465 INFO   - GraphicsLinesForCurve::lineMembershipPurge curve=CH_Potential
+06:53:43.465 INFO   - GraphicsLinesForCurve::updateGraphicsLinesToMatchGraphicsPoints numberPoints=50 ordinalRenumbering=false
+06:53:43.465 INFO   - GraphicsLinesForCurve::drawLinesSmooth curve=CH_Potential
+06:53:43.465 INFO   - DigitizeStateSelect::updateAfterPointAddition
+06:53:43.465 INFO   - DigitizeStateSelect::addHoverHighlighting
+06:53:43.465 INFO   - MainWindow::updateControls selectedItems=0
+06:53:43.465 INFO   - CmdStackShadow::canRedo
+06:53:43.465 INFO   - MainWindow::updateChecklistGuide
+06:53:43.465 INFO   - ChecklistGuide::update
+06:53:43.465 INFO   - ChecklistGuideBrowser::update
+06:53:43.465 INFO   - ChecklistGuideBrowser::repopulateCheckedTags
+06:53:43.465 INFO   - Document::curveAxes
+06:53:43.465 INFO   - CoordSystemContext::curveAxes
+06:53:43.465 INFO   - Document::curveAxes
+06:53:43.465 INFO   - CoordSystemContext::curveAxes
+06:53:43.465 INFO   - Document::curveAxes
+06:53:43.465 INFO   - CoordSystemContext::curveAxes
+06:53:43.465 INFO   - ChecklistGuideBrowser::refresh
+06:53:43.465 INFO   - ChecklistGuideBrowser::processAhrefs
+06:53:43.465 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.465 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.465 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.465 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.465 INFO   - ChecklistGuideBrowser::bindToDocument
+06:53:43.465 INFO   - ChecklistGuideBrowser::processCheckboxes
+06:53:43.465 INFO   - ChecklistGuideBrowser::check
+06:53:43.465 INFO   - ChecklistGuideBrowser::check
+06:53:43.465 INFO   - ChecklistGuideBrowser::check
+06:53:43.465 INFO   - ChecklistGuideBrowser::check
+06:53:43.465 INFO   - ChecklistGuideBrowser::check
+06:53:43.465 INFO   - ChecklistGuideBrowser::processDivs
+06:53:43.465 INFO   - ChecklistGuideBrowser::divShow anchor=
+06:53:43.465 INFO   - ChecklistGuideBrowser::divHide anchor=BACKGROUND
+06:53:43.465 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS1
+06:53:43.465 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS2
+06:53:43.465 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS3
+06:53:43.465 INFO   - ChecklistGuideBrowser::divHide anchor=EXPORT
+06:53:43.465 INFO   - MainWindow::updateFittingWindow
+06:53:43.465 INFO   - FittingWindow::update
+06:53:43.465 INFO   - Document::curveForCurveName
+06:53:43.465 INFO   - CoordSystemContext::curveForCurveName
+06:53:43.465 INFO   - FittingWindow::resizeTable
+06:53:43.465 INFO   - MainWindow::slotFittingWindowCurveFit order=9
+06:53:43.466 INFO   - MainWindow::updateGeometryWindow
+06:53:43.466 INFO   - GeometryWindow::update
+06:53:43.466 INFO   - Document::curveForCurveName
+06:53:43.466 INFO   - CoordSystemContext::curveForCurveName
+06:53:43.466 INFO   - GeometryWindow::resizeTable
+06:53:43.468 INFO   - CoordSystemContext::printStream
+06:53:43.469 INFO   - DocumentScrub::DocumentScrub
+06:53:43.469 INFO   - DocumentScrub::check
+06:53:43.469 INFO   - Document::iterateThroughCurvePointsAxes
+06:53:43.469 INFO   - CoordSystemContext::iterateThroughCurvePointsAxes
+06:53:43.469 INFO   - Document::iterateThroughCurvesPointsGraphs
+06:53:43.469 INFO   - CoordSystemContext::iterateThroughCurvesPointsGraphs
+06:53:46.520 INFO   - TransformationStateDefined::slotTimeout
+06:53:54.970 INFO   - MainWindow::slotFileExport
+06:54:02.396 INFO   - MainWindow::fileExport curDir=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat fileName=/home/conner/QNEE6.1/Fortran/CHp_CH_DipMat/PotCurve_CH.tsv
+06:54:02.397 INFO   - ExportToFile::exportToFile
+06:54:02.397 INFO   - ExportFileFunctions::exportToFile
+06:54:02.397 INFO   - Document::curvesGraphsNames
+06:54:02.397 INFO   - CoordSystemContext::curvesGraphsNames
+06:54:02.397 INFO   - ExportFileAbstractBase::curvesToInclude
+06:54:02.397 INFO   - Document::curveForCurveName
+06:54:02.397 INFO   - CoordSystemContext::curveForCurveName
+06:54:02.397 INFO   - Document::iterateThroughCurvesPointsGraphs
+06:54:02.397 INFO   - CoordSystemContext::iterateThroughCurvesPointsGraphs
+06:54:02.397 INFO   - CallbackGatherXThetaValuesFunctions::xThetaValuesRaw
+06:54:02.397 INFO   - ExportXThetaValuesMergedFunctions::xThetaValues
+06:54:02.397 INFO   - ExportFileFunctions::exportAllPerLineXThetaValuesMerged
+06:54:02.397 INFO   - ExportFileFunctions::initializeYRadiusValues
+06:54:02.397 INFO   - ExportFileFunctions::loadYRadiusValues
+06:54:02.397 INFO   - Document::curveForCurveName
+06:54:02.397 INFO   - CoordSystemContext::curveForCurveName
+06:54:02.397 INFO   - ExportFileFunctions::loadYRadiusValuesForCurveRaw
+06:54:02.397 INFO   - ExportFileFunctions::outputXThetaYRadiusValues
+06:54:02.398 INFO   - ExportFileAbstractBase::destroy2DArray
+06:54:02.398 INFO   - ExportFileRelations::exportToFile
+06:54:02.398 INFO   - Document::curvesGraphsNames
+06:54:02.398 INFO   - CoordSystemContext::curvesGraphsNames
+06:54:02.398 INFO   - ExportFileAbstractBase::curvesToInclude
+06:54:02.398 INFO   - Document::curveForCurveName
+06:54:02.398 INFO   - CoordSystemContext::curveForCurveName
+06:54:02.398 INFO   - ExportFileRelations::exportAllPerLineXThetaValuesMerged
+06:54:02.398 INFO   - ExportFileRelations::maxColumnSizeAllocation
+06:54:02.398 INFO   - MainWindow::updateChecklistGuide
+06:54:02.398 INFO   - ChecklistGuide::update
+06:54:02.398 INFO   - ChecklistGuideBrowser::update
+06:54:02.398 INFO   - ChecklistGuideBrowser::repopulateCheckedTags
+06:54:02.398 INFO   - Document::curveAxes
+06:54:02.398 INFO   - CoordSystemContext::curveAxes
+06:54:02.398 INFO   - Document::curveAxes
+06:54:02.398 INFO   - CoordSystemContext::curveAxes
+06:54:02.398 INFO   - Document::curveAxes
+06:54:02.398 INFO   - CoordSystemContext::curveAxes
+06:54:02.398 INFO   - ChecklistGuideBrowser::refresh
+06:54:02.398 INFO   - ChecklistGuideBrowser::processAhrefs
+06:54:02.398 INFO   - ChecklistGuideBrowser::bindToDocument
+06:54:02.398 INFO   - ChecklistGuideBrowser::bindToDocument
+06:54:02.398 INFO   - ChecklistGuideBrowser::bindToDocument
+06:54:02.398 INFO   - ChecklistGuideBrowser::bindToDocument
+06:54:02.398 INFO   - ChecklistGuideBrowser::bindToDocument
+06:54:02.398 INFO   - ChecklistGuideBrowser::processCheckboxes
+06:54:02.398 INFO   - ChecklistGuideBrowser::check
+06:54:02.398 INFO   - ChecklistGuideBrowser::check
+06:54:02.398 INFO   - ChecklistGuideBrowser::check
+06:54:02.398 INFO   - ChecklistGuideBrowser::check
+06:54:02.398 INFO   - ChecklistGuideBrowser::check
+06:54:02.398 INFO   - ChecklistGuideBrowser::processDivs
+06:54:02.398 INFO   - ChecklistGuideBrowser::divShow anchor=
+06:54:02.398 INFO   - ChecklistGuideBrowser::divHide anchor=BACKGROUND
+06:54:02.398 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS1
+06:54:02.398 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS2
+06:54:02.398 INFO   - ChecklistGuideBrowser::divHide anchor=AXIS3
+06:54:02.398 INFO   - ChecklistGuideBrowser::divHide anchor=EXPORT
+06:54:10.985 INFO   - DlgSettingsCoords::~DlgSettingsCoords
+06:54:10.985 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsCoords
+06:54:10.986 INFO   - DlgSettingsCurveAddRemove::~DlgSettingsCurveAddRemove
+06:54:10.986 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsCurveAddRemove
+06:54:10.986 INFO   - DlgSettingsCurveProperties::~DlgSettingsCurveProperties
+06:54:10.986 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsCurveProperties
+06:54:10.987 INFO   - DlgSettingsDigitizeCurve::~DlgSettingsDigitizeCurve
+06:54:10.987 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsDigitizeCurve
+06:54:10.987 INFO   - DlgSettingsExportFormat::~DlgSettingsExportFormat
+06:54:10.987 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsExportFormat
+06:54:10.988 INFO   - DlgSettingsColorFilter::~DlgSettingsColorFilter
+06:54:10.988 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsColorFilter
+06:54:10.988 INFO   - DlgSettingsAxesChecker::~DlgSettingsAxesChecker
+06:54:10.988 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsAxesChecker
+06:54:10.989 INFO   - DlgSettingsGridDisplay::~DlgSettingsGridDisplay
+06:54:10.989 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsGridDisplay
+06:54:10.990 INFO   - DlgSettingsGridRemoval::~DlgSettingsGridRemoval
+06:54:10.990 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsGridRemoval
+06:54:10.990 INFO   - DlgSettingsPointMatch::~DlgSettingsPointMatch
+06:54:10.990 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsPointMatch
+06:54:10.991 INFO   - DlgSettingsSegments::~DlgSettingsSegments
+06:54:10.991 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsSegments
+06:54:10.991 INFO   - DlgSettingsGeneral::~DlgSettingsGeneral
+06:54:10.991 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsGeneral
+06:54:10.991 INFO   - DlgSettingsMainWindow::~DlgSettingsMainWindow
+06:54:10.992 INFO   - DlgSettingsAbstractBase::~DlgSettingsAbstractBase name=DlgSettingsMainWindow

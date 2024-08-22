@@ -1,0 +1,73 @@
+   Some initial input data
+   Name_of_species,Rmin,Rmax,ns,w(effective mass),U_infinity,index_of_resonances,molecule
+   jmin,jmax,jpas
+   i_change,bet
+#initia
+'N2_',1.5,8,1,7.00335,0.,0,'N2_'  # .7.00335--> N2  
+0,0,2
+0,0.2,10
+
+    The block of potentials
+    file_with_curve,ncolumnx, ncolumnU
+#Pot_di         
+'N2__pot_',1,2
+
+    Optical potential CAP==0 exp. and CAP==1 parabola forms
+    CAP,L,A5
+#OptPot
+1,20,3.6e-3   
+
+    Block of couplings
+#coupl2  
+0.00              FS
+#coupl3             
+1.316e-6,0.,1.         c12,c13,c23
+
+    To output the wavefunctions, selected by user according their number v
+#initwf
+0,1000,1       - v,Ng,index of calculation of WF.    
+#initwf
+1,1000,1       - v,Ng,index of calculation of WF.    
+#initwf
+2,1000,1       - v,Ng,index of calculation of WF.    
+#initwf
+3,1000,1       - v,Ng,index of calculation of WF.  
+#initwf
+4,1000,1       - v,Ng,index of calculation of WF. 
+#initwf
+5,1000,1       - v,Ng,index of calculation of WF.   
+#initwf
+6,1000,1       - v,Ng,index of calculation of WF.    
+#initwf
+7,1000,1       - v,Ng,index of calculation of WF.   
+#initwf
+8,1000,1       - v,Ng,index of calculation of WF. 
+#initwf
+26,1000,1       - v,Ng,index of calculation of WF. 
+#initwf
+27,1000,1       - v,Ng,index of calculation of WF. 
+#initwf
+47,1000,1       - v,Ng,index of calculation of WF.   
+#initwf
+48,1000,1       - v,Ng,index of calculation of WF.     
+-1              - this means the end of the list of wavefunctions
+
+    Sorting of output eigenenergies, etc.
+    i_sort
+    v_cut,R_cut,Bv_cut,ge_cut
+#Sortir
+1
+200.,1000.,0.0000,22.
+
+    Asymptotic energy which should be included into calculation
+    E_inf
+#E_infi
+0.
+0.0010826
+
+    A possibility to output the whole matrix of 
+    eigenvectors in binary format (0 or 1)
+#FC_Fac
+0
+
+

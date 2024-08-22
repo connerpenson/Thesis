@@ -1,0 +1,4 @@
+title=Total Photoionisation Cross Section
+x_label=Photon Energy (nm)
+y_label=Cross Section(Mb)
+y_series0=Total

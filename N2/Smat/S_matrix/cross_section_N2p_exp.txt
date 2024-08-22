@@ -1,0 +1,69 @@
+This is a file which explains all of the variables and functions within program cross_section_pr
+
+We start by defining some global parameters in the module: "global_params"
+(These are mostly constants and conversion factors, though some procedure defining user inputs as well)
+
+    - ci, this is the conversion to complex
+    - pi/ryd/au_eV/au_cm/au_to_sec, value for pi and rydberg and then conversions from_to for the listed units
+
+    - num_gamma_Q,  number of symmetries
+    - l_max,        the highest partial wave angular momentum
+    - num_Q,        number of points on the R-grid
+    - num_v,        number of vibrational states (why?)
+    - dim_lm,       total multiplicity
+    - num_ev,       never used once
+    - num_scatE,    number of energies where the S-matrix is calculated for a given geom
+    - num_Q_,       number of points on the interpolated R-grid
+    - qn_ev,        never used once
+    - geom,         list of geometries
+    - energies_ev,  never used once
+    - E_el_Rmat,
+    - energies_v,   never used once
+
+    - S_Q,          S-matrix on all geometries
+    - S_ev,         S-matrix on all energies
+
+Program starts by assigning values into some of the parameters defined in global params
+
+num_Q is set to 5 to indicate the number of R-matrix calculations done in Quantemol
+    - 5 seperate r-mat calculations should exist in the data files
+
+Calling into reading_R_matrix_data:
+
+    Many of the defined variables are just loop integers, so the definitions will be skipped. The important definitions
+    here are:
+
+        - num_ener,     Renamed num_scatE
+
+    dim_lm is set with (l_max+1)**2, no excited electronic states
+    num_scatE is set to 1000 and then set equal to num_ener
+
+    We now define the sizes of the arrays for the calculation:
+
+        - E_el_Rmat has num_scatE elements
+        - S_Q is a combination of num_Q X num_scatE matrices which are dim_lm X dim_lm
+            - essentially well ahve a full s-matrix for num_scatE energies at each Q
+        - geom has num_Q elements
+        - D2h_Dinf, 
+        - md, 
+
+    First loop opens up file defined by cex2(i_Q)
+        - cex2() is a function which turns an integer into a string 
+        - cex1() does the same but with no 10s place
+    filename ex: "one_more_time/05/Q.txt
+    This gets the geometry from the r-mat calculation at i_Q
+    so, we are filling geom(i_Q) with all the r-matrix geometries
+
+    Second loop puts these geometries in ascending order but we've already done that
+
+    Initializing the S_Q matrix and D2h_Dinf
+
+    Third loop over 1 to dim_lm calls i2lm() and lm2i()
+        - i2lm() is a subroutine which converts the s-matrix indeces into partial waves
+        - lm2i() is the reverse
+
+
+num_v = 6 is set but this is never used
+
+
+    

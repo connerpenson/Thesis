@@ -1,0 +1,84 @@
+================================================
+e-N2 Scattering using the R-matrix method
+Quantemol-N (EE)
+Version 6.1
+Date and time: Tue Feb 20 15:46:26 EST 2024
+================================================
+
+
+Point group employed: D2h
+
+Molecular charge is 0
+
+Geometry employed (quoted in Angstroms in the centre of mass frame):
+N 0.0000 0.0000 0.5965
+N 0.0000 0.0000 -0.5965
+
+
+Basis set employed: cc-pVTZ
+
+
+
+Quantum chemistry method employed: Configuration Interaction (HF Orbitals)
+
+CAS used in target analysis:
+
+Frozen orbitals: 
+(1ag, 2ag, 1b1u, 2b1u, )^8
+
+Active space: 
+(3ag, 1b3u, 1b2u, 3b1u, 1b2g, 1b3g, )^6
+
+
+Point group employed: D2h
+
+Molecular charge is +1
+
+Geometry employed (quoted in Angstroms in the centre of mass frame):
+N 0.0000 0.0000 0.5965
+N 0.0000 0.0000 -0.5965
+
+
+Basis set employed: cc-pVTZ
+
+
+
+Quantum chemistry method employed: Configuration Interaction (HF Orbitals)
+
+CAS used in target analysis:
+
+Frozen orbitals: 
+(1ag, 2ag, 1b1u, 2b1u, )^8
+
+Active space: 
+(3ag, 1b3u, 1b2u, 3b1u, 1b2g, 1b3g, )^5
+
+
+Virtual molecular orbitals allocation for augmentation to the
+continuum orbitals.
+This is required for the construction of the N+1 trial eigenkets.
+
+2 virtual MOs of Ag symmetry retained
+1 virtual MOs of B3u symmetry retained
+1 virtual MOs of B2u symmetry retained
+0 virtual MOs of B1g symmetry retained
+0 virtual MOs of B1u symmetry retained
+0 virtual MOs of B2g symmetry retained
+0 virtual MOs of B3g symmetry retained
+0 virtual MOs of Au symmetry retained
+
+Scattering method employed: close coupling (CC) expansion
+
+
+Continuum orbitals: orbitals which represent the scattering electron. 
+A partial wave expansion of up to and including g-wave is employed (see Faure et. al. (2002)).
+
+
+Number of target states employed in close coupling expansion and retained in the outer region: 113
+(see SelectedTargetStates.txt in results folder for details).
+
+
+R-matrix sphere radius: 11 a_0
+R-matrix propagated to 100.1a_0
+
+

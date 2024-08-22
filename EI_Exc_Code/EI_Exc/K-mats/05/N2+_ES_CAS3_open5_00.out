@@ -1,0 +1,440 @@
+Pre-clean successful: true
+Date and time :Thu May 30 04:27:38 EDT 2024
+
+
+
+*****************************************************
+
+Analysing molecular symmetry:
+
+*****************************************************
+
+
+N2+ has 1 symmetrically non-redundant atoms
+
+
+The symmetrically non-redundant atoms are:
+[N1]
+
+Point group of N2+: D2h
+
+Generating symmetry operations for this group:
+Reflection in the X-Y plane.
+Reflection in the X-Z plane.
+Reflection in the Y-Z plane.
+
+Molecular charge is +1
+
+Geometry employed (quoted in Angstroms in the centre of mass frame):
+N 0.0000 0.0000 0.4911
+N 0.0000 0.0000 -0.4911
+
+
+Basis set used: DZP
+
+******************************************************
+
+Sorting and Ordering of Integrals
+
+******************************************************
+
+*******************************************************
+
+Running Molpro
+
+*******************************************************
+
+
+
+*******************************************************
+
+Running MPOUTRD
+
+*******************************************************
+
+
+
+
+Orbital Energies and Occupations.
+
+SYM  1	ORB   1	 -440.38599 eV	2 OCC
+SYM  5	ORB   1	 -440.20401 eV	2 OCC
+SYM  1	ORB   2	  -54.60200 eV	2 OCC
+SYM  5	ORB   2	  -30.51500 eV	2 OCC
+SYM  2	ORB   1	  -30.12800 eV	2 OCC
+SYM  3	ORB   1	  -30.12800 eV	2 OCC
+SYM  1	ORB   3	  -15.56400 eV	1 OCC
+SYM  6	ORB   1	   -5.20800 eV	0 OCC
+SYM  7	ORB   1	   -5.20800 eV	0 OCC
+SYM  5	ORB   3	    3.17600 eV	0 OCC
+SYM  2	ORB   2	    6.37600 eV	0 OCC
+SYM  3	ORB   2	    6.37600 eV	0 OCC
+SYM  1	ORB   4	    6.39200 eV	0 OCC
+SYM  6	ORB   2	   12.10100 eV	0 OCC
+SYM  7	ORB   2	   12.10100 eV	0 OCC
+SYM  1	ORB   5	   12.84400 eV	0 OCC
+SYM  5	ORB   4	   22.79800 eV	0 OCC
+SYM  5	ORB   5	   32.77900 eV	0 OCC
+SYM  1	ORB   6	   34.41200 eV	0 OCC
+SYM  4	ORB   1	   34.41200 eV	0 OCC
+SYM  2	ORB   3	   41.12200 eV	0 OCC
+SYM  3	ORB   3	   41.12200 eV	0 OCC
+SYM  5	ORB   6	   52.20000 eV	0 OCC
+SYM  8	ORB   1	   52.20000 eV	0 OCC
+SYM  1	ORB   7	   59.03000 eV	0 OCC
+SYM  6	ORB   3	   70.68200 eV	0 OCC
+SYM  7	ORB   3	   70.68200 eV	0 OCC
+SYM  5	ORB   7	   82.02900 eV	0 OCC
+SYM  1	ORB   8	  875.16998 eV	0 OCC
+SYM  5	ORB   8	  898.92499 eV	0 OCC
+
+
+Number of molecular orbitals per symmetry: [8, 3, 3, 1, 8, 3, 3, 1]
+
+Quantum chemistry model: 
+
+Suggested frozen orbitals: [1, 0, 0, 0, 1, 0, 0, 0]
+Suggested complete active space: [3, 2, 2, 0, 3, 1, 1, 0]
+
+
+**************************************************************
+
+Orthogonalising molecular orbitals (Programme SWEDMOS)
+
+**************************************************************
+
+
+**************************************************************
+
+Transforming intergrals (Programme SWTRMO)
+
+**************************************************************
+
+
+**************************************************************
+
+Generating N2+ Target wavefunctions
+
+**************************************************************
+
+Running congen job: congen1.data
+
+ *** TOTAL NUMBER OF GENERATED CSF'S FOR THE GROUND STATE IS   3488
+*** This target calculation should not take long !
+
+Running scatci job: ci1.data
+Running congen job: congen2.data
+Running scatci job: ci2.data
+Running congen job: congen3.data
+Running scatci job: ci3.data
+Running congen job: congen4.data
+Running scatci job: ci4.data
+Running congen job: congen5.data
+Running scatci job: ci5.data
+Running congen job: congen6.data
+Running scatci job: ci6.data
+Running congen job: congen7.data
+Running scatci job: ci7.data
+Running congen job: congen8.data
+Running scatci job: ci8.data
+Running congen job: congen9.data
+Running scatci job: ci9.data
+Running congen job: congen10.data
+Running scatci job: ci10.data
+Running congen job: congen11.data
+Running scatci job: ci11.data
+Running congen job: congen12.data
+Running scatci job: ci12.data
+Running congen job: congen13.data
+Running scatci job: ci13.data
+Running congen job: congen14.data
+Running scatci job: ci14.data
+Running congen job: congen15.data
+Running scatci job: ci15.data
+Running congen job: congen16.data
+Running scatci job: ci16.data
+
+STATE ENERGIES FOR THE MOLECULAR TARGET ARE: 
+
+   Energy (Hartree)                     State
+
+ -108.442375130877          State No.   1 Doublet     AG        
+ -107.835933288875          State No.   2 Doublet     AG        
+ -107.820273191764          State No.   3 Doublet     AG        
+ -107.765694216854          State No.   4 Doublet     AG        
+ -108.348419150499          State No.   5 Doublet     B3U       
+ -107.910231950092          State No.   6 Doublet     B3U       
+ -107.717880459679          State No.   7 Doublet     B3U       
+ -108.348419150499          State No.   8 Doublet     B2U       
+ -107.910231950092          State No.   9 Doublet     B2U       
+ -107.717880459679          State No.  10 Doublet     B2U       
+ -107.828630411063          State No.  11 Doublet     B1G       
+ -107.820273191764          State No.  12 Doublet     B1G       
+ -107.765694216854          State No.  13 Doublet     B1G       
+ -107.731330299499          State No.  14 Doublet     B1G       
+ -108.345066011425          State No.  15 Doublet     B1U       
+ -107.934111469311          State No.  16 Doublet     B1U       
+ -107.924282810270          State No.  17 Doublet     B1U       
+ -107.905851164986          State No.  18 Doublet     B1U       
+ -108.049351333397          State No.  19 Doublet     B2G       
+ -107.874724131941          State No.  20 Doublet     B2G       
+ -107.826592398629          State No.  21 Doublet     B2G       
+ -107.818507628485          State No.  22 Doublet     B2G       
+ -108.049351333397          State No.  23 Doublet     B3G       
+ -107.874724131941          State No.  24 Doublet     B3G       
+ -107.826592398628          State No.  25 Doublet     B3G       
+ -107.818507628485          State No.  26 Doublet     B3G       
+ -107.931773212290          State No.  27 Doublet     AU        
+ -107.924282810270          State No.  28 Doublet     AU        
+ -107.905851164987          State No.  29 Doublet     AU        
+ -107.879460673403          State No.  30 Doublet     AU        
+ -107.968673807012          State No.  31 Quartet     AG        
+ -107.920653952041          State No.  32 Quartet     AG        
+ -108.060838682186          State No.  33 Quartet     B3U       
+ -108.060838682186          State No.  34 Quartet     B2U       
+ -107.920653952042          State No.  35 Quartet     B1G       
+ -107.897731667421          State No.  36 Quartet     B1G       
+ -108.051044704369          State No.  37 Quartet     B1U       
+ -108.004656838385          State No.  38 Quartet     B1U       
+ -107.911838894159          State No.  39 Quartet     B2G       
+ -107.911838894159          State No.  40 Quartet     B3G       
+ -108.004656838385          State No.  41 Quartet     AU        
+ -107.980698098720          State No.  42 Quartet     AU        
+
+See file results/SelectedTargetStates.txt for vertical excitation energies
+ of the selected states in energy order.
+
+
+*************************************************************
+
+Vertical excitation energies in eV:
+
+*************************************************************
+
+
+Doublet  Ag 0.0
+Doublet  B2u 2.557740000000226
+Doublet  B3u 2.557740000000226
+Doublet  B1u 2.6475330000001134
+Quartet  B3u 10.383336000000162
+Quartet  B2u 10.383336000000162
+Quartet  B1u 10.64999400000012
+Doublet  B2g 10.693530000000019
+Doublet  B3g 10.693530000000019
+Quartet  B1u 11.909817000000182
+
+
+
+
+*******************************************************
+
+Commencing the N+1 inner region scattering calculation
+
+*******************************************************
+
+
+************************************************************
+
+program SWORD: sorting and ordering of molecular integrals
+
+************************************************************
+
+
+**************************************************************
+
+program SWEDMOS: orthogonalisation of bound and continuum MOs
+
+**************************************************************
+
+
+****************************************************
+
+program SWTRMO: transforming and ordering of integrals
+
+****************************************************
+
+
+**************************************************************
+
+Generating scattering trial close-coupling wavefunctions
+
+**************************************************************
+Running congen job: congen1np1.data
+Running scatci job: ci1np1.data
+
+Running congen job: congen2np1.data
+Running scatci job: ci2np1.data
+
+Running congen job: congen3np1.data
+Running scatci job: ci3np1.data
+
+Running congen job: congen4np1.data
+Running scatci job: ci4np1.data
+
+Running congen job: congen5np1.data
+Running scatci job: ci5np1.data
+
+Running congen job: congen6np1.data
+Running scatci job: ci6np1.data
+
+Running congen job: congen7np1.data
+Running scatci job: ci7np1.data
+
+Running congen job: congen8np1.data
+Running scatci job: ci8np1.data
+
+Running congen job: congen9np1.data
+Running scatci job: ci9np1.data
+
+Running congen job: congen10np1.data
+Running scatci job: ci10np1.data
+
+Running congen job: congen11np1.data
+Running scatci job: ci11np1.data
+
+Running congen job: congen12np1.data
+Running scatci job: ci12np1.data
+
+Running congen job: congen13np1.data
+Running scatci job: ci13np1.data
+
+Running congen job: congen14np1.data
+Running scatci job: ci14np1.data
+
+Running congen job: congen15np1.data
+Running scatci job: ci15np1.data
+
+Running congen job: congen16np1.data
+Running scatci job: ci16np1.data
+
+
+Scattering state 1
+Scattering state 2
+Scattering state 3
+Scattering state 4
+Scattering state 5
+Scattering state 6
+Scattering state 7
+Scattering state 8
+Scattering state 9
+Scattering state 10
+Scattering state 11
+Scattering state 12
+Scattering state 13
+Scattering state 14
+Scattering state 15
+Scattering state 16
+
+R-Matrix generation for scattering state 1
+R-Matrix generation for scattering state 2
+R-Matrix generation for scattering state 3
+R-Matrix generation for scattering state 4
+R-Matrix generation for scattering state 5
+R-Matrix generation for scattering state 6
+R-Matrix generation for scattering state 7
+R-Matrix generation for scattering state 8
+R-Matrix generation for scattering state 9
+R-Matrix generation for scattering state 10
+R-Matrix generation for scattering state 11
+R-Matrix generation for scattering state 12
+R-Matrix generation for scattering state 13
+R-Matrix generation for scattering state 14
+R-Matrix generation for scattering state 15
+R-Matrix generation for scattering state 16
+Sorting phase shifts
+Summing cross sections over the scattering symmetries: 
+1Ag, 3Ag, 1B3u, 3B3u, 1B2u, 3B2u, 1B1g, 3B1g, 1B1u, 3B1u, 1B2g, 3B2g, 1B3g, 3B3g, 1Au, 3Au, 
+
+
+Calculating born correction and adding to the summed cross section
+*************************************************
+
+Computing the Binary-Encounter-Bethe (BEB) ionisation cross section
+
+*************************************************
+
+By Koopman's theorem the ionisation energy of N2+ is 15.564 eV
+
+BEB cross section written to /home/conner/soft/QNEE6.1/workspace/project/N2+_ES_CAS3_open5_00/results/xsec-beb.dat
+
+*************************************************
+
+Calculating the BE scaled born cross section
+
+*************************************************
+
+Ionisation energy from BEB =  15.564
+State Number 	 Energy (eV) 	 Spin 	 Irrep 	 Dipole Transition Moment
+State ... 01 / 10	000.000000000	Doublet	AG	0.0
+State ... 02 / 10	002.557870152	Doublet	B2U	0.305076
+State ... 03 / 10	002.557870152	Doublet	B3U	-0.305076
+State ... 04 / 10	002.647667722	Doublet	B1U	-0.7777948
+State ... 05 / 10	010.383864363	Quartet	B3U	0.0
+State ... 06 / 10	010.383864363	Quartet	B2U	0.0
+State ... 07 / 10	010.650535932	Quartet	B1U	0.0
+State ... 08 / 10	010.694074148	Doublet	B2G	0.0
+State ... 09 / 10	010.694074148	Doublet	B3G	0.0
+State ... 10 / 10	011.910423039	Quartet	B1U	0.0
+1
+2
+3
+
+Number of Dipole allowed transitions: 3
+Calculating rate coefficients and Arrhenius parameters
+
+
+*****************************************************
+
+!!!IMPORTANT PLEASE READ THE FOLLOWING CAREFULLY!!!
+
+*****************************************************
+
+end.message
+Date and time :Thu May 30 07:27:40 EDT 2024
+
+=====================================================
+R-matrix calculation of e-N2+ scattering complete
+=====================================================
+
+All important target and scattering data may be found in:
+/home/conner/soft/QNEE6.1/workspace/project/N2+_ES_CAS3_open5_00/results
+
+=====================================================
+N2+ Target Quantum Chemistry Results Files
+=====================================================
+
+Quantemol-N produces:
+
+target electronic energies;
+target ground state configuration;
+target transition moments
+target vertical excitation energies
+
+For ground state electron configuration see file 'moen_message.txt';
+for target energies see file(s) 'target.prop' or 'trg.energy';
+for target transition moments see 'target-all.prop'
+Molecule spherical polarisability and, where appropriate, the diagonal components of the polarisability (see file 'molecule.polarisability')
+For target vertical excitation energies see file 'SelectedTargetStates.txt'
+
+=====================================================
+N2+ Scattering Results Files
+=====================================================
+
+
+Quantemol-N produces:
+
+eigenphase shifts;
+total cross sections;
+ionisation cross section using the Binary-Encounter-Bethe model;
+rates
+target vertical excitation energies
+
+For resonances see file 'reson_message'
+For eigenphase sum data see files 'eigenp1.dat' and eigenp3.dat
+For total cross section data see file 'xsec_1.dat'
+electronic excitation cross section are in file 'xsec-exc.dat
+For rates data see file 'rates.dat'
+K-matrix files have suffixes .kmat, the prefix symbols are the scattering states
+R-matrix files have suffixes .rmat, the prefix symbols are the scattering states
+T-matrix files have suffixes .tmat, the prefix symbols are the scattering states
+Channel files have suffixes .channel, the prefix symbols are the scattering states

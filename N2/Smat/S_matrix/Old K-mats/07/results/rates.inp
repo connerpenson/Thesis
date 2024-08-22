@@ -1,0 +1,7 @@
+&RATESIN
+name = 'xsec_exc_7 Rate Coefficients',
+ieunit = 2,
+infile = 'xsec_exc_7.dat'
+outfile = 'xsec_exc_7_rates.dat'
+deffile = 'xsec_exc_7_rates.def'
+/

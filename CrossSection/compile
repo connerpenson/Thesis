@@ -1,0 +1,43 @@
+#!/bin/sh
+
+PROGRAM=$(basename "$0")
+tmpold=$(mktemp)
+tmpnew=$(mktemp)
+stat=-1
+
+die() {
+  # Raises an error message and exits.
+  # param: $1: $error_message: error message
+
+  local exit_code=1
+  local error_message="$1"
+
+	echo "${PROGRAM}: ${error_message}" 1>&2
+
+  exit "${exit_code}"
+}
+
+clean(){
+  rm "${tmpold}" "${tmpnew}"
+}
+
+main(){
+
+  while true ; do
+    cat "${tmpnew}" > "${tmpold}"
+    make -k -j 2>"${tmpnew}" && stat=0
+    [ ${stat} -eq 0 ] && break
+    diff "${tmpold}" "${tmpnew}" 1>/dev/null && stat=1
+    [ ${stat} -eq 1 ] && break
+  done
+
+  message="$(cat $tmpnew)"
+
+  clean
+
+  [ ${stat} -eq -1 ] && clean && die "something has gone horribly wrong"
+  [ ${stat} -eq  1 ] && echo "" && echo "FATAL COMPILATION ERROR" && echo "" && die "$message"
+
+}
+
+main "$@"

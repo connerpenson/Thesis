@@ -1,0 +1,384 @@
+                     1     Scattering state symmetry is 1Ag  
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.42367621D+01
+ Beta                          0.55531499D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.59669847D+01
+ Beta                          0.15002961D+00
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     2     Scattering state symmetry is 1B3u 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.64190115D+01
+ Beta                          0.16510747D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.81507901D+01
+ Beta                          0.12273850D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.69038935D+01
+ Beta                          0.54100663D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.10950524D+02
+ Beta                          0.13027858D+00
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     3     Scattering state symmetry is 1B2u 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.61817566D+01
+ Beta                          0.16363174D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.82192938D+01
+ Beta                          0.12070574D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.68952512D+01
+ Beta                          0.52587139D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.55041436D+01
+ Beta                          0.56298748D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.51104659D+01
+ Beta                          0.42744508D-02
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     4     Scattering state symmetry is 1B1g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.49464262D+01      0.26619181D+02
+ Beta                          0.15528840D-03      0.44391447D+01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.27144463D+02
+ Beta                          0.52389014D+01
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     5     Scattering state symmetry is 1B1u 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.52193152D+01
+ Beta                          0.13452404D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.84311090D+01
+ Beta                          0.87616087D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.60989972D+01
+ Beta                          0.15215944D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.90791478D+01
+ Beta                          0.62480923D-01
+
+ Fitted resonance parameters
+ Positions / eV                0.35843991D+01
+ Widths    / eV                0.72365945D-02
+ Residues
+     0.0000654    0.0000389    0.0000155   -0.0000047   -0.0000215   -0.0000333   -0.0000237    0.0000297   -0.0000194   -0.0000342
+    -0.0000364   -0.0000320   -0.0000224   -0.0000070    0.0000170    0.0000708   -0.0001685    0.0000133    0.0000577    0.0000947
+ Goodness factor:      0.59680720D-07
+
+ Fitted resonance parameters
+ Positions / eV                0.41689336D+01
+ Widths    / eV                0.27000415D-04
+ Residues
+    -0.0216542   -0.0199628   -0.0188046   -0.0229122   -0.0054250   -0.0080723   -0.0068729   -0.0051604   -0.0032767   -0.0013140
+     0.0006923    0.0027258    0.0047779    0.0068435    0.0089195    0.0110039    0.0130954    0.0151931    0.0172962    0.0194044
+ Goodness factor:      0.32831431D-02
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     6     Scattering state symmetry is 1B2g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.89657919D+01
+ Beta                          0.16629824D+00
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     7     Scattering state symmetry is 1B3g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.81666338D+01
+ Beta                          0.12433152D+00
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     8     Scattering state symmetry is 1Au  
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.14656064D+02
+ Beta                          0.23779635D+01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.52067181D+01
+ Beta                          0.11530538D+00
+
+ Fitted resonance parameters
+ Positions / eV                0.35836624D+01
+ Widths    / eV                0.71011490D-02
+ Residues
+     0.0000403    0.0000254    0.0000119   -0.0000003   -0.0000112   -0.0000200   -0.0000141    0.0000213   -0.0000091   -0.0000204
+    -0.0000247   -0.0000257   -0.0000242   -0.0000208   -0.0000154   -0.0000082    0.0000007    0.0000328    0.0000238    0.0000379
+ Goodness factor:      0.97707293D-08
+
+ Fitted resonance parameters
+ Positions / eV                0.42304235D+01      0.42434647D+01
+ Widths    / eV                0.41231975D-05      0.16500520D-01
+ Residues
+     0.0446502    0.0337942    0.0693173   -0.0303144   -0.0415893   -0.0000170    0.0168200    0.0047241    0.0242731   -0.1295646
+    -0.0439412   -0.0307452   -0.0226175   -0.0151451   -0.0071520    0.0021410    0.0141938    0.0403589    0.0216697    0.0491288
+ Goodness factor:      0.36656887D-01
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                     9     Scattering state symmetry is 3Ag  
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.40255242D+01
+ Beta                          0.17383808D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.63634793D+01
+ Beta                          0.58928893D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.54186761D+01
+ Beta                          0.93343929D-01
+
+ Fitted resonance parameters
+ Positions / eV                0.36213323D+01
+ Widths    / eV                0.10002830D+01
+ Residues
+     0.0000292    0.0078630    0.0011651   -0.0032527   -0.0052815   -0.0050252   -0.0029353    0.0001297    0.0030442    0.0047777
+     0.0047895    0.0031871    0.0005727   -0.0022551   -0.0045318   -0.0056475   -0.0051430   -0.0026779    0.0020165    0.0091753
+ Goodness factor:      0.38045417D-03
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    10     Scattering state symmetry is 3B3u 
+
+ Fitted resonance parameters
+ Positions / eV                0.35382119D+01
+ Widths    / eV                0.19683714D-01
+ Residues
+     0.0001962    0.0001095    0.0000320   -0.0000350   -0.0000881   -0.0001183   -0.0000983    0.0000187    0.0001154    0.0000359
+    -0.0000527   -0.0001004   -0.0001175   -0.0001133   -0.0000925   -0.0000576   -0.0000099    0.0000499    0.0001214    0.0002046
+ Goodness factor:      0.20966450D-06
+
+ Fitted resonance parameters
+ Positions / eV                0.44023249D+01
+ Widths    / eV                0.37600998D-01
+ Residues
+     0.0022656    0.0009746   -0.0002309   -0.0012061   -0.0013567    0.0001910    0.0013709    0.0008854    0.0000563   -0.0006094
+    -0.0010568   -0.0013051   -0.0013757   -0.0012828   -0.0010353   -0.0006380   -0.0000937    0.0005967    0.0014333    0.0024167
+ Goodness factor:      0.28602389D-04
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    11     Scattering state symmetry is 3B2u 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.48517332D+01
+ Beta                          0.59816555D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.76516635D+01
+ Beta                          0.29346031D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.15836440D+02
+ Beta                          0.39298845D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.18565095D+02
+ Beta                          0.25292555D+00
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.67832566D+01
+ Beta                          0.12820247D-02
+
+ Fitted resonance parameters
+ Positions / eV                0.36030787D+01
+ Widths    / eV                0.21297841D-01
+ Residues
+     0.0006437    0.0003224    0.0000004   -0.0003086   -0.0003329    0.0003310    0.0002733    0.0000219   -0.0001638   -0.0002862
+    -0.0003584   -0.0003881   -0.0003791   -0.0003335   -0.0002522   -0.0001353    0.0000171    0.0002055    0.0004304    0.0006924
+ Goodness factor:      0.23407979D-05
+
+ Fitted resonance parameters
+ Positions / eV                0.43610011D+01
+ Widths    / eV                0.36150515D-01
+ Residues
+     0.0011815    0.0004274   -0.0002477   -0.0007151   -0.0006350    0.0001636    0.0007065    0.0005403    0.0001407   -0.0002244
+    -0.0004913   -0.0006545   -0.0007195   -0.0006921   -0.0005766   -0.0003758   -0.0000912    0.0002764    0.0007267    0.0012601
+ Goodness factor:      0.77832526D-05
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    12     Scattering state symmetry is 3B1g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.82570597D+01
+ Beta                          0.29837367D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.61526554D+01
+ Beta                          0.35597284D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.71573644D+01
+ Beta                          0.24507519D-02
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    13     Scattering state symmetry is 3B1u 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.41709953D+01
+ Beta                          0.41631409D-02
+
+ Fitted resonance parameters
+ Positions / eV                0.44521112D+01
+ Widths    / eV                0.63516245D-02
+ Residues
+     0.0004039    0.0002277    0.0000299   -0.0001228    0.0002927    0.0000483   -0.0000788   -0.0001618   -0.0002179   -0.0002523
+    -0.0002670   -0.0002626   -0.0002395   -0.0001975   -0.0001363   -0.0000556    0.0000449    0.0001659    0.0003078    0.0004712
+ Goodness factor:      0.10670414D-05
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    14     Scattering state symmetry is 3B2g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.51235039D+01
+ Beta                          0.19538373D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.64595764D+01
+ Beta                          0.89806968D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.54207554D+01
+ Beta                          0.50100658D-02
+
+ Fitted resonance parameters
+ Positions / eV                0.39154021D+01
+ Widths    / eV                0.36900144D-01
+ Residues
+     0.0002945    0.0001190   -0.0000433   -0.0001669   -0.0001844   -0.0000257    0.0001599    0.0001720    0.0000802   -0.0000237
+    -0.0001076   -0.0001648   -0.0001944   -0.0001971   -0.0001730   -0.0001221   -0.0000439    0.0000622    0.0001971    0.0003620
+ Goodness factor:      0.56336942D-06
+
+ Fitted resonance parameters
+ Positions / eV                0.46391050D+01
+ Widths    / eV                0.10230816D+00
+ Residues
+     0.0067115    0.0029736   -0.0002503   -0.0027547   -0.0042638   -0.0044631   -0.0031398   -0.0004938    0.0025505    0.0045535
+     0.0045284    0.0026192   -0.0002695   -0.0031776   -0.0053985   -0.0064366   -0.0058559   -0.0031130    0.0026549    0.0130250
+ Goodness factor:      0.46577085D-03
+
+ Fitted resonance parameters
+ Positions / eV                0.47980107D+01
+ Widths    / eV                0.76690452D-02
+ Residues
+    -0.0117017   -0.0064835   -0.0022985    0.0009592    0.0033752    0.0050053    0.0058411    0.0056671    0.0032852   -0.0042920
+     0.0025680    0.0048404    0.0043674    0.0032049    0.0017517    0.0001430   -0.0015448   -0.0032523   -0.0049254   -0.0065103
+ Goodness factor:      0.45912743D-03
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    15     Scattering state symmetry is 3B3g 
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.41344424D+01
+ Beta                          0.18578592D-02
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.51448500D+01
+ Beta                          0.17264188D-01
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.64564686D+01
+ Beta                          0.84849577D-02
+
+ Fitted resonance parameters
+ Positions / eV                0.39603231D+01
+ Widths    / eV                0.33014989D-01
+ Residues
+     0.0004367    0.0001786   -0.0000669   -0.0002568   -0.0002475    0.0000723    0.0002739    0.0001943    0.0000402   -0.0000963
+    -0.0001966   -0.0002594   -0.0002862   -0.0002779   -0.0002348   -0.0001567   -0.0000430    0.0001073    0.0002956    0.0005233
+ Goodness factor:      0.12024750D-05
+
+ Fitted resonance parameters
+ Positions / eV                0.46557113D+01      0.47968960D+01
+ Widths    / eV                0.91061190D-01      0.94156659D-02
+ Residues
+     0.0047220    0.0014843   -0.0011926   -0.0029029   -0.0030968   -0.0014831    0.0011237    0.0029132    0.0028918    0.0015387
+    -0.0002575   -0.0018823   -0.0030096   -0.0034604   -0.0030990   -0.0017691    0.0007246    0.0020883   -0.0038353    0.0085021
+ Goodness factor:      0.19587588D-03
+
+ Fitted resonance parameters
+ Positions / eV                0.47968846D+01
+ Widths    / eV                0.95614728D-02
+ Residues
+    -0.0140633   -0.0073189   -0.0020328    0.0019540    0.0047598    0.0064386    0.0068986    0.0055906    0.0003504   -0.0053944
+     0.0037647    0.0060061    0.0053403    0.0038443    0.0020254    0.0000752   -0.0018934   -0.0037899   -0.0055295   -0.0070260
+ Goodness factor:      0.62701060D-03
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+
+                    16     Scattering state symmetry is 3Au  
+
+ Fitted resonance parameters
+ Quantum defect (n-alpha)      0.13272146D+02
+ Beta                          0.23631403D+00
+
+ Fitted resonance parameters
+ Positions / eV                0.44548369D+01
+ Widths    / eV                0.74792507D-02
+ Residues
+     0.0054954    0.0025116   -0.0030509    0.0008035    0.0026525    0.0011931   -0.0001290   -0.0012107   -0.0020642   -0.0026948
+    -0.0030986   -0.0032656   -0.0031811   -0.0028266   -0.0021802   -0.0012161    0.0000951    0.0017876    0.0039004    0.0064785
+ Goodness factor:      0.17291986D-03
+
+ Fitted resonance parameters
+ Positions / eV                0.47322860D+01
+ Widths    / eV                0.62796499D-01
+ Residues
+    -0.0001410   -0.0000279    0.0000442    0.0000779    0.0000753    0.0000409   -0.0000116   -0.0000538   -0.0000575   -0.0000257
+     0.0000134    0.0000398    0.0000491    0.0000449    0.0000317    0.0000140   -0.0000052   -0.0000231   -0.0000378   -0.0000477
+ Goodness factor:      0.54678807D-07
+
+*** CHECK EIGENPHASES GRAPHS TO SEE IF RESONANCES ARE REAL OR IF I MISSED ANY ***
+
+

@@ -1,0 +1,46 @@
+
+STATE ENERGIES FOR THE MOLECULAR TARGET ARE: 
+
+   Energy (Hartree)                     State
+
+ -108.462455586759          State No.   1 Doublet     AG        
+ -107.703986178305          State No.   2 Doublet     AG        
+ -107.647417739178          State No.   3 Doublet     AG        
+ -108.435909125085          State No.   4 Doublet     B3U       
+ -108.435909125085          State No.   5 Doublet     B2U       
+ -107.647417739178          State No.   6 Doublet     B1G       
+ -108.065613710930          State No.   7 Doublet     B1U       
+ -108.027583976180          State No.   8 Doublet     B1U       
+ -108.004982686320          State No.   9 Doublet     B1U       
+ -107.694449309138          State No.  10 Doublet     B1U       
+ -108.040191914711          State No.  11 Doublet     B2G       
+ -108.007010324189          State No.  12 Doublet     B2G       
+ -107.999375046087          State No.  13 Doublet     B2G       
+ -107.922709052296          State No.  14 Doublet     B2G       
+ -107.713963454931          State No.  15 Doublet     B2G       
+ -108.040191914711          State No.  16 Doublet     B3G       
+ -108.007010324189          State No.  17 Doublet     B3G       
+ -107.999375046087          State No.  18 Doublet     B3G       
+ -107.922709052296          State No.  19 Doublet     B3G       
+ -107.713963454931          State No.  20 Doublet     B3G       
+ -108.039167870707          State No.  21 Doublet     AU        
+ -108.027583976180          State No.  22 Doublet     AU        
+ -108.004982686320          State No.  23 Doublet     AU        
+ -107.974734622145          State No.  24 Doublet     AU        
+ -107.737861434479          State No.  25 Quartet     AG        
+ -107.689177033438          State No.  26 Quartet     AG        
+ -107.669998012261          State No.  27 Quartet     B3U       
+ -107.669998012261          State No.  28 Quartet     B2U       
+ -107.737861434479          State No.  29 Quartet     B1G       
+ -107.665534539419          State No.  30 Quartet     B1G       
+ -108.157089196995          State No.  31 Quartet     B1U       
+ -108.111725635521          State No.  32 Quartet     B1U       
+ -108.078427840342          State No.  33 Quartet     B2G       
+ -108.078427840342          State No.  34 Quartet     B3G       
+ -108.111725635521          State No.  35 Quartet     AU        
+ -108.068002836045          State No.  36 Quartet     AU        
+
+See file results/SelectedTargetStates.txt for vertical excitation energies
+ of the selected states in energy order.
+
+

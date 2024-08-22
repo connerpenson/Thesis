@@ -1,0 +1,95 @@
+
+STATE ENERGIES FOR THE MOLECULAR TARGET ARE: 
+
+   Energy (Hartree)                     State
+
+ -108.514690321642          State No.   1 Doublet     AG        
+ -108.050541213443          State No.   2 Doublet     AG        
+ -108.029127231908          State No.   3 Doublet     AG        
+ -107.978860439091          State No.   4 Doublet     AG        
+ -107.943714841096          State No.   5 Doublet     AG        
+ -107.878637346434          State No.   6 Doublet     AG        
+ -107.866917496087          State No.   7 Doublet     AG        
+ -107.829334664663          State No.   8 Doublet     AG        
+ -107.813629175777          State No.   9 Doublet     AG        
+ -108.476550246271          State No.  10 Doublet     B3U       
+ -108.051261175864          State No.  11 Doublet     B3U       
+ -107.929801162205          State No.  12 Doublet     B3U       
+ -107.901711536519          State No.  13 Doublet     B3U       
+ -107.884257971425          State No.  14 Doublet     B3U       
+ -107.855361225215          State No.  15 Doublet     B3U       
+ -107.820600323881          State No.  16 Doublet     B3U       
+ -107.785636441689          State No.  17 Doublet     B3U       
+ -108.476550246271          State No.  18 Doublet     B2U       
+ -108.051261175864          State No.  19 Doublet     B2U       
+ -107.929801162205          State No.  20 Doublet     B2U       
+ -107.901711536519          State No.  21 Doublet     B2U       
+ -107.884257971425          State No.  22 Doublet     B2U       
+ -107.855361225215          State No.  23 Doublet     B2U       
+ -107.820600323882          State No.  24 Doublet     B2U       
+ -107.785636441689          State No.  25 Doublet     B2U       
+ -108.034507527818          State No.  26 Doublet     B1G       
+ -108.029127231908          State No.  27 Doublet     B1G       
+ -107.978860439091          State No.  28 Doublet     B1G       
+ -107.943834915712          State No.  29 Doublet     B1G       
+ -107.878637346434          State No.  30 Doublet     B1G       
+ -107.866917496087          State No.  31 Doublet     B1G       
+ -107.842685504478          State No.  32 Doublet     B1G       
+ -107.829334664663          State No.  33 Doublet     B1G       
+ -108.374703850791          State No.  34 Doublet     B1U       
+ -108.189295266434          State No.  35 Doublet     B1U       
+ -108.178117665127          State No.  36 Doublet     B1U       
+ -108.168844114471          State No.  37 Doublet     B1U       
+ -107.861828486709          State No.  38 Doublet     B1U       
+ -108.215326519412          State No.  39 Doublet     B2G       
+ -108.199953058050          State No.  40 Doublet     B2G       
+ -108.157575012103          State No.  41 Doublet     B2G       
+ -108.131306286063          State No.  42 Doublet     B2G       
+ -107.892553515361          State No.  43 Doublet     B2G       
+ -107.850024783381          State No.  44 Doublet     B2G       
+ -108.215326519412          State No.  45 Doublet     B3G       
+ -108.199953058050          State No.  46 Doublet     B3G       
+ -108.157575012103          State No.  47 Doublet     B3G       
+ -108.131306286063          State No.  48 Doublet     B3G       
+ -107.892553515361          State No.  49 Doublet     B3G       
+ -107.850024783381          State No.  50 Doublet     B3G       
+ -108.186627837659          State No.  51 Doublet     AU        
+ -108.178117665127          State No.  52 Doublet     AU        
+ -108.168844114471          State No.  53 Doublet     AU        
+ -108.144458001941          State No.  54 Doublet     AU        
+ -108.179087425624          State No.  55 Quartet     AG        
+ -108.123378267638          State No.  56 Quartet     AG        
+ -107.982753316509          State No.  57 Quartet     AG        
+ -107.932950636832          State No.  58 Quartet     AG        
+ -108.171971566897          State No.  59 Quartet     B3U       
+ -107.964487468682          State No.  60 Quartet     B3U       
+ -107.859285152709          State No.  61 Quartet     B3U       
+ -108.171971566897          State No.  62 Quartet     B2U       
+ -107.964487468682          State No.  63 Quartet     B2U       
+ -107.859285152710          State No.  64 Quartet     B2U       
+ -108.123378267638          State No.  65 Quartet     B1G       
+ -108.102678904318          State No.  66 Quartet     B1G       
+ -107.982753316509          State No.  67 Quartet     B1G       
+ -107.943145026703          State No.  68 Quartet     B1G       
+ -108.313046130908          State No.  69 Quartet     B1U       
+ -108.260616432345          State No.  70 Quartet     B1U       
+ -107.814529212138          State No.  71 Quartet     B1U       
+ -108.238805867212          State No.  72 Quartet     B2G       
+ -107.912666108774          State No.  73 Quartet     B2G       
+ -107.848098822821          State No.  74 Quartet     B2G       
+ -107.819587188464          State No.  75 Quartet     B2G       
+ -107.806766918565          State No.  76 Quartet     B2G       
+ -108.238805867212          State No.  77 Quartet     B3G       
+ -107.912666108774          State No.  78 Quartet     B3G       
+ -107.848098822821          State No.  79 Quartet     B3G       
+ -107.819587188464          State No.  80 Quartet     B3G       
+ -107.806766918565          State No.  81 Quartet     B3G       
+ -108.260616432345          State No.  82 Quartet     AU        
+ -108.236408666953          State No.  83 Quartet     AU        
+ -107.814529212138          State No.  84 Quartet     AU        
+ -107.799837036741          State No.  85 Quartet     AU        
+
+See file results/SelectedTargetStates.txt for vertical excitation energies
+ of the selected states in energy order.
+
+

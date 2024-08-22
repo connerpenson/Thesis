@@ -1,0 +1,5 @@
+&ARRHENIUSIN
+name = 'xsec_exc_3 Arrhenius parameters'
+infile = 'xsec_exc_3_rates.dat'
+outfile = 'arrhenius.dat',
+/

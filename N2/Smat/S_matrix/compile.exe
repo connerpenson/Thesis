@@ -1,0 +1,2 @@
+gfortran -g -ffpe-trap=zero,overflow,invalid -fcheck=all,bounds -fimplicit-none -ffree-line-length-0 -floop-parallelize-all -Werror -Wno-tabs -Wno-unused-function -Wno-maybe-uninitialized -Wno-conversion -Og -c src/global_params.f90 -o obj/global_params.o -J mod
+gfortran -g -ffpe-trap=zero,overflow,invalid -fcheck=all,bounds -fimplicit-none -ffree-line-length-0 -floop-parallelize-all -Werror -Wno-tabs -Wno-unused-function -Wno-maybe-uninitialized -Wno-conversion -Og obj/global_params.o src/Delta_interpol.f90 -o bin/Delta_interpol.e -L lib -lstdlib -llapack -J mod 

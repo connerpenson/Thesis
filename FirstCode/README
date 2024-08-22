@@ -1,0 +1,5 @@
+This code will not run prperly because the original wf000.dat and wf001.dat files are deleted.
+Though, two wavefunctions are input into the cd by these names the code should run.
+
+The purpose of this code was basicall to familiarize myself with our setup and some of the calculations that I would be interacting with
+regularly. The wavefunction files were essentially arbitrary. It was for practice.

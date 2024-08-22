@@ -1,0 +1,16 @@
+ ******************************
+ Target Polarisability calculation
+ ******************************
+                               
+ Polarisability (in (a0)^3) is computed using first order perturbation theory.
+                               
+ alpha():   1.531540660058168E-030
+ alpha(yy):    20.0523742546208     
+ alpha(xx):    20.0523742547695     
+ alpha():   1.598020492923509E-009
+ alpha(zz):    6.59164792342101     
+                               
+                               
+ ------------------------------
+                               
+Mean/spherical polarisability alpha=    0.155654654781365E+02

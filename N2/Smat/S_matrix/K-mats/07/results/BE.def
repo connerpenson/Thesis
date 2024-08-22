@@ -1,0 +1,6 @@
+title=BE scaled Born Cross Sections /Å²
+x_label=Energy /eV
+y_label=BE scaled Born Cross Section /Å²
+y_series0=Excitation to DoubletB3U
+y_series1=Excitation to DoubletB2U
+y_series2=Excitation to DoubletB1U

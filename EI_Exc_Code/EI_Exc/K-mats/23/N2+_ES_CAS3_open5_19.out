@@ -1,0 +1,581 @@
+Pre-clean successful: false
+Date and time :Mon Aug 12 09:37:38 EDT 2024
+
+
+
+*****************************************************
+
+Analysing molecular symmetry:
+
+*****************************************************
+
+
+N2+ has 1 symmetrically non-redundant atoms
+
+
+The symmetrically non-redundant atoms are:
+[N1]
+
+Point group of N2+: D2h
+
+Generating symmetry operations for this group:
+Reflection in the X-Y plane.
+Reflection in the X-Z plane.
+Reflection in the Y-Z plane.
+
+Molecular charge is +1
+
+Geometry employed (quoted in Angstroms in the centre of mass frame):
+N 0.0000 0.0000 0.7024
+N 0.0000 0.0000 -0.7024
+
+
+Basis set used: DZP
+
+******************************************************
+
+Sorting and Ordering of Integrals
+
+******************************************************
+
+*******************************************************
+
+Running Molpro
+
+*******************************************************
+
+
+
+*******************************************************
+
+Running MPOUTRD
+
+*******************************************************
+
+
+
+
+Orbital Energies and Occupations.
+
+SYM  1	ORB   1	 -441.67300 eV	2 OCC
+SYM  5	ORB   1	 -441.64899 eV	2 OCC
+SYM  1	ORB   2	  -45.79100 eV	2 OCC
+SYM  5	ORB   2	  -33.66300 eV	2 OCC
+SYM  2	ORB   1	  -24.70500 eV	2 OCC
+SYM  3	ORB   1	  -24.70500 eV	2 OCC
+SYM  1	ORB   3	  -14.41400 eV	1 OCC
+SYM  6	ORB   1	  -10.13100 eV	0 OCC
+SYM  7	ORB   1	  -10.13100 eV	0 OCC
+SYM  5	ORB   3	   -1.45300 eV	0 OCC
+SYM  5	ORB   4	    6.68900 eV	0 OCC
+SYM  2	ORB   2	    8.35700 eV	0 OCC
+SYM  3	ORB   2	    8.35700 eV	0 OCC
+SYM  1	ORB   4	    8.62900 eV	0 OCC
+SYM  6	ORB   2	   10.87100 eV	0 OCC
+SYM  7	ORB   2	   10.87100 eV	0 OCC
+SYM  1	ORB   5	   13.38500 eV	0 OCC
+SYM  5	ORB   5	   26.70000 eV	0 OCC
+SYM  2	ORB   3	   33.73900 eV	0 OCC
+SYM  3	ORB   3	   33.73900 eV	0 OCC
+SYM  1	ORB   6	   38.80100 eV	0 OCC
+SYM  4	ORB   1	   38.80100 eV	0 OCC
+SYM  5	ORB   6	   46.24000 eV	0 OCC
+SYM  8	ORB   1	   46.24000 eV	0 OCC
+SYM  1	ORB   7	   49.43200 eV	0 OCC
+SYM  6	ORB   3	   58.74100 eV	0 OCC
+SYM  7	ORB   3	   58.74100 eV	0 OCC
+SYM  5	ORB   7	   64.02300 eV	0 OCC
+SYM  1	ORB   8	  877.01703 eV	0 OCC
+SYM  5	ORB   8	  882.35901 eV	0 OCC
+
+
+Number of molecular orbitals per symmetry: [8, 3, 3, 1, 8, 3, 3, 1]
+
+Quantum chemistry model: 
+
+Suggested frozen orbitals: [1, 0, 0, 0, 1, 0, 0, 0]
+Suggested complete active space: [3, 1, 1, 0, 4, 1, 1, 0]
+
+
+**************************************************************
+
+Orthogonalising molecular orbitals (Programme SWEDMOS)
+
+**************************************************************
+
+
+**************************************************************
+
+Transforming intergrals (Programme SWTRMO)
+
+**************************************************************
+
+
+**************************************************************
+
+Generating N2+ Target wavefunctions
+
+**************************************************************
+
+Running congen job: congen1.data
+
+ *** TOTAL NUMBER OF GENERATED CSF'S FOR THE GROUND STATE IS   1144
+*** This target calculation should not take long !
+
+Running scatci job: ci1.data
+Running congen job: congen2.data
+Running scatci job: ci2.data
+Running congen job: congen3.data
+Running scatci job: ci3.data
+Running congen job: congen4.data
+Running scatci job: ci4.data
+Running congen job: congen5.data
+Running scatci job: ci5.data
+Running congen job: congen6.data
+Running scatci job: ci6.data
+Running congen job: congen7.data
+Running scatci job: ci7.data
+Running congen job: congen8.data
+Running scatci job: ci8.data
+Running congen job: congen9.data
+Running scatci job: ci9.data
+Running congen job: congen10.data
+Running scatci job: ci10.data
+Running congen job: congen11.data
+Running scatci job: ci11.data
+Running congen job: congen12.data
+Running scatci job: ci12.data
+Running congen job: congen13.data
+Running scatci job: ci13.data
+Running congen job: congen14.data
+Running scatci job: ci14.data
+Running congen job: congen15.data
+Running scatci job: ci15.data
+Running congen job: congen16.data
+Running scatci job: ci16.data
+
+STATE ENERGIES FOR THE MOLECULAR TARGET ARE: 
+
+   Energy (Hartree)                     State
+
+ -108.477612716320          State No.   1 Doublet     AG        
+ -108.170035714338          State No.   2 Doublet     AG        
+ -108.125856863724          State No.   3 Doublet     AG        
+ -108.077678672039          State No.   4 Doublet     AG        
+ -108.071969216953          State No.   5 Doublet     AG        
+ -108.070364370071          State No.   6 Doublet     AG        
+ -108.031685244669          State No.   7 Doublet     AG        
+ -108.015617323977          State No.   8 Doublet     AG        
+ -107.969856864101          State No.   9 Doublet     AG        
+ -107.949006278695          State No.  10 Doublet     AG        
+ -107.930624813936          State No.  11 Doublet     AG        
+ -107.879150665938          State No.  12 Doublet     AG        
+ -107.862732929640          State No.  13 Doublet     AG        
+ -107.805889762670          State No.  14 Doublet     AG        
+ -107.794923919838          State No.  15 Doublet     AG        
+ -107.771872640790          State No.  16 Doublet     AG        
+ -108.477248632886          State No.  17 Doublet     B3U       
+ -108.094276915707          State No.  18 Doublet     B3U       
+ -108.088316396154          State No.  19 Doublet     B3U       
+ -108.057018886464          State No.  20 Doublet     B3U       
+ -108.030965148946          State No.  21 Doublet     B3U       
+ -108.015111250952          State No.  22 Doublet     B3U       
+ -107.982920522308          State No.  23 Doublet     B3U       
+ -107.976698932659          State No.  24 Doublet     B3U       
+ -107.930399563496          State No.  25 Doublet     B3U       
+ -107.831776905961          State No.  26 Doublet     B3U       
+ -107.822952714386          State No.  27 Doublet     B3U       
+ -107.798896796434          State No.  28 Doublet     B3U       
+ -107.784722072293          State No.  29 Doublet     B3U       
+ -107.754098733132          State No.  30 Doublet     B3U       
+ -108.477248632886          State No.  31 Doublet     B2U       
+ -108.094276915707          State No.  32 Doublet     B2U       
+ -108.088316396155          State No.  33 Doublet     B2U       
+ -108.057018886464          State No.  34 Doublet     B2U       
+ -108.030965148946          State No.  35 Doublet     B2U       
+ -108.015111250952          State No.  36 Doublet     B2U       
+ -107.982920522308          State No.  37 Doublet     B2U       
+ -107.976698932659          State No.  38 Doublet     B2U       
+ -107.930399563496          State No.  39 Doublet     B2U       
+ -107.831776905961          State No.  40 Doublet     B2U       
+ -107.822952714386          State No.  41 Doublet     B2U       
+ -107.798896796434          State No.  42 Doublet     B2U       
+ -107.784722072293          State No.  43 Doublet     B2U       
+ -107.754098733132          State No.  44 Doublet     B2U       
+ -108.125856863724          State No.  45 Doublet     B1G       
+ -108.084453483917          State No.  46 Doublet     B1G       
+ -108.077678672039          State No.  47 Doublet     B1G       
+ -108.071922008203          State No.  48 Doublet     B1G       
+ -108.070364370071          State No.  49 Doublet     B1G       
+ -108.031685244669          State No.  50 Doublet     B1G       
+ -107.969856864101          State No.  51 Doublet     B1G       
+ -107.959711768522          State No.  52 Doublet     B1G       
+ -107.936057103611          State No.  53 Doublet     B1G       
+ -107.930624813936          State No.  54 Doublet     B1G       
+ -107.862732929640          State No.  55 Doublet     B1G       
+ -107.855185338783          State No.  56 Doublet     B1G       
+ -107.842925902259          State No.  57 Doublet     B1G       
+ -107.794923919838          State No.  58 Doublet     B1G       
+ -108.358080059127          State No.  59 Doublet     B1U       
+ -108.253520121138          State No.  60 Doublet     B1U       
+ -108.233111982697          State No.  61 Doublet     B1U       
+ -108.228982415405          State No.  62 Doublet     B1U       
+ -108.065161365162          State No.  63 Doublet     B1U       
+ -107.986686000244          State No.  64 Doublet     B1U       
+ -107.974810722398          State No.  65 Doublet     B1U       
+ -107.924166848874          State No.  66 Doublet     B1U       
+ -107.890498738676          State No.  67 Doublet     B1U       
+ -107.843718472988          State No.  68 Doublet     B1U       
+ -107.829751301300          State No.  69 Doublet     B1U       
+ -107.827452738920          State No.  70 Doublet     B1U       
+ -107.824818624312          State No.  71 Doublet     B1U       
+ -107.783645299192          State No.  72 Doublet     B1U       
+ -107.770983562769          State No.  73 Doublet     B1U       
+ -107.754414770071          State No.  74 Doublet     B1U       
+ -108.316085285534          State No.  75 Doublet     B2G       
+ -108.270000711960          State No.  76 Doublet     B2G       
+ -108.248450795332          State No.  77 Doublet     B2G       
+ -108.215684222403          State No.  78 Doublet     B2G       
+ -108.132579114467          State No.  79 Doublet     B2G       
+ -107.971857195130          State No.  80 Doublet     B2G       
+ -107.919215976063          State No.  81 Doublet     B2G       
+ -107.873594816114          State No.  82 Doublet     B2G       
+ -107.863020852398          State No.  83 Doublet     B2G       
+ -107.828401514153          State No.  84 Doublet     B2G       
+ -107.819013651287          State No.  85 Doublet     B2G       
+ -107.811204804211          State No.  86 Doublet     B2G       
+ -107.753982043667          State No.  87 Doublet     B2G       
+ -108.316085285534          State No.  88 Doublet     B3G       
+ -108.270000711960          State No.  89 Doublet     B3G       
+ -108.248450795332          State No.  90 Doublet     B3G       
+ -108.215684222403          State No.  91 Doublet     B3G       
+ -108.132579114467          State No.  92 Doublet     B3G       
+ -107.971857195130          State No.  93 Doublet     B3G       
+ -107.919215976063          State No.  94 Doublet     B3G       
+ -107.873594816114          State No.  95 Doublet     B3G       
+ -107.863020852398          State No.  96 Doublet     B3G       
+ -107.828401514153          State No.  97 Doublet     B3G       
+ -107.819013651287          State No.  98 Doublet     B3G       
+ -107.811204804211          State No.  99 Doublet     B3G       
+ -107.753982043667          State No. 100 Doublet     B3G       
+ -108.253520121138          State No. 101 Doublet     AU        
+ -108.249902217219          State No. 102 Doublet     AU        
+ -108.233111982697          State No. 103 Doublet     AU        
+ -108.224032908761          State No. 104 Doublet     AU        
+ -107.986686000244          State No. 105 Doublet     AU        
+ -107.957470828783          State No. 106 Doublet     AU        
+ -107.893458720101          State No. 107 Doublet     AU        
+ -107.890498738677          State No. 108 Doublet     AU        
+ -107.829751301300          State No. 109 Doublet     AU        
+ -107.824818624312          State No. 110 Doublet     AU        
+ -107.788697835763          State No. 111 Doublet     AU        
+ -107.783645299192          State No. 112 Doublet     AU        
+ -107.770983562769          State No. 113 Doublet     AU        
+ -107.763439873279          State No. 114 Doublet     AU        
+ -108.243845329996          State No. 115 Quartet     AG        
+ -108.197257885137          State No. 116 Quartet     AG        
+ -108.134635321856          State No. 117 Quartet     AG        
+ -108.126237393731          State No. 118 Quartet     AG        
+ -108.016097782202          State No. 119 Quartet     AG        
+ -107.990051650116          State No. 120 Quartet     AG        
+ -107.876571127721          State No. 121 Quartet     AG        
+ -107.874401073969          State No. 122 Quartet     AG        
+ -107.870582321104          State No. 123 Quartet     AG        
+ -108.153184970681          State No. 124 Quartet     B3U       
+ -108.132253951284          State No. 125 Quartet     B3U       
+ -108.066031169698          State No. 126 Quartet     B3U       
+ -107.929635535434          State No. 127 Quartet     B3U       
+ -107.867173508911          State No. 128 Quartet     B3U       
+ -107.856264396471          State No. 129 Quartet     B3U       
+ -107.831510803483          State No. 130 Quartet     B3U       
+ -107.818535017541          State No. 131 Quartet     B3U       
+ -107.776562828299          State No. 132 Quartet     B3U       
+ -108.153184970680          State No. 133 Quartet     B2U       
+ -108.132253951284          State No. 134 Quartet     B2U       
+ -108.066031169698          State No. 135 Quartet     B2U       
+ -107.929635535434          State No. 136 Quartet     B2U       
+ -107.867173508911          State No. 137 Quartet     B2U       
+ -107.856264396471          State No. 138 Quartet     B2U       
+ -107.831510803483          State No. 139 Quartet     B2U       
+ -107.818535017541          State No. 140 Quartet     B2U       
+ -107.776562828299          State No. 141 Quartet     B2U       
+ -108.197257885137          State No. 142 Quartet     B1G       
+ -108.170614587322          State No. 143 Quartet     B1G       
+ -108.134635321856          State No. 144 Quartet     B1G       
+ -108.102509156965          State No. 145 Quartet     B1G       
+ -107.990051650116          State No. 146 Quartet     B1G       
+ -107.976813348871          State No. 147 Quartet     B1G       
+ -107.876571127721          State No. 148 Quartet     B1G       
+ -107.744705551529          State No. 149 Quartet     B1G       
+ -108.386260719475          State No. 150 Quartet     B1U       
+ -108.325653714958          State No. 151 Quartet     B1U       
+ -107.982557182074          State No. 152 Quartet     B1U       
+ -107.949678172559          State No. 153 Quartet     B1U       
+ -107.922262596393          State No. 154 Quartet     B1U       
+ -107.903167261446          State No. 155 Quartet     B1U       
+ -107.746617774044          State No. 156 Quartet     B1U       
+ -108.348762878149          State No. 157 Quartet     B2G       
+ -108.054667978548          State No. 158 Quartet     B2G       
+ -107.987300929209          State No. 159 Quartet     B2G       
+ -107.909907314326          State No. 160 Quartet     B2G       
+ -107.902804164726          State No. 161 Quartet     B2G       
+ -107.892827153071          State No. 162 Quartet     B2G       
+ -107.862197730387          State No. 163 Quartet     B2G       
+ -107.757948194452          State No. 164 Quartet     B2G       
+ -107.746665750378          State No. 165 Quartet     B2G       
+ -108.348762878149          State No. 166 Quartet     B3G       
+ -108.054667978548          State No. 167 Quartet     B3G       
+ -107.987300929209          State No. 168 Quartet     B3G       
+ -107.909907314326          State No. 169 Quartet     B3G       
+ -107.902804164726          State No. 170 Quartet     B3G       
+ -107.892827153071          State No. 171 Quartet     B3G       
+ -107.862197730387          State No. 172 Quartet     B3G       
+ -107.757948194452          State No. 173 Quartet     B3G       
+ -107.746665750378          State No. 174 Quartet     B3G       
+ -108.325653714958          State No. 175 Quartet     AU        
+ -108.300147475398          State No. 176 Quartet     AU        
+ -108.041449424724          State No. 177 Quartet     AU        
+ -107.982557182074          State No. 178 Quartet     AU        
+ -107.945264076054          State No. 179 Quartet     AU        
+ -107.922262596393          State No. 180 Quartet     AU        
+ -107.904087760690          State No. 181 Quartet     AU        
+ -107.809792444491          State No. 182 Quartet     AU        
+ -107.746617774044          State No. 183 Quartet     AU        
+
+See file results/SelectedTargetStates.txt for vertical excitation energies
+ of the selected states in energy order.
+
+
+*************************************************************
+
+Vertical excitation energies in eV:
+
+*************************************************************
+
+
+Doublet  Ag 0.0
+Doublet  B3u 0.010883999999974634
+Doublet  B2u 0.010883999999974634
+Quartet  B1u 2.4842729999997206
+Doublet  B1u 3.251595000000059
+Quartet  B3g 3.5046479999999525
+Quartet  B2g 3.5046479999999525
+Quartet  Au 4.133198999999937
+Quartet  B1u 4.133198999999937
+Doublet  B2g 4.394414999999715
+
+
+
+
+*******************************************************
+
+Commencing the N+1 inner region scattering calculation
+
+*******************************************************
+
+
+************************************************************
+
+program SWORD: sorting and ordering of molecular integrals
+
+************************************************************
+
+
+**************************************************************
+
+program SWEDMOS: orthogonalisation of bound and continuum MOs
+
+**************************************************************
+
+
+****************************************************
+
+program SWTRMO: transforming and ordering of integrals
+
+****************************************************
+
+
+**************************************************************
+
+Generating scattering trial close-coupling wavefunctions
+
+**************************************************************
+Running congen job: congen1np1.data
+Running scatci job: ci1np1.data
+
+Running congen job: congen2np1.data
+Running scatci job: ci2np1.data
+
+Running congen job: congen3np1.data
+Running scatci job: ci3np1.data
+
+Running congen job: congen4np1.data
+Running scatci job: ci4np1.data
+
+Running congen job: congen5np1.data
+Running scatci job: ci5np1.data
+
+Running congen job: congen6np1.data
+Running scatci job: ci6np1.data
+
+Running congen job: congen7np1.data
+Running scatci job: ci7np1.data
+
+Running congen job: congen8np1.data
+Running scatci job: ci8np1.data
+
+Running congen job: congen9np1.data
+Running scatci job: ci9np1.data
+
+Running congen job: congen10np1.data
+Running scatci job: ci10np1.data
+
+Running congen job: congen11np1.data
+Running scatci job: ci11np1.data
+
+Running congen job: congen12np1.data
+Running scatci job: ci12np1.data
+
+Running congen job: congen13np1.data
+Running scatci job: ci13np1.data
+
+Running congen job: congen14np1.data
+Running scatci job: ci14np1.data
+
+Running congen job: congen15np1.data
+Running scatci job: ci15np1.data
+
+Running congen job: congen16np1.data
+Running scatci job: ci16np1.data
+
+
+Scattering state 1
+Scattering state 2
+Scattering state 3
+Scattering state 4
+Scattering state 5
+Scattering state 6
+Scattering state 7
+Scattering state 8
+Scattering state 9
+Scattering state 10
+Scattering state 11
+Scattering state 12
+Scattering state 13
+Scattering state 14
+Scattering state 15
+Scattering state 16
+
+R-Matrix generation for scattering state 1
+R-Matrix generation for scattering state 2
+R-Matrix generation for scattering state 3
+R-Matrix generation for scattering state 4
+R-Matrix generation for scattering state 5
+R-Matrix generation for scattering state 6
+R-Matrix generation for scattering state 7
+R-Matrix generation for scattering state 8
+R-Matrix generation for scattering state 9
+R-Matrix generation for scattering state 10
+R-Matrix generation for scattering state 11
+R-Matrix generation for scattering state 12
+R-Matrix generation for scattering state 13
+R-Matrix generation for scattering state 14
+R-Matrix generation for scattering state 15
+R-Matrix generation for scattering state 16
+Sorting phase shifts
+Summing cross sections over the scattering symmetries: 
+1Ag, 3Ag, 1B3u, 3B3u, 1B2u, 3B2u, 1B1g, 3B1g, 1B1u, 3B1u, 1B2g, 3B2g, 1B3g, 3B3g, 1Au, 3Au, 
+
+
+Calculating born correction and adding to the summed cross section
+*************************************************
+
+Computing the Binary-Encounter-Bethe (BEB) ionisation cross section
+
+*************************************************
+
+By Koopman's theorem the ionisation energy of N2+ is 14.414 eV
+
+BEB cross section written to /home/conner/soft/QNEE6.1/workspace/project/N2+_ES_CAS3_open5_19/results/xsec-beb.dat
+
+*************************************************
+
+Calculating the BE scaled born cross section
+
+*************************************************
+
+Ionisation energy from BEB =  14.414
+State Number 	 Energy (eV) 	 Spin 	 Irrep 	 Dipole Transition Moment
+State ... 01 / 10	000.000000000	Doublet	AG	0.0
+State ... 02 / 10	000.010884554	Doublet	B3U	-0.2031985
+State ... 03 / 10	000.010884554	Doublet	B2U	-0.2031985
+State ... 04 / 10	002.484399414	Quartet	B1U	0.0
+State ... 05 / 10	003.251760460	Doublet	B1U	-0.4371907
+State ... 06 / 10	003.504826336	Quartet	B3G	0.0
+State ... 07 / 10	003.504826336	Quartet	B2G	0.0
+State ... 08 / 10	004.133409321	Quartet	AU	0.0
+State ... 09 / 10	004.133409321	Quartet	B1U	0.0
+State ... 10 / 10	004.394638613	Doublet	B2G	0.0
+1
+2
+3
+
+Number of Dipole allowed transitions: 3
+Calculating rate coefficients and Arrhenius parameters
+
+
+*****************************************************
+
+!!!IMPORTANT PLEASE READ THE FOLLOWING CAREFULLY!!!
+
+*****************************************************
+
+end.message
+Date and time :Mon Aug 12 10:14:22 EDT 2024
+
+=====================================================
+R-matrix calculation of e-N2+ scattering complete
+=====================================================
+
+All important target and scattering data may be found in:
+/home/conner/soft/QNEE6.1/workspace/project/N2+_ES_CAS3_open5_19/results
+
+=====================================================
+N2+ Target Quantum Chemistry Results Files
+=====================================================
+
+Quantemol-N produces:
+
+target electronic energies;
+target ground state configuration;
+target transition moments
+target vertical excitation energies
+
+For ground state electron configuration see file 'moen_message.txt';
+for target energies see file(s) 'target.prop' or 'trg.energy';
+for target transition moments see 'target-all.prop'
+Molecule spherical polarisability and, where appropriate, the diagonal components of the polarisability (see file 'molecule.polarisability')
+For target vertical excitation energies see file 'SelectedTargetStates.txt'
+
+=====================================================
+N2+ Scattering Results Files
+=====================================================
+
+
+Quantemol-N produces:
+
+eigenphase shifts;
+total cross sections;
+ionisation cross section using the Binary-Encounter-Bethe model;
+rates
+target vertical excitation energies
+
+For resonances see file 'reson_message'
+For eigenphase sum data see files 'eigenp1.dat' and eigenp3.dat
+For total cross section data see file 'xsec_1.dat'
+electronic excitation cross section are in file 'xsec-exc.dat
+For rates data see file 'rates.dat'
+K-matrix files have suffixes .kmat, the prefix symbols are the scattering states
+R-matrix files have suffixes .rmat, the prefix symbols are the scattering states
+T-matrix files have suffixes .tmat, the prefix symbols are the scattering states
+Channel files have suffixes .channel, the prefix symbols are the scattering states
