@@ -387,8 +387,10 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
   real(8), dimension(n_max, n_max, 0:vib_max-1, 0:vib_max-1), intent(out) ::  eics_matrix
   integer ::  max_chan
   integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
-  real(8), dimension(num_tot) :: nu
-
+  real(8), dimension(num_tot) :: nu, beta
+  
+  integer, dimension(3, n_max, 0:vib_max-1) :: max_pos
+  real(8), dimension(3, n_max, 0:vib_max-1) :: Z_vals
 
   complex*16, allocatable       :: phys_S_ft(:,:)
 
@@ -396,8 +398,9 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
   integer ::  en_i, ei, ei_p, vi, vi_p, num_open, num_closed, j, INFO, i, n, v, n_p, v_p, k
 
+  real(8), allocatable      ::  Z_norms(:,:,:)
   complex*16, allocatable		::	smat_cc(:,:), smat_co(:,:), smat_oc(:,:), smat_oo(:,:)
-  complex*16, allocatable		::	beta(:)
+  complex*16, allocatable		::	D(:,:)
   integer,    allocatable		::	IPIV(:)
   
 
@@ -432,7 +435,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
     
     allocate(IPIV(num_tot), phys_S_ft(num_open,num_open))
     allocate(smat_cc(num_closed,num_closed),smat_co(num_closed,num_open),smat_oc(num_open,num_closed), &
-              & smat_oo(num_open,num_open),beta(num_tot))
+              & smat_oo(num_open,num_open),Z_norms(num_closed,n_max,0:vib_max-1), D(num_closed,num_open))
 
     if (num_open /= num_tot) then
 
@@ -446,9 +449,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
         beta(j+num_open) = pi/sqrt(2*(energy_array(j+num_open)-E))
       end do
 
-      nu = pi * beta   
-
-      call Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_open)
+      nu = beta / pi   
 
       do j = 1, num_closed
       smat_cc(j,j) = smat_cc(j,j) - exp(-2d0*ci*beta(j+num_open))
@@ -456,7 +457,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
       call ZGESV(num_closed,num_open,smat_cc,num_closed,IPIV(1:num_closed),smat_co,num_closed,INFO)
 
-      phys_S_ft(:,:) =  MatMul(smat_oc,smat_co)
+      phys_S_ft(:,:) =  smat_oo - MatMul(smat_oc,smat_co)
 
     else if (num_open == num_tot) then
 
@@ -464,11 +465,35 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
     end if
 
+    Z_norms = 0
+    do j = 1, num_closed
+      do k = 1, num_open
+        n = sorted_ft_channels(k,1)
+        v = sorted_ft_channels(k,2)
+  
+        D(j, k) = smat_co(j,k) * nu(j+num_open)**1.5
+  
+        if (sorted_ft_channels(k,1) == n .and. sorted_ft_channels(k,2) == v) then
+          Z_norms(j,n,v) = Z_norms(j,n,v) + abs(D(j, k))**2
+        end if
+  
+      end do
+    end do
+
     print *, en_i
     open(29, file = "Sum_Check.dat")
       do ei = 1, n_max
-        do ei_p = 1, n_max
-          do vi = 0, vib_nums(ei)-1
+        do vi = 0, vib_nums(ei)-1
+
+          do i = 1,3
+            max_pos(i,ei,vi) = maxloc(Z_norms(:,ei,vi),1)
+            print *, max_pos(i,ei,vi)
+            Z_vals(i,ei,vi) = Z_norms(max_pos(i,ei,vi),ei,vi)
+            Z_norms(max_pos(i,ei,vi),ei,vi) = 0
+          end do
+          max_pos = max_pos + num_open
+
+          do ei_p = 1, n_max
             do vi_p = 0, vib_nums(ei_p)-1
   
               eics_sum = 0
@@ -503,64 +528,20 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
       end do
       close(29)
 
-      write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)
+      write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)&
+                & , sorted_ft_channels(max_pos(1,1,0),1), sorted_ft_channels(max_pos(1,1,0),2), sorted_ft_channels(max_pos(1,1,0),3), sorted_ft_channels(max_pos(1,1,0),4) &
+                & , Z_vals(1,1,0), nu(max_pos(1,1,0))
+
+
       write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,1,0,0), elec_energies(2,1,en_i), (pi / (2*elec_energies(2,1,en_i)) ) * eics_matrix(2,1,1,0), &
                   & elec_energies(2,2,en_i), (pi / (2*elec_energies(2,2,en_i)) ) * eics_matrix(2,1,2,0), elec_energies(2,3,en_i), (pi / (2*elec_energies(2,3,en_i)) ) * eics_matrix(2,1,3,0)
 
-    deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, beta)
+    deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, D)
 
   end do
   close(27)
   close(28)
   close(333)
-
-end subroutine
-
-subroutine Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_open)
-
-  use global_params, only: num_tot, energy_step_num, n_max, vib_nums, vib_max, chan_ens
-
-  real(8), intent(in) ::  nu(num_tot)
-  integer, intent(in) ::  num_closed, num_open, en_i
-  complex*16, dimension(num_closed, num_open)  ::   smat_co
-  integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
-
-  integer ::  j,k
-  integer, dimension(3) ::  max_chans
-  real(8), dimension(num_closed)  :: Z_norms
-  real(8) ::  energy_begin, energy_end, energy_step, E
-  complex*16, dimension(num_closed, num_open)  :: D
-
-  energy_begin = chan_ens(1,0) !Origin is ground state of N2+
-  energy_end = chan_ens(n_max, vib_max-1)
-  energy_step = (energy_end - energy_begin)/energy_step_num
-
-  E = energy_begin + en_i*energy_step
-
-  do k = 1, num_open
-    do j = 1, num_closed
-      D(j, k) = smat_co(j,k) * nu(j+num_open)**1.5
-    end do
-  end do
-
-  Z_norms = 0
-  do j = 1, num_closed
-    !do coord_i = 1, 3
-      Z_norms(j) = Z_norms(j) + sum(abs(D(j,:))**2)
-    !end do
-  end do
-
-  do j = 1, 3
-    max_chans(j) = maxloc(Z_norms, 1) 
-    Z_norms(maxloc(Z_norms, 1)) = 0
-  end do
-
-  
-  !print *, ei, max_chans(ei,1)
-  write(333,'(F11.8,3(4I4,2F10.3))') E, sorted_ft_channels(max_chans(1)+num_open,1), sorted_ft_channels(max_chans(1)+num_open,2), sorted_ft_channels(max_chans(1)+num_open,3), sorted_ft_channels(max_chans(1)+num_open,4), Z_norms(max_chans(1)), nu(max_chans(1)),&
-        & sorted_ft_channels(max_chans(2)+num_open,1), sorted_ft_channels(max_chans(2)+num_open,2), sorted_ft_channels(max_chans(2)+num_open,3), sorted_ft_channels(max_chans(2)+num_open,4), Z_norms(max_chans(2)), nu(max_chans(2)), &
-        & sorted_ft_channels(max_chans(3)+num_open,1), sorted_ft_channels(max_chans(3)+num_open,2), sorted_ft_channels(max_chans(3)+num_open,3), sorted_ft_channels(max_chans(3)+num_open,4), Z_norms(max_chans(3)), nu(max_chans(3))
-  write(333,*)
 
 end subroutine
 
