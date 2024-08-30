@@ -9,29 +9,33 @@ program EI_Exc_Calc
     integer ::  i, j, n, v, l, m, n_prime, v_prime, l_prime, m_prime, i_Q, elec_i, vib_i, counter, ie, ei, ei_p, vi, vi_p, i_Q_
     real(8) ::  E_tot, E_elec, E, energy_begin, energy_end, energy_step
 
-    real(8), dimension(dim_lm, dim_lm, num_Q)      :: K_Q, Delta_Q, fixed_Delta_Q, trimmed_Delta_Q
-    real(8), dimension(dim_lm, dim_lm, num_Q_)     :: lin_Delta_Q, final_Delta_Q
+    real(8), dimension(dim_lm, dim_lm, num_Q)      :: K_Q, Delta_Q, fixed_Delta_Q
     real(8), dimension(dim_lm, num_Q)      :: eigenphases
-    complex*16, dimension(dim_lm, dim_lm, num_Q_)   :: S_Q
     integer, dimension(100,num_gamma_Q,3,num_Q)    :: D2h_Dinf
     integer, dimension(num_Q, num_gamma_Q)         :: md
-    real(8), dimension(0:vib_num-1, num_Q_, n_max)      :: ion_wf
-    complex*16, dimension(num_tot, num_tot)        :: S_ft
-    complex*16, dimension(num_tot, num_tot)        :: replaced_S_ft
-    complex*16, dimension(num_tot, num_tot)        :: sorted_S_ft
-    integer, dimension(num_tot, 4)                 :: ft_channels, sorted_ft_channels
-    real(8), dimension(n_max, n_max, 0:vib_num, 0:vib_num)               :: eics_matrix
-    !real(8), dimension(1, 2:2, 0:vib_num, 0:vib_num)  :: diff_mat
+    real(8), dimension(0:vib_max-1, num_Q_, n_max)      :: ion_wf
+    real(8), dimension(n_max, 0:vib_max-1, n_max, 0:vib_max-1)               :: eics_matrix
+    !real(8), dimension(1, 2:2, 0:max(vib_nums), 0:max(vib_nums))  :: diff_mat
     real(8), dimension(num_scatE)                  :: energies
-    real(8), dimension(num_tot)                    :: energy_array
-    integer(kind=int64), dimension(num_tot) ::  index
     integer, dimension(energy_step_num) ::  max_chans
+    real(8), allocatable, dimension(:,:,:)  ::  trimmed_Delta_Q, lin_Delta_Q, final_Delta_Q
+    complex*16, allocatable, dimension(:,:,:)  :: S_Q
+    integer, allocatable, dimension(:,:)    ::  trimmed_chans
+    complex*16, allocatable, dimension(:,:) :: S_ft, replaced_S_ft, sorted_S_ft
+    integer, allocatable, dimension(:,:)                  :: ft_channels, sorted_ft_channels
+    real(8), allocatable, dimension(:)                    :: energy_array
+    integer(kind=int64), allocatable, dimension(:) ::  index
 
     good_elem_list(1,:) = (/1,1,0,1,1,0/) 
     good_elem_list(2,:) = (/1,1,0,4,0,0/)
     good_elem_list(3,:) = (/2,2,1,2,2,1/)
     good_elem_list(4,:) = (/3,2,-1,3,2,-1/)
     good_elem_list(5,:) = (/4,0,0,1,1,0/)
+
+    write_list(1,:) = (/1,0,1,0/) 
+    write_list(2,:) = (/2,0,1,0/)
+    write_list(3,:) = (/1,0,1,3/)
+    write_list(4,:) = (/1,0,1,4/)
 
     call get_geoms
     call get_lin_geoms
@@ -63,25 +67,28 @@ program EI_Exc_Calc
     end do
 
     call sign_fixer(Delta_Q, fixed_Delta_Q)
-    call trim_Delta(fixed_Delta_Q, trimmed_Delta_Q)
+    call get_num_to_trim(Delta_Q)
+    allocate(trimmed_Delta_Q(trimmed_dim_lm,trimmed_dim_lm,num_Q), trimmed_chans(trimmed_dim_lm,3), lin_Delta_Q(trimmed_dim_lm,trimmed_dim_lm,num_Q)&
+              & , final_Delta_Q(trimmed_dim_lm,trimmed_dim_lm,num_Q), S_Q(trimmed_dim_lm,trimmed_dim_lm,num_Q_))
+    call trim_Delta(fixed_Delta_Q, trimmed_Delta_Q, trimmed_chans)
 
-    do i = 1, dim_lm
-      do j = 1, dim_lm
+    ! do i = 1, dim_lm
+    !   do j = 1, dim_lm
 
-        call i2lm(i, n, l, m)
-        call i2lm(j, n_prime, l_prime, m_prime)
+    !     call i2lm(i, n, l, m)
+    !     call i2lm(j, n_prime, l_prime, m_prime)
 
-        if ( ( (n == 2 .and. l == 2 .and. m == 1) .and. (n == 2 .and. l == 2 .and. m == 1) ) .or. &
-        & ( (n_prime == 3 .and. l_prime == 2 .and. m_prime == -1) .and. (n_prime == 3 .and. l_prime == 2 .and. m_prime == -1) ) ) then
+    !     if ( ( (n == 2 .and. l == 2 .and. m == 1) .and. (n == 2 .and. l == 2 .and. m == 1) ) .or. &
+    !     & ( (n_prime == 3 .and. l_prime == 2 .and. m_prime == -1) .and. (n_prime == 3 .and. l_prime == 2 .and. m_prime == -1) ) ) then
 
-          fixed_Delta_Q(i,j,num_Q) = fixed_Delta_Q(i,j,num_Q-1)
+    !       fixed_Delta_Q(i,j,num_Q) = fixed_Delta_Q(i,j,num_Q-1)
 
-        end if
-      end do
-    end do
+    !     end if
+    !   end do
+    ! end do
 
-    call linearize_Delta(trimmed_Delta_Q(:,:,:), lin_Delta_Q(:,:,:))
-    call add_nice_elems(fixed_Delta_Q, lin_Delta_Q, final_Delta_Q)
+    call linearize_Delta(trimmed_Delta_Q, lin_Delta_Q)
+    call add_nice_elems(trimmed_Delta_Q, lin_Delta_Q, final_Delta_Q)
 
     open(333, file = "delta_interp_points.dat")
     counter = 0
@@ -171,8 +178,8 @@ program EI_Exc_Calc
     call get_wf(ion_wf)
             
     open(27, file = "WF_vals.dat")
-    do vib_i = 0, vib_num-1
-        do elec_i = 1, n_max
+    do elec_i = 1, n_max
+        do vib_i = 0, vib_nums(elec_i)-1
             write(27,*) "#e=",elec_i,"v=", vib_i
             do i_Q_ = 1, num_Q_
                 write(27,*) lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i)
@@ -203,7 +210,10 @@ program EI_Exc_Calc
     end do
     close(333)
 
-    call frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
+    call get_num_tot(trimmed_chans)
+    allocate(S_ft(num_tot,num_tot),replaced_S_ft(num_tot,num_tot),sorted_S_ft(num_tot,num_tot),ft_channels(num_tot,4)&
+              &,sorted_ft_channels(num_tot,4),energy_array(num_tot), index(num_tot))
+    call frame_transform(trimmed_chans, S_Q, ion_wf, S_ft, ft_channels, energy_array)
 
     open(333, file = "ft_channels.dat")
     do i = 1, num_tot
@@ -225,7 +235,13 @@ program EI_Exc_Calc
       sorted_ft_channels(i, :) = ft_channels(index(i), :)
     end do
 
-    call channel_elimination(sorted_S_ft, energy_array, sorted_ft_channels, eics_matrix)
+    open(333, file = "sorted_ft_channels.dat")
+    do i = 1, num_tot
+      write(333,*) i, sorted_ft_channels(i,:)
+    end do
+    close(333)
+
+    call channel_elimination(sorted_S_ft, energy_array, sorted_ft_channels)
 
     
     !---------------------------------------------------------------------------------------------------------------
@@ -235,7 +251,7 @@ program EI_Exc_Calc
 
     open(27, file = "channel_energies.dat")
     do ei = 1, n_max
-      do vi = 0, vib_num-1
+      do vi = 0, vib_nums(ei)-1
 
         write(27,*) "#ei,vi", ei, vi
         write(27,*) chan_ens(ei,vi)
@@ -285,13 +301,14 @@ program EI_Exc_Calc
 
 end program
 
-subroutine add_nice_elems(fixed_Delta_Q, lin_Delta_Q, final_Delta_Q)
+subroutine add_nice_elems(trimmed_Delta_Q, trimmed_chans, lin_Delta_Q, final_Delta_Q)
 
-  use global_params, only: dim_lm, num_Q, num_Q_, good_elem_list
+  use global_params, only: trimmed_dim_lm, num_Q, num_Q_, good_elem_list
 
-  real(8), dimension(dim_lm, dim_lm, num_Q), intent(in)      :: fixed_Delta_Q
-  real(8), dimension(dim_lm, dim_lm, num_Q_), intent(in)      :: lin_Delta_Q
-  real(8), dimension(dim_lm, dim_lm, num_Q_), intent(out)     :: final_Delta_Q
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q), intent(in)      :: fixed_Delta_Q
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q_), intent(in)      :: lin_Delta_Q
+  integer, dimension(trimmed_dim_lm, 3) ::  trimmed_chans
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q_), intent(out)     :: final_Delta_Q
 
   integer ::  i, j, num_elems, ind, ind_p
 
@@ -304,8 +321,18 @@ subroutine add_nice_elems(fixed_Delta_Q, lin_Delta_Q, final_Delta_Q)
   final_Delta_Q = lin_Delta_Q
   do i = 1, num_elems
 
-    call lm2i(good_elem_list(i,1), good_elem_list(i,2), good_elem_list(i,3), ind)
-    call lm2i(good_elem_list(i,4), good_elem_list(i,5), good_elem_list(i,6), ind_p)
+    do j = 1, trimmed_dim_lm
+      if (trimmed_chans(j,1) == good_elem_list(i,1) .and. trimmed_chans(j,2) == good_elem_list(i,2) .and. trimmed_chans(j,3) == good_elem_list(i,3) ) then
+        ind = j
+      end if
+    end do
+
+    do j = 1, trimmed_dim_lm
+      if (trimmed_chans(j,1) == good_elem_list(i,4) .and. trimmed_chans(j,2) == good_elem_list(i,5) .and. trimmed_chans(j,3) == good_elem_list(i,6) ) then
+        ind_p = j
+      end if
+    end do
+
     print *, good_elem_list(i,1), good_elem_list(i,2), good_elem_list(i,3), ind, good_elem_list(i,4), good_elem_list(i,5), good_elem_list(i,6), ind_p
     in_elem = fixed_Delta_Q(ind, ind_p, :)
 
@@ -339,76 +366,148 @@ subroutine change_grid(in_elem, fin_elem)
 
 end subroutine
 
-subroutine trim_Delta(Delta_Q, trimmed_Delta_Q)
+subroutine get_num_to_trim(Delta_Q)
 
-  use global_params, only: dim_lm, num_Q, trim_value, lin_start, lin_end, deriv_trim, geoms
+  use global_params, only: dim_lm, trimmed_dim_lm, trim_value, num_Q
 
-  real(8), dimension(dim_lm, dim_lm, num_Q), intent(in)       :: Delta_Q
-  real(8), dimension(dim_lm, dim_lm, num_Q), intent(out)      :: trimmed_Delta_Q
+  real(8), dimension(dim_lm,dim_lm,num_Q), intent(in) ::  Delta_Q
 
-  real(8) ::  deriv, avg
+  integer ::  i,j
+  logical, dimension(dim_lm, dim_lm)  ::  trim_mask
 
-  integer ::  i, j
-
-  trimmed_Delta_Q = Delta_Q
   do i = 1, dim_lm
     do j = 1, i
 
       if (sum(abs(Delta_Q(i,j,:))) <= trim_value) then
-        trimmed_Delta_Q(i,j,:) = 0
-        trimmed_Delta_Q(j,i,:) = 0
+        trim_mask(i,j) = .False.
+        trim_mask(j,i) = .False.
       end if
 
-      call find_rderiv(trimmed_Delta_Q(i, j, lin_end), trimmed_Delta_Q(i, j, lin_start), (geoms(lin_end) - geoms(lin_start)), deriv)
+    end do
+  end do
+
+  trimmed_dim_lm = int( sqrt( count(trim_mask) ) )
+
+end subroutine
+
+subroutine trim_Delta(Delta_Q, trimmed_Delta_Q, trimmed_chans)
+
+  use global_params, only: dim_lm, num_Q, trim_value, lin_start, lin_end, deriv_trim, geoms, trimmed_dim_lm
+
+  real(8), dimension(dim_lm, dim_lm, num_Q), intent(in)       :: Delta_Q
+
+  real(8), dimension(dim_lm, dim_lm, num_Q)       :: zerod_Delta_Q
+  logical, dimension(dim_lm)                      :: trim_mask_1
+  logical, dimension(dim_lm, dim_lm)              :: trim_mask_2
+  integer, dimension(dim_lm, 3)                   :: temp_chans
+  integer     ::  counter
+
+  real(8), allocatable, dimension(:,:,:), intent(out)                   :: trimmed_Delta_Q
+  integer, allocatable, dimension(:,:), intent(out)                     :: trimmed_chans
+
+  real(8) ::  deriv, avg
+
+  integer ::  i, j, n, l, m, n_p, l_p, m_p, i_untrimmed, j_untrimmed
+
+  trim_mask_1 = .True.
+  trim_mask_2 = .True.
+  zerod_Delta_Q = Delta_Q
+  do i = 1, dim_lm
+
+    call i2lm(i,n,l,m)
+
+    do j = 1, i
+
+      if (sum(abs(Delta_Q(i,j,:))) <= trim_value) then
+        zerod_Delta_Q(i,j,:) = 0
+        zerod_Delta_Q(j,i,:) = 0
+        trim_mask_1(i) = .False.
+        trim_mask_2(i,j) = .False.
+        trim_mask_2(j,i) = .False.
+      else 
+        temp_chans(i,:) = (/n,l,m/)
+      end if
+
+      call find_rderiv(zerod_Delta_Q(i, j, lin_end), zerod_Delta_Q(i, j, lin_start), (geoms(lin_end) - geoms(lin_start)), deriv)
 
       if (abs(deriv) > deriv_trim) then
 
-        avg = sum(trimmed_Delta_Q(i,j,:))/size(trimmed_Delta_Q(i,j,:))
+        avg = sum(zerod_Delta_Q(i,j,:))/size(zerod_Delta_Q(i,j,:))
 
-        trimmed_Delta_Q(i,j,:) = avg
-        trimmed_Delta_Q(j,i,:) = avg
+        zerod_Delta_Q(i,j,:) = avg
+        zerod_Delta_Q(j,i,:) = avg
 
       end if
 
     end do
   end do
 
-  
+  trimmed_dim_lm = count(trim_mask_1)
+
+  allocate(trimmed_chans(trimmed_dim_lm,3), trimmed_Delta_Q(trimmed_dim_lm, trimmed_dim_lm, num_Q_))
+
+  counter = 0
+  do i = 1, dim_lm
+    if (trim_mask_1(i)) then
+      trimmed_chans(counter,3) = (/n,l,m/)
+      counter = counter +1
+    end if
+  end do
+
+  do i = 1, trimmed_dim_lm
+    n = trimmed_chans(i,1)
+    l = trimmed_chans(i,2)
+    m = trimmed_chans(i,3)
+    do j = 1, trimmed_dim_lm
+      n_p = trimmed_chans(j,1)
+      l_p = trimmed_chans(j,2)
+      m_p = trimmed_chans(j,3)
+
+      call lm2i(n,l,m,i_untrimmed)
+      call lm2i(n_p,l_p,m_p,j_untrimmed)
+
+      trimmed_Delta_Q(i, j, :) = zerod_Delta_Q(i_untrimmed, j_untrimmed, :)
+      trimmed_Delta_Q(j, i, :) = zerod_Delta_Q(j_untrimmed, i_untrimmed, :)
+
+    end do
+  end do
 
 end subroutine
 
-subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matrix)
+subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels)
 
-  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_num, elec_energies
+  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_nums, vib_max, elec_energies, write_list
   use iso_fortran_env, only: int64, iostat_end
 
   complex*16, dimension(num_tot, num_tot), intent(in)        :: S_ft
   real(8), dimension(num_tot), intent(in)                    :: energy_array
-  real(8), dimension(n_max, n_max, 0:vib_num, 0:vib_num), intent(out) ::  eics_matrix
-  integer ::  max_chan
+  real(8), dimension(n_max, 0:vib_max-1, n_max, 0:vib_max-1) :: eics_matrix
   integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
   real(8), dimension(num_tot) :: nu
+  real(8), dimension(3, n_max, 0:vib_max-1) ::  Z_vals
 
 
   complex*16, allocatable       :: phys_S_ft(:,:)
 
   real(8) ::  energy_begin, energy_end, energy_step, E, eics_sum, E_elec
 
-  integer ::  en_i, ei, ei_p, vi, vi_p, num_open, num_closed, j, INFO, i, n, v, n_p, v_p, k
+  integer ::  en_i, ei, vi, ei_p, vi_p, num_open, num_closed, j, INFO, i, n, v, n_p, v_p, k
 
-  complex*16, allocatable		::	smat_cc(:,:), smat_co(:,:), smat_oc(:,:), smat_oo(:,:)
-  complex*16, allocatable		::	beta(:)
+  integer, dimension(3, n_max, 0:vib_max-1) :: max_pos
+  real(8), dimension(3, n_max, 0:vib_max-1) :: Z_vals
+
+  complex*16, allocatable		::	smat_cc(:,:), smat_co(:,:), smat_oc(:,:), smat_oo(:,:), Z_norms(:,:,:)
+  complex*16, allocatable		::	beta(:), D(:,:)
   integer,    allocatable		::	IPIV(:)
   
 
   energy_begin = chan_ens(1,0) !Origin is ground state of N2+
-  energy_end = chan_ens(n_max, vib_num-1)
+  energy_end = chan_ens(n_max, vib_max-1)
   energy_step = (energy_end - energy_begin)/energy_step_num
   print *, energy_begin, energy_end, energy_step
 
   open(27, file = "eics_vs_energy_fromground.dat")
-  open(28, file = "eics_vs_energy_toground.dat")
-  open(333, file = "Resonances_exc.dat")
+  !open(28, file = "eics_vs_energy_toground.dat")
 
   eics_sum = 0
   do en_i = 1, energy_step_num
@@ -432,31 +531,29 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
     
     allocate(IPIV(num_tot), phys_S_ft(num_open,num_open))
     allocate(smat_cc(num_closed,num_closed),smat_co(num_closed,num_open),smat_oc(num_open,num_closed), &
-              & smat_oo(num_open,num_open),beta(num_tot))
+              & smat_oo(num_open,num_open),beta(num_tot),Z_norms(num_closed,n_max,0:vib_max-1), D(num_closed,num_open))
 
     if (num_open /= num_tot) then
 
-      smat_oo = S_ft(1:num_open,1:num_open)
-      smat_cc = S_ft(num_open+1:num_tot,num_open+1:num_tot)
-      smat_oc = S_ft(1:num_open,num_open+1:num_tot)
-      smat_co = S_ft(num_open+1:num_tot,1:num_open)
+      smat_oo = conjg(transpose(S_ft(1:num_open,1:num_open)))
+      smat_cc = conjg(transpose(S_ft(num_open+1:num_tot,num_open+1:num_tot)))
+      smat_co = conjg(transpose(S_ft(1:num_open,num_open+1:num_tot)))
+      smat_oc = conjg(transpose(S_ft(num_open+1:num_tot,1:num_open)))
 
       beta = 0d0
       do j = 1, num_closed
         beta(j+num_open) = pi/sqrt(2*(energy_array(j+num_open)-E))
       end do
 
-      nu = pi * beta   
-
-      call Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_open)
+      nu = beta / pi
 
       do j = 1, num_closed
-      smat_cc(j,j) = smat_cc(j,j) - exp(-2d0*ci*beta(j+num_open))
+      smat_cc(j,j) = smat_cc(j,j) - exp(2d0*ci*beta(j+num_open))
       end do
 
       call ZGESV(num_closed,num_open,smat_cc,num_closed,IPIV(1:num_closed),smat_co,num_closed,INFO)
 
-      phys_S_ft(:,:) =  MatMul(smat_oc,smat_co)
+      phys_S_ft(:,:) =  smat_oo - MatMul(smat_oc,smat_co)
 
     else if (num_open == num_tot) then
 
@@ -464,109 +561,75 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
     end if
 
+    
+  Z_norms = 0
+  do j = 1, num_closed
+    do k = 1, num_open
+      n = sorted_ft_channels(k,1)
+      v = sorted_ft_channels(k,2)
+
+      D(j, k) = smat_co(j,k) * nu(j+num_open)**1.5
+
+      if (sorted_ft_channels(k,1) == n .and. sorted_ft_channels(k,2) == v) then
+        Z_norms(j,n,v) = Z_norms(j,n,v) + abs(D(j, k))**2
+      end if
+
+    end do
+  end do
+
     print *, en_i
-    open(29, file = "Sum_Check.dat")
       do ei = 1, n_max
-        do ei_p = 1, n_max
-          do vi = 0, vib_num-1
-            do vi_p = 0, vib_num-1
-  
+        do vi = 0, vib_nums(ei)-1
+
+          do i = 1,3
+            max_pos(i,ei,vi) = maxloc(Z_norms(:,ei,vi))
+            Z_vals(i,ei,vi) = Z_norms(max_pos(i,ei,vi),ei,vi)
+            Z_norms(max_pos(i,ei,vi),ei,vi) = 0
+          end do
+
+          do ei_p = 1, n_max
+            do vi_p = 0, vib_nums(ei_p)-1
+        
               eics_sum = 0
               do i = 1, num_open
                 n = sorted_ft_channels(i,1)
                 v = sorted_ft_channels(i,2)
-   
+
                 do j = 1, num_open
                   n_p = sorted_ft_channels(j,1)
                   v_p = sorted_ft_channels(j,2)
-  
+
                   if ( (n == ei) .and. (n_p == ei_p) .and. (v == vi) .and. (v_p == vi_p) ) then
-              
-                      eics_sum = eics_sum + ( real(phys_S_ft(i,j))**2 + aimag(phys_S_ft(i,j))**2 )
-  
-                     if (phys_S_ft(i,j) /= 0) then
-                      write(29, *) n, v, sorted_ft_channels(i,3), sorted_ft_channels(i,4), n_p, v_p, sorted_ft_channels(j,3), sorted_ft_channels(j,4), phys_S_ft(i,j)
-                     end if
-                     
+                    eics_sum = eics_sum + ( real(phys_S_ft(i,j))**2 + aimag(phys_S_ft(i,j))**2 )                 
                   end if
-  
+
                 end do
               end do
 
-              if (E - chan_ens(ei_p,vi_p) /= 0) then
-                eics_matrix(ei, ei_p, vi, vi_p) =  eics_sum  
-              end if
+              !if (E - chan_ens(ei_p,vi_p) /= 0) then
+                eics_matrix(ei, vi, ei_p, vi_p) = eics_sum  
+              !end 
+                
 
             end do
           end do
         end do
       end do
-      close(29)
 
-      write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)
-      write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,1,0,0), elec_energies(2,1,en_i), (pi / (2*elec_energies(2,1,en_i)) ) * eics_matrix(2,1,1,0), &
-                  & elec_energies(2,2,en_i), (pi / (2*elec_energies(2,2,en_i)) ) * eics_matrix(2,1,2,0), elec_energies(2,3,en_i), (pi / (2*elec_energies(2,3,en_i)) ) * eics_matrix(2,1,3,0)
+      write(27,*) E, (pi / (2*E) ) * eics_matrix(1,0,1,1), sorted_ft_channels(max_pos(1,1,0),1), sorted_ft_channels(max_pos(1,1,0),2),sorted_ft_channels(max_pos(1,1,0),3),sorted_ft_channels(max_pos(1,1,0),4), Z_vals(1,1,0), nu(max_pos(1,1,0))
+      !write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,0,1,0), sorted_ft_channels(max_chans(1,1,0),1), sorted_ft_channels(max_chans(1,1,0),2),sorted_ft_channels(max_chans(1,1,0),3),sorted_ft_channels(max_chans(1,1,0),4), Z_vals(1,1,0), nu(max_chans(1,1,0))
 
-    deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, beta)
+      deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, beta)
 
   end do
   close(27)
-  close(28)
-  close(333)
-
-end subroutine
-
-subroutine Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_open)
-
-  use global_params, only: num_tot, energy_step_num, n_max, vib_num, chan_ens
-
-  real(8), intent(in) ::  nu(num_tot)
-  integer, intent(in) ::  num_closed, num_open, en_i
-  complex*16, dimension(num_closed, num_open)  ::   smat_co
-  integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
-
-  integer ::  j,k
-  integer, dimension(3) ::  max_chans
-  real(8), dimension(num_closed)  :: Z_norms
-  real(8) ::  energy_begin, energy_end, energy_step, E
-  complex*16, dimension(num_closed, num_open)  :: D
-
-  energy_begin = chan_ens(1,0) !Origin is ground state of N2+
-  energy_end = chan_ens(n_max, vib_num-1)
-  energy_step = (energy_end - energy_begin)/energy_step_num
-
-  E = energy_begin + en_i*energy_step
-
-  do k = 1, num_open
-    do j = 1, num_closed
-      D(j, k) = smat_co(j,k) * nu(j+num_open)**1.5
-    end do
-  end do
-
-  Z_norms = 0
-  do j = 1, num_closed
-    !do coord_i = 1, 3
-      Z_norms(j) = Z_norms(j) + sum(abs(D(j,:))**2)
-    !end do
-  end do
-
-  do j = 1, 3
-    max_chans(j) = maxloc(Z_norms, 1) 
-    Z_norms(maxloc(Z_norms, 1)) = 0
-  end do
-
-  
-  !print *, ei, max_chans(ei,1)
-  write(333,'(F11.8,3(4I4,2F10.3))') E, sorted_ft_channels(max_chans(1)+num_open,1), sorted_ft_channels(max_chans(1)+num_open,2), sorted_ft_channels(max_chans(1)+num_open,3), sorted_ft_channels(max_chans(1)+num_open,4), Z_norms(max_chans(1)), nu(max_chans(1)),&
-        & sorted_ft_channels(max_chans(2)+num_open,1), sorted_ft_channels(max_chans(2)+num_open,2), sorted_ft_channels(max_chans(2)+num_open,3), sorted_ft_channels(max_chans(2)+num_open,4), Z_norms(max_chans(2)), nu(max_chans(2)), &
-        & sorted_ft_channels(max_chans(3)+num_open,1), sorted_ft_channels(max_chans(3)+num_open,2), sorted_ft_channels(max_chans(3)+num_open,3), sorted_ft_channels(max_chans(3)+num_open,4), Z_norms(max_chans(3)), nu(max_chans(3))
-  write(333,*)
+  !close(28)
 
 end subroutine
 
 subroutine replace_like_vals(S_ft, ft_channels, replaced_S_ft)
 
-  use global_params, only: num_tot, num_Q, vib_num, l_max
+  use global_params, only: num_tot, vib_nums, l_max
 
   complex*16, dimension(num_tot, num_tot), intent(in)         :: S_ft
   integer, dimension(num_tot, 4), intent(in)                    :: ft_channels
@@ -730,41 +793,70 @@ end subroutine
 
 ! end subroutine
 
-subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
+subroutine get_num_tot(trimmed_chans)
 
-  use global_params, only : vib_num, n_max, num_Q_, dim_lm, num_tot, lin_geoms, all_open_i, chan_ens, lin_r_step
+  use global_params, only : trimmed_dim_lm, num_tot, vib_nums
+
+  integer, dimension(trimmed_dim_lm, 3), intent(in) :: trimmed_chans
+
+  integer ::   i, n, iv
+
+  num_tot = 0
+  do i = 1, trimmed_dim_lm
+    n = trimmed_chans(i,1)
+      do iv = 0, vib_nums(n)-1
+        num_tot = num_tot+1
+      end do
+  end do
+
+end subroutine
+
+subroutine frame_transform(trimmed_chans, S_Q, ion_wf, S_ft, ft_channels, energy_array)
+
+  use global_params, only : vib_nums, vib_max, n_max, num_Q_, num_tot, trimmed_dim_lm, num_tot, lin_geoms, all_open_i, chan_ens, lin_r_step
   
   
-  complex*16, dimension(dim_lm, dim_lm, num_Q_), intent(in) ::  S_Q
-  real(8), dimension(0:vib_num-1, num_Q_, n_max), intent(in)	::	ion_wf
+  complex*16, dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q_), intent(in) ::  S_Q
+  real(8), dimension(0:vib_max-1, num_Q_, n_max), intent(in)	::	ion_wf
+  integer, dimension(trimmed_dim_lm, 3) ::  trimmed_chans
   
   complex*16, dimension(num_tot, num_tot), intent(out) ::  S_ft
   integer, dimension(num_tot, 4), intent(out) ::  ft_channels
   real(8), dimension(num_tot), intent(out)    ::  energy_array
   
   complex*16 :: S_sum
-  integer :: i, j, iv, i_p, j_p, iv_p, i_Q_, n, l, m, n_p, l_p, m_p, ie 
-  
+  integer :: i, j, iv, i_p, j_p, iv_p, i_Q_, n, l, m, n_p, l_p, m_p, ie
+
+
   ie = maxval(all_open_i)
   open(27, file = "S_ft.dat")
   !do ie = 1, num_scatE
-    do i = 1, dim_lm
-      do iv = 0, vib_num-1
+    do i = 1, trimmed_dim_lm
 
-        j = (i-1)*vib_num + (iv+1)
+      n = trimmed_chans(i,1)
+      l = trimmed_chans(i,2)
+      m = trimmed_chans(i,3)
 
-        call i2lm(i, n, l, m)
+      do iv = 0, vib_nums(n)-1
+
+        j = (i-1)*vib_nums(n) + (iv+1)
+        
         ft_channels(j, :) = (/n, iv, l, m/)
         energy_array(j) = chan_ens(n, iv)
 
-        do i_p = 1, dim_lm
-          call i2lm(i_p, n_p, l_p, m_p)
-            do iv_p = 0, vib_num-1
+        do i_p = 1, trimmed_dim_lm
 
-              j_p = (i_p-1)*vib_num + (iv_p+1)
+          n_p = trimmed_chans(i_p,1)
+          l_p = trimmed_chans(i_p,2)
+          m_p = trimmed_chans(i_p,3)
+
+            do iv_p = 0, vib_nums(n_p)-1
+
+              j_p = (i_p-1)*vib_nums(n_p) + (iv_p+1)
 
               S_sum = 0
               do i_Q_ = 1,num_Q_
+                !print *, S_Q(i, i_p, i_Q_), ion_wf(iv, i_Q_, n), ion_wf(iv_p, i_Q_, n_p)
                 S_sum = S_sum + S_Q(i, i_p, i_Q_) * ion_wf(iv, i_Q_, n) * ion_wf(iv_p, i_Q_, n_p) * lin_r_step
               end do
               S_ft(j, j_p) = S_sum
@@ -777,7 +869,6 @@ subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
                   write(27,*) "v_p=", iv_p, real(S_ft(j, j_p)), aimag(S_ft(j, j_p))
                 end if
               
-
             end do
             if (S_ft(j, j_p) /= 0) then
               write(27,*)
@@ -788,25 +879,26 @@ subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
     end do
   !end do
   close(27)
+
   
   end subroutine
 
 subroutine get_wf(ion_wf)
 
-  use global_params, only: n_max, num_Q_, vib_num, lin_geoms
+  use global_params, only: n_max, num_Q_, vib_nums, lin_geoms, vib_max
 
-  real(8), dimension(0:vib_num-1, num_Q_, n_max), intent(out)     :: ion_wf
+  real(8), dimension(0:vib_max-1, num_Q_, n_max), intent(out)     :: ion_wf
 
   character(len = 44) ::  wf_name
 
   integer ::  elec_i, i_Q_, vib_i
 
-  do elec_i = 0, n_max-1
-    do vib_i = 0, vib_num-1
+  do elec_i = 1, n_max
+    do vib_i = 0, vib_nums(elec_i)-1
       call make_wf_name(elec_i, vib_i, wf_name)
       open(333, file = wf_name, status = "old")
       do i_Q_ = 1, num_Q_
-          call get_wf_vals(wf_name, lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i+1))
+          call get_wf_vals(wf_name, lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i))
       end do
       close(333)
     end do
@@ -833,12 +925,11 @@ subroutine make_wf_name(elec_num, vib_i, wf_name)
   print *, cex2
 
   wf_name = wf_dir // state_names(elec_num) // "/Target_wf0" // cex2 // "_N2__ElecState001.dat"
+  print *, wf_name
 
 end subroutine
 
 subroutine get_wf_vals(file_path, r, WF)
-
-  use global_params, only : vib_num
 
   real(8)                  :: r
   integer                  :: a, io, vib_i
@@ -1296,23 +1387,23 @@ End Subroutine lm2i
 
 subroutine linearize_Delta(Delta, lin_Delta)
 
-  use global_params, only: dim_lm, num_Q, lin_start, lin_end, geoms, lin_geoms, num_Q_
+  use global_params, only: trimmed_dim_lm, num_Q, lin_start, lin_end, geoms, lin_geoms, num_Q_
 
-  real(8), dimension(dim_lm, dim_lm, num_Q), intent(in)    ::  Delta
-  real(8), dimension(dim_lm, dim_lm, num_Q_), intent(out)   ::  lin_Delta
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q), intent(in)    ::  Delta
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm, num_Q_), intent(out)   ::  lin_Delta
 
-  real(8), dimension(dim_lm, dim_lm)  ::  a
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm)  ::  a
   integer ::  i, j, i_Q, i_Q_
 
 
-  do i = 1, dim_lm
-    do j = 1, dim_lm
+  do i = 1, trimmed_dim_lm
+    do j = 1, trimmed_dim_lm
       a(i,j) = ( Delta(i,j,lin_end) - Delta(i,j,lin_start) ) / ( geoms(lin_end) - geoms(lin_start) )
     end do
   end do
 
-  do i = 1, dim_lm
-    do j = 1, dim_lm
+  do i = 1, trimmed_dim_lm
+    do j = 1, trimmed_dim_lm
       do i_Q_ = 1, num_Q_
       lin_Delta(i,j,i_Q_) = Delta(i,j,lin_start) + ( a(i,j) * (lin_geoms(i_Q_) - geoms(lin_start)) )
       end do
@@ -1438,23 +1529,23 @@ End Subroutine K_delta
 
 subroutine Delta_S(Delta, S)
 
-  use global_params, only: dim_lm, ci
+  use global_params, only: trimmed_dim_lm, ci
 
 
-  real(8), dimension(dim_lm, dim_lm), intent(in)        :: Delta
-  complex*16, dimension(dim_lm, dim_lm), intent(out)    :: S
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm), intent(in)        :: Delta
+  complex*16, dimension(trimmed_dim_lm, trimmed_dim_lm), intent(out)    :: S
 
-  real(8), dimension(dim_lm, dim_lm)                    :: eigenvectors
-  real(8), dimension(dim_lm)                            :: eigenvalues
+  real(8), dimension(trimmed_dim_lm, trimmed_dim_lm)                    :: eigenvectors
+  real(8), dimension(trimmed_dim_lm)                            :: eigenvalues
   integer                                               :: i,j,k
 
-  call diagonalization(dim_lm,Delta,eigenvalues,eigenvectors)
+  call diagonalization(trimmed_dim_lm,Delta,eigenvalues,eigenvectors)
 
   eigenvalues = exp(2*ci*eigenvalues)
 
-  Do i=1,dim_lm
-    Do j=1,dim_lm
-      Do k=1,dim_lm
+  Do i=1,trimmed_dim_lm
+    Do j=1,trimmed_dim_lm
+      Do k=1,trimmed_dim_lm
         S(i,j)=S(i,j)+eigenvectors(i,k)*eigenvalues(k)*eigenvectors(j,k)
       Enddo
     Enddo

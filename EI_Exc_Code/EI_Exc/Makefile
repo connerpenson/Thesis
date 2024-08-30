@@ -48,7 +48,7 @@ FCFLAGS = \
 	-ffree-line-length-0 \
 	-floop-parallelize-all \
 	-pg 
-
+ 
 # -- linker flags
 FLFLAGS = \
 	-I$(MOD) \
