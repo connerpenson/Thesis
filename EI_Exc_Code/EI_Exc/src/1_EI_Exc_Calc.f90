@@ -15,12 +15,12 @@ program EI_Exc_Calc
     complex*16, dimension(dim_lm, dim_lm, num_Q_)   :: S_Q
     integer, dimension(100,num_gamma_Q,3,num_Q)    :: D2h_Dinf
     integer, dimension(num_Q, num_gamma_Q)         :: md
-    real(8), dimension(0:vib_num-1, num_Q_, n_max)      :: ion_wf
+    real(8), dimension(0:vib_max-1, num_Q_, n_max)      :: ion_wf
     complex*16, dimension(num_tot, num_tot)        :: S_ft
     complex*16, dimension(num_tot, num_tot)        :: replaced_S_ft
     complex*16, dimension(num_tot, num_tot)        :: sorted_S_ft
     integer, dimension(num_tot, 4)                 :: ft_channels, sorted_ft_channels
-    real(8), dimension(n_max, n_max, 0:vib_num, 0:vib_num)               :: eics_matrix
+    real(8), dimension(n_max, n_max, 0:vib_max-1, 0:vib_max-1)               :: eics_matrix
     !real(8), dimension(1, 2:2, 0:vib_num, 0:vib_num)  :: diff_mat
     real(8), dimension(num_scatE)                  :: energies
     real(8), dimension(num_tot)                    :: energy_array
@@ -171,8 +171,8 @@ program EI_Exc_Calc
     call get_wf(ion_wf)
             
     open(27, file = "WF_vals.dat")
-    do vib_i = 0, vib_num-1
-        do elec_i = 1, n_max
+    do elec_i = 1, n_max
+      do vib_i = 0, vib_nums(elec_i)-1
             write(27,*) "#e=",elec_i,"v=", vib_i
             do i_Q_ = 1, num_Q_
                 write(27,*) lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i)
@@ -235,7 +235,7 @@ program EI_Exc_Calc
 
     open(27, file = "channel_energies.dat")
     do ei = 1, n_max
-      do vi = 0, vib_num-1
+      do vi = 0, vib_nums(ei)-1
 
         write(27,*) "#ei,vi", ei, vi
         write(27,*) chan_ens(ei,vi)
@@ -379,12 +379,12 @@ end subroutine
 
 subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matrix)
 
-  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_num, elec_energies
+  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_nums, vib_max, elec_energies
   use iso_fortran_env, only: int64, iostat_end
 
   complex*16, dimension(num_tot, num_tot), intent(in)        :: S_ft
   real(8), dimension(num_tot), intent(in)                    :: energy_array
-  real(8), dimension(n_max, n_max, 0:vib_num, 0:vib_num), intent(out) ::  eics_matrix
+  real(8), dimension(n_max, n_max, 0:vib_max-1, 0:vib_max-1), intent(out) ::  eics_matrix
   integer ::  max_chan
   integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
   real(8), dimension(num_tot) :: nu
@@ -402,7 +402,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
   
 
   energy_begin = chan_ens(1,0) !Origin is ground state of N2+
-  energy_end = chan_ens(n_max, vib_num-1)
+  energy_end = chan_ens(n_max, vib_max-1)
   energy_step = (energy_end - energy_begin)/energy_step_num
   print *, energy_begin, energy_end, energy_step
 
@@ -468,8 +468,8 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
     open(29, file = "Sum_Check.dat")
       do ei = 1, n_max
         do ei_p = 1, n_max
-          do vi = 0, vib_num-1
-            do vi_p = 0, vib_num-1
+          do vi = 0, vib_nums(ei)-1
+            do vi_p = 0, vib_nums(ei_p)-1
   
               eics_sum = 0
               do i = 1, num_open
@@ -518,7 +518,7 @@ end subroutine
 
 subroutine Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_open)
 
-  use global_params, only: num_tot, energy_step_num, n_max, vib_num, chan_ens
+  use global_params, only: num_tot, energy_step_num, n_max, vib_nums, vib_max, chan_ens
 
   real(8), intent(in) ::  nu(num_tot)
   integer, intent(in) ::  num_closed, num_open, en_i
@@ -532,7 +532,7 @@ subroutine Z_analysis(en_i, sorted_ft_channels, nu, smat_co, num_closed, num_ope
   complex*16, dimension(num_closed, num_open)  :: D
 
   energy_begin = chan_ens(1,0) !Origin is ground state of N2+
-  energy_end = chan_ens(n_max, vib_num-1)
+  energy_end = chan_ens(n_max, vib_max-1)
   energy_step = (energy_end - energy_begin)/energy_step_num
 
   E = energy_begin + en_i*energy_step
@@ -566,7 +566,7 @@ end subroutine
 
 subroutine replace_like_vals(S_ft, ft_channels, replaced_S_ft)
 
-  use global_params, only: num_tot, num_Q, vib_num, l_max
+  use global_params, only: num_tot, num_Q, vib_nums, l_max
 
   complex*16, dimension(num_tot, num_tot), intent(in)         :: S_ft
   integer, dimension(num_tot, 4), intent(in)                    :: ft_channels
@@ -732,11 +732,11 @@ end subroutine
 
 subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
 
-  use global_params, only : vib_num, n_max, num_Q_, dim_lm, num_tot, lin_geoms, all_open_i, chan_ens, lin_r_step
+  use global_params, only : vib_nums, vib_max, n_max, num_Q_, dim_lm, num_tot, lin_geoms, all_open_i, chan_ens, lin_r_step
   
   
   complex*16, dimension(dim_lm, dim_lm, num_Q_), intent(in) ::  S_Q
-  real(8), dimension(0:vib_num-1, num_Q_, n_max), intent(in)	::	ion_wf
+  real(8), dimension(0:vib_max-1, num_Q_, n_max), intent(in)	::	ion_wf
   
   complex*16, dimension(num_tot, num_tot), intent(out) ::  S_ft
   integer, dimension(num_tot, 4), intent(out) ::  ft_channels
@@ -749,19 +749,19 @@ subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
   open(27, file = "S_ft.dat")
   !do ie = 1, num_scatE
     do i = 1, dim_lm
-      do iv = 0, vib_num-1
+      call i2lm(i, n, l, m)
+      do iv = 0, vib_nums(n)-1
 
-        j = (i-1)*vib_num + (iv+1)
+        j = (i-1)*vib_nums(n) + (iv+1)
 
-        call i2lm(i, n, l, m)
         ft_channels(j, :) = (/n, iv, l, m/)
         energy_array(j) = chan_ens(n, iv)
 
         do i_p = 1, dim_lm
           call i2lm(i_p, n_p, l_p, m_p)
-            do iv_p = 0, vib_num-1
+            do iv_p = 0, vib_nums(n_p)-1
 
-              j_p = (i_p-1)*vib_num + (iv_p+1)
+              j_p = (i_p-1)*vib_nums(n_p) + (iv_p+1)
 
               S_sum = 0
               do i_Q_ = 1,num_Q_
@@ -793,20 +793,21 @@ subroutine frame_transform(S_Q, ion_wf, S_ft, ft_channels, energy_array)
 
 subroutine get_wf(ion_wf)
 
-  use global_params, only: n_max, num_Q_, vib_num, lin_geoms
+  use global_params, only: n_max, num_Q_, vib_nums, vib_max, lin_geoms
 
-  real(8), dimension(0:vib_num-1, num_Q_, n_max), intent(out)     :: ion_wf
+  real(8), dimension(0:vib_max-1, num_Q_, n_max), intent(out)     :: ion_wf
 
   character(len = 44) ::  wf_name
 
   integer ::  elec_i, i_Q_, vib_i
 
-  do elec_i = 0, n_max-1
-    do vib_i = 0, vib_num-1
+  do elec_i = 1, n_max
+    do vib_i = 0, vib_nums(elec_i)-1
       call make_wf_name(elec_i, vib_i, wf_name)
+      print *, wf_name
       open(333, file = wf_name, status = "old")
       do i_Q_ = 1, num_Q_
-          call get_wf_vals(wf_name, lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i+1))
+          call get_wf_vals(wf_name, lin_geoms(i_Q_), ion_wf(vib_i, i_Q_, elec_i))
       end do
       close(333)
     end do
@@ -837,8 +838,6 @@ subroutine make_wf_name(elec_num, vib_i, wf_name)
 end subroutine
 
 subroutine get_wf_vals(file_path, r, WF)
-
-  use global_params, only : vib_num
 
   real(8)                  :: r
   integer                  :: a, io, vib_i
