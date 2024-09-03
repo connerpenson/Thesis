@@ -439,10 +439,10 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
     if (num_open /= num_tot) then
 
-      smat_oo = S_ft(1:num_open,1:num_open)
-      smat_cc = S_ft(num_open+1:num_tot,num_open+1:num_tot)
-      smat_oc = S_ft(1:num_open,num_open+1:num_tot)
-      smat_co = S_ft(num_open+1:num_tot,1:num_open)
+      smat_oo = conjg(transpose(S_ft(1:num_open,1:num_open)))
+      smat_cc = conjg(transpose(S_ft(num_open+1:num_tot,num_open+1:num_tot)))
+      smat_co = conjg(transpose(S_ft(1:num_open,num_open+1:num_tot)))
+      smat_oc = conjg(transpose(S_ft(num_open+1:num_tot,1:num_open)))
 
       beta = 0d0
       do j = 1, num_closed
@@ -452,7 +452,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
       nu = beta / pi   
 
       do j = 1, num_closed
-      smat_cc(j,j) = smat_cc(j,j) - exp(-2d0*ci*beta(j+num_open))
+      smat_cc(j,j) = smat_cc(j,j) - exp(2d0*ci*beta(j+num_open))
       end do
 
       call ZGESV(num_closed,num_open,smat_cc,num_closed,IPIV(1:num_closed),smat_co,num_closed,INFO)
@@ -487,11 +487,10 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
           do i = 1,3
             max_pos(i,ei,vi) = maxloc(Z_norms(:,ei,vi),1)
-            print *, max_pos(i,ei,vi)
             Z_vals(i,ei,vi) = Z_norms(max_pos(i,ei,vi),ei,vi)
             Z_norms(max_pos(i,ei,vi),ei,vi) = 0
           end do
-          max_pos = max_pos + num_open
+        
 
           do ei_p = 1, n_max
             do vi_p = 0, vib_nums(ei_p)-1
@@ -528,6 +527,8 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
       end do
       close(29)
 
+      max_pos = max_pos + num_open
+
       write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)&
                 & , sorted_ft_channels(max_pos(1,1,0),1), sorted_ft_channels(max_pos(1,1,0),2), sorted_ft_channels(max_pos(1,1,0),3), sorted_ft_channels(max_pos(1,1,0),4) &
                 & , Z_vals(1,1,0), nu(max_pos(1,1,0))
@@ -536,7 +537,7 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
       write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,1,0,0), elec_energies(2,1,en_i), (pi / (2*elec_energies(2,1,en_i)) ) * eics_matrix(2,1,1,0), &
                   & elec_energies(2,2,en_i), (pi / (2*elec_energies(2,2,en_i)) ) * eics_matrix(2,1,2,0), elec_energies(2,3,en_i), (pi / (2*elec_energies(2,3,en_i)) ) * eics_matrix(2,1,3,0)
 
-    deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, D)
+    deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, D, Z_norms)
 
   end do
   close(27)

@@ -47,6 +47,7 @@ FCFLAGS = \
 	-fimplicit-none \
 	-ffree-line-length-0 \
 	-floop-parallelize-all \
+	-mcmodel=medium \
 	-pg 
 
 # -- linker flags
