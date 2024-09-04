@@ -1,6 +1,6 @@
 Module global_params
 
-    integer, parameter :: num_gamma_Q = 8, l_max = 4, n_max = 4, num_Q = 19, num_Q_ = 500, skip_en = 4, num_scatE = 85, energy_step_num = 5000
+    integer, parameter :: num_gamma_Q = 8, l_max = 4, n_max = 4, num_Q = 19, num_Q_ = 500, skip_en = 4, num_scatE = 85, energy_step_num = 500
     integer, parameter :: dim_lm    = (l_max+1)**2 * n_max
     integer, dimension(n_max), parameter    ::  	vib_nums = (/5,5,5,5/) !specify num v for each elec state
     integer, parameter                      ::      vib_max = maxval(vib_nums,1)
@@ -18,7 +18,6 @@ Module global_params
     real(8)                 ::  lin_r_step = (lin_final_r - lin_initial_r)/num_Q_
     real(8), dimension(num_Q_)  ::  lin_geoms
     integer, dimension(5,6)    ::  good_elem_list
-    real(8), dimension(n_max, 0:vib_max-1, energy_step_num) ::  elec_energies
     character(len=15), dimension(num_gamma_Q) ::  name_of_file(1:num_gamma_Q) = (/ '1Ag.channel ', '1Au.channel ', '1B1g.channel', '1B1u.channel', &
                                                                                 '1B2g.channel', '1B2u.channel', '1B3g.channel', '1B3u.channel'/)!, &
                                                                                 !'3Ag.channel ', '3Au.channel ', '3B1g.channel', '3B1u.channel', &
@@ -112,27 +111,6 @@ Module global_params
             end do
         end do
         close(333)
-
-    end subroutine
-
-    subroutine make_electron_energies
-
-        integer ::  en_i
-
-        real(8) ::  E, energy_begin, energy_end, energy_step
-
-        do en_i = 1, energy_step_num
-
-            energy_begin = chan_ens(1,0) 
-	        energy_end = chan_ens(n_max, vib_max-1)
-	        energy_step = (energy_end - energy_begin)/energy_step_num
-
-            E = energy_begin + en_i*energy_step
-
-            elec_energies(:,:,en_i) = -chan_ens + E
-
-        end do
-
 
     end subroutine
 

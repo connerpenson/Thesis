@@ -20,7 +20,7 @@ program EI_Exc_Calc
     complex*16, dimension(num_tot, num_tot)        :: replaced_S_ft
     complex*16, dimension(num_tot, num_tot)        :: sorted_S_ft
     integer, dimension(num_tot, 4)                 :: ft_channels, sorted_ft_channels
-    real(8), dimension(n_max, n_max, 0:vib_max-1, 0:vib_max-1)               :: eics_matrix
+    real(8), dimension(n_max, 0:vib_max-1, n_max, 0:vib_max-1)               :: eics_matrix
     !real(8), dimension(1, 2:2, 0:vib_num, 0:vib_num)  :: diff_mat
     real(8), dimension(num_scatE)                  :: energies
     real(8), dimension(num_tot)                    :: energy_array
@@ -36,7 +36,6 @@ program EI_Exc_Calc
     call get_geoms
     call get_lin_geoms
     call get_channel_ens
-    call make_electron_energies
 
     call get_KQ(K_Q, md, D2h_Dinf, energies)
 
@@ -379,12 +378,12 @@ end subroutine
 
 subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matrix)
 
-  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_nums, vib_max, elec_energies
+  use global_params, only: num_tot, chan_ens, energy_step_num, pi, ci, n_max, vib_nums, vib_max
   use iso_fortran_env, only: int64, iostat_end
 
   complex*16, dimension(num_tot, num_tot), intent(in)        :: S_ft
   real(8), dimension(num_tot), intent(in)                    :: energy_array
-  real(8), dimension(n_max, n_max, 0:vib_max-1, 0:vib_max-1), intent(out) ::  eics_matrix
+  real(8), dimension(n_max, 0:vib_max-1, n_max, 0:vib_max-1), intent(out) ::  eics_matrix
   integer ::  max_chan
   integer, dimension(num_tot, 4), intent(in)                 :: sorted_ft_channels
   real(8), dimension(num_tot) :: nu, beta
@@ -394,15 +393,59 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
 
   complex*16, allocatable       :: phys_S_ft(:,:)
 
-  real(8) ::  energy_begin, energy_end, energy_step, E, eics_sum, E_elec
+  real(8) ::  energy_begin, energy_end, energy_step, E, eics_sum, E_elec, E_electron
 
-  integer ::  en_i, ei, ei_p, vi, vi_p, num_open, num_closed, j, INFO, i, n, v, n_p, v_p, k
+  integer ::  en_i, ei, ei_p, vi, vi_p, num_open, num_closed, j, INFO, i, n, v, n_p, v_p, k, counter, vib_stop
 
   real(8), allocatable      ::  Z_norms(:,:,:)
   complex*16, allocatable		::	smat_cc(:,:), smat_co(:,:), smat_oc(:,:), smat_oo(:,:)
   complex*16, allocatable		::	D(:,:)
   integer,    allocatable		::	IPIV(:)
   
+
+  open(27, file="read_guide_exc.dat")
+  counter = 0
+  write(27,*) "# index, n, v, n_p, v_p"
+  write(27,*) "# To plot a given transition, get the index from the list and plot in xmgrace block data mode with X_column = index-1 and Y_column = index"
+  write(27,*)
+  do ei_p = 1, n_max
+    do ei = 1, ei_p
+      do vi_p = 0, vib_nums(ei)-1
+        if (ei == ei_p) then
+          vib_stop = vi_p - 1
+        else if (ei<ei_p) then
+          vib_stop = vib_nums(ei)-1
+        end if
+        do vi = 0, vib_stop
+          counter = counter +2
+          write(27,*) counter, ei, vi, ei_p, vi_p
+        end do
+      end do
+    end do
+  end do
+  close(27)
+
+  open(27, file="read_guide_deexc.dat")
+  counter = 0
+  write(27,*) "# index, n, v, n_p, v_p"
+  write(27,*) "# To plot a given transition, get the index from the list and plot in xmgrace block data mode with X_column = index-1 and Y_column = index"
+  write(27,*)
+  do ei = 1, n_max
+    do ei_p = 1, ei
+      do vi = 0, vib_nums(ei)-1
+        if (ei == ei_p) then
+          vib_stop = vi_p - 1
+        else if (ei<ei_p) then
+          vib_stop = vib_nums(ei)-1
+        end if
+        do vi_p = 0, vib_stop
+          counter = counter +2
+          write(27,*) counter, ei, vi, ei_p, vi_p
+        end do
+      end do
+    end do
+  end do
+  close(27)
 
   energy_begin = chan_ens(1,0) !Origin is ground state of N2+
   energy_end = chan_ens(n_max, vib_max-1)
@@ -481,7 +524,6 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
     end do
 
     print *, en_i
-    open(29, file = "Sum_Check.dat")
       do ei = 1, n_max
         do vi = 0, vib_nums(ei)-1
 
@@ -505,37 +547,71 @@ subroutine channel_elimination(S_ft, energy_array, sorted_ft_channels, eics_matr
                   v_p = sorted_ft_channels(j,2)
   
                   if ( (n == ei) .and. (n_p == ei_p) .and. (v == vi) .and. (v_p == vi_p) ) then
-              
                       eics_sum = eics_sum + ( real(phys_S_ft(i,j))**2 + aimag(phys_S_ft(i,j))**2 )
-  
-                     if (phys_S_ft(i,j) /= 0) then
-                      write(29, *) n, v, sorted_ft_channels(i,3), sorted_ft_channels(i,4), n_p, v_p, sorted_ft_channels(j,3), sorted_ft_channels(j,4), phys_S_ft(i,j)
-                     end if
-                     
                   end if
   
                 end do
               end do
-
-              if (E - chan_ens(ei_p,vi_p) /= 0) then
-                eics_matrix(ei, ei_p, vi, vi_p) =  eics_sum  
-              end if
+             
+              eics_matrix(ei, vi, ei_p, vi_p) =  eics_sum  
 
             end do
           end do
         end do
       end do
-      close(29)
+
 
       max_pos = max_pos + num_open
 
-      write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)&
-                & , sorted_ft_channels(max_pos(1,1,0),1), sorted_ft_channels(max_pos(1,1,0),2), sorted_ft_channels(max_pos(1,1,0),3), sorted_ft_channels(max_pos(1,1,0),4) &
-                & , Z_vals(1,1,0), nu(max_pos(1,1,0))
+      do ei_p = 1, n_max
+        do ei = 1, ei_p
+          do vi_p = 0, vib_nums(ei_p)-1
+            if (ei == ei_p) then
+              vib_stop = vi_p - 1
+            else if (ei<ei_p) then
+              vib_stop = vib_nums(ei)-1
+            end if
+            do vi = 0, vib_stop
+              !E_total = E-chan_ens(ei,vi)
+              write(27, '(F12.10, F18.10, " ")', advance='no') E, (pi / (2*E) ) * eics_matrix(ei,vi,ei_p,vi_p)
+              write(333, '("   ", F18.16)', advance='no') E
+              write(333, '(" [",I2,I2,I2,I2," ] ")', advance='no') ei,vi,ei_p,vi_p
+              write(333, '(" [",I2,I2,I2,I2," ] ")', advance='no') sorted_ft_channels(max_pos(1,ei,vi),1),sorted_ft_channels(max_pos(1,ei,vi),2),sorted_ft_channels(max_pos(1,ei,vi),3)&
+              &,sorted_ft_channels(max_pos(1,ei,vi),4)
+              write(333, '(F10.2,F9.2)', advance='no') Z_vals(1,ei,vi),nu(max_pos(1,ei,vi))
+            end do
+          end do
+        end do
+      end do
+      write(27,*)
+
+      do ei = 1, n_max
+        do ei_p = 1, ei
+          do vi = 0, vib_nums(ei)-1
+            if (ei == ei_p) then
+              vib_stop = vi_p - 1
+            else if (ei<ei_p) then
+              vib_stop = vib_nums(ei_p)-1
+            end if
+            do vi_p = 0, vib_stop
+              E_electron = E-chan_ens(ei,vi)
+              write(28, '(F18.16, F18.10, " ")', advance='no') E_electron, (pi / (2*E_electron) ) * eics_matrix(ei,vi,ei_p,vi_p)
+            end do
+          end do
+        end do
+      end do
+      write(28,*)
 
 
-      write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,1,0,0), elec_energies(2,1,en_i), (pi / (2*elec_energies(2,1,en_i)) ) * eics_matrix(2,1,1,0), &
-                  & elec_energies(2,2,en_i), (pi / (2*elec_energies(2,2,en_i)) ) * eics_matrix(2,1,2,0), elec_energies(2,3,en_i), (pi / (2*elec_energies(2,3,en_i)) ) * eics_matrix(2,1,3,0)
+
+
+      ! write(27,*) E, (pi / (2*E) ) * eics_matrix(1,1,0,0), (pi / (2*E) ) * eics_matrix(1,1,0,1), (pi / (2*E) ) * eics_matrix(1,1,0,2), (pi / (2*E) ) * eics_matrix(1,1,0,3)&
+      !           & , sorted_ft_channels(max_pos(1,1,0),1), sorted_ft_channels(max_pos(1,1,0),2), sorted_ft_channels(max_pos(1,1,0),3), sorted_ft_channels(max_pos(1,1,0),4) &
+      !           & , Z_vals(1,1,0), nu(max_pos(1,1,0))
+
+
+      ! write(28,*) elec_energies(2,0,en_i), (pi / (2*elec_energies(2,0,en_i)) ) * eics_matrix(2,1,0,0), elec_energies(2,1,en_i), (pi / (2*elec_energies(2,1,en_i)) ) * eics_matrix(2,1,1,0), &
+      !             & elec_energies(2,2,en_i), (pi / (2*elec_energies(2,2,en_i)) ) * eics_matrix(2,1,2,0), elec_energies(2,3,en_i), (pi / (2*elec_energies(2,3,en_i)) ) * eics_matrix(2,1,3,0)
 
     deallocate(phys_S_ft, smat_cc, smat_co, smat_oc, smat_oo, IPIV, D, Z_norms)
 
